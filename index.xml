@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://jiatong.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Oct 2025 09:57:41 +0800</lastBuildDate>
+    <atom:link href="https://jiatong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://jiatong.github.io/posts/my-first-post/</link>
+      <pubDate>Mon, 06 Oct 2025 09:57:41 +0800</pubDate>
+      <guid>https://jiatong.github.io/posts/my-first-post/</guid>
+      <description>&lt;p&gt;## 简介 这是 &lt;strong&gt;粗体&lt;/strong&gt; 文本，这是 &lt;em&gt;斜体&lt;/em&gt; 文本。 访问 &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; 网站！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
