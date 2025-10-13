@@ -2,25 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>分类2 on Jiatong Blog</title>
-    <link>http://localhost:1313/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/</link>
+    <link>https://mydocts.github.io/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/</link>
     <description>Recent content in 分类2 on Jiatong Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 23 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>LLM-RL-DPO</title>
-      <link>http://localhost:1313/jiatong.github.io/posts/custom-url/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/posts/custom-url/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/jiatong.github.io/images/ppo_full.png&#34;&#xA;    alt=&#34;ppo&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/jiatong.github.io/images/dpo_full.png&#34;&#xA;    alt=&#34;dpo_full&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;kl-散度kullbackleibler-divergence&#34;&gt;KL 散度（Kullback–Leibler Divergence）&lt;/h2&gt;&#xA;&lt;p&gt;$$&#xA;KL(P | Q) = \sum_{x \in X} P(x) \log \frac{P(x)}{Q(x)}&#xA;$$&lt;/p&gt;&#xA;&lt;h3 id=&#34;含义&#34;&gt;含义&lt;/h3&gt;&#xA;&lt;p&gt;P 分布相对于 Q 分布的相似程度。&lt;/p&gt;&#xA;&lt;h3 id=&#34;性质&#34;&gt;性质&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;KL 散度的值 &lt;strong&gt;大于等于 0&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;P 和 Q 越相似，KL 散度越接近 0。&lt;/li&gt;&#xA;&lt;li&gt;如果 P 和 Q 分布完全一致，则 &lt;strong&gt;KL 散度 = 0&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;注意：&lt;br&gt;&#xA;$$&#xA;KL(P | Q) \neq KL(Q | P)&#xA;$$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;kl-散度大于等于-0-的直观理解&#34;&gt;KL 散度大于等于 0 的直观理解&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;直观理解&lt;/strong&gt;：KL 散度是一个非负数，因为我们在比较两个分布时，&#xA;只有在完全一致时，它们之间的“差异”才为 0。&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mydocts.github.io/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LLM-RL-PPO</title>
-      <link>http://localhost:1313/jiatong.github.io/posts/custom-url/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/custom-url/</link>
       <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/posts/custom-url/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/jiatong.github.io/images/ppo_1.png&#34;&#xA;    alt=&#34;前置基础&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;基础概念i&#34;&gt;基础概念I&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果你不熟悉强化学习，学习ppo了解这些基础知识就足够了&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Action Space&lt;/strong&gt;: 可选择的动作，比如 {left, up, right}&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Policy&lt;/strong&gt;: 策略函数，输入 State，输出 Action 的概率分布。一般用 π 表示。&lt;/p&gt;</description>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/custom-url/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;../../images/ppo_1.png&#34;&#xA;    alt=&#34;前置基础&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;基础概念i&#34;&gt;基础概念I&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果你不熟悉强化学习，学习ppo了解这些基础知识就足够了&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Action Space&lt;/strong&gt;: 可选择的动作，比如 {left, up, right}&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Policy&lt;/strong&gt;: 策略函数，输入 State，输出 Action 的概率分布。一般用 π 表示。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

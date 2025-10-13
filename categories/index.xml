@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Jiatong Blog</title>
-    <link>http://localhost:1313/jiatong.github.io/categories/</link>
+    <link>https://mydocts.github.io/jiatong.github.io/categories/</link>
     <description>Recent content in Categories on Jiatong Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 01 Oct 2025 10:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/jiatong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mydocts.github.io/jiatong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>博客</title>
-      <link>http://localhost:1313/jiatong.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Wed, 01 Oct 2025 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/categories/%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://mydocts.github.io/jiatong.github.io/categories/%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     <item>
       <title>分类1</title>
-      <link>http://localhost:1313/jiatong.github.io/categories/%E5%88%86%E7%B1%BB1/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/categories/%E5%88%86%E7%B1%BB1/</guid>
+      <link>https://mydocts.github.io/jiatong.github.io/categories/%E5%88%86%E7%B1%BB1/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/categories/%E5%88%86%E7%B1%BB1/</guid>
       <description></description>
     </item>
     <item>
       <title>分类2</title>
-      <link>http://localhost:1313/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/</guid>
+      <link>https://mydocts.github.io/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/categories/%E5%88%86%E7%B1%BB2/</guid>
       <description></description>
     </item>
     <item>
       <title>Github</title>
-      <link>http://localhost:1313/jiatong.github.io/categories/github/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/categories/github/</link>
       <pubDate>Sun, 01 Jun 2025 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/categories/github/</guid>
+      <guid>https://mydocts.github.io/jiatong.github.io/categories/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Image-Rendering</title>
-      <link>http://localhost:1313/jiatong.github.io/categories/image-rendering/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/categories/image-rendering/</link>
       <pubDate>Tue, 16 Jan 2024 22:30:00 +0800</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/categories/image-rendering/</guid>
+      <guid>https://mydocts.github.io/jiatong.github.io/categories/image-rendering/</guid>
       <description></description>
     </item>
     <item>
       <title>Code-Highlighting</title>
-      <link>http://localhost:1313/jiatong.github.io/categories/code-highlighting/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/categories/code-highlighting/</link>
       <pubDate>Tue, 16 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/categories/code-highlighting/</guid>
+      <guid>https://mydocts.github.io/jiatong.github.io/categories/code-highlighting/</guid>
       <description></description>
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/jiatong.github.io/categories/test/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/categories/test/</link>
       <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/jiatong.github.io/categories/test/</guid>
+      <guid>https://mydocts.github.io/jiatong.github.io/categories/test/</guid>
       <description></description>
     </item>
   </channel>
