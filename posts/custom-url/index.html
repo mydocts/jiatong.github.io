@@ -9,9 +9,9 @@
   content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>LLM-RL-PPO | Jiatong Blog</title>
+<title>LLM-RL-DPO | Jiatong Blog</title>
 
-<meta name="description" content="介绍PPO算法原理以及代码实现" />
+<meta name="description" content="介绍DPO算法原理以及代码实现" />
 <meta name="keywords" content="大模型, 强化学习" />
 <meta name="author" content="Hugo Narrow" />
 <meta name="language" content="en-US" />
@@ -25,16 +25,16 @@
 
 
 
-<link rel="manifest" href="../../site.webmanifest" />
+<link rel="manifest" href="https://mydocts.github.io/jiatong.github.io/site.webmanifest" />
 <meta property="og:url" content="https://mydocts.github.io/jiatong.github.io/posts/custom-url/">
   <meta property="og:site_name" content="Jiatong Blog">
-  <meta property="og:title" content="LLM-RL-PPO">
-  <meta property="og:description" content="介绍PPO算法原理以及代码实现">
+  <meta property="og:title" content="LLM-RL-DPO">
+  <meta property="og:description" content="介绍DPO算法原理以及代码实现">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-23T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-23T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-09-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-23T00:00:00+00:00">
     <meta property="article:tag" content="大模型">
     <meta property="article:tag" content="强化学习">
     <meta property="og:image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
@@ -42,15 +42,15 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
-  <meta name="twitter:title" content="LLM-RL-PPO">
-  <meta name="twitter:description" content="介绍PPO算法原理以及代码实现">
+  <meta name="twitter:title" content="LLM-RL-DPO">
+  <meta name="twitter:description" content="介绍DPO算法原理以及代码实现">
 
 
-  <meta itemprop="name" content="LLM-RL-PPO">
-  <meta itemprop="description" content="介绍PPO算法原理以及代码实现">
-  <meta itemprop="datePublished" content="2025-08-23T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-08-23T00:00:00+00:00">
-  <meta itemprop="wordCount" content="2976">
+  <meta itemprop="name" content="LLM-RL-DPO">
+  <meta itemprop="description" content="介绍DPO算法原理以及代码实现">
+  <meta itemprop="datePublished" content="2025-09-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-09-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="2426">
   <meta itemprop="image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
   <meta itemprop="keywords" content="大模型,强化学习">
 
@@ -184,7 +184,7 @@
     
       <link
         rel="stylesheet"
-        href="../../jiatong.github.io/css/compiled.min.19a914843ad676fbf6f2782b8b794b78b8f052120496d087d7135573dd3ba9d7.css"
+        href="https://mydocts.github.io/jiatong.github.io/css/compiled.min.19a914843ad676fbf6f2782b8b794b78b8f052120496d087d7135573dd3ba9d7.css"
         integrity="sha256-GakUhDrWdvv28ngri3lLeLjwUhIEltCH1xNVc907qdc="
         crossorigin="anonymous" />
     
@@ -198,7 +198,7 @@
     
       <link
         rel="stylesheet"
-        href="../../jiatong.github.io/css/chroma.min.491df36221f739b5948a747a0351f100ee7ccaaf466d9f46288bf06de1d59123.css"
+        href="https://mydocts.github.io/jiatong.github.io/css/chroma.min.491df36221f739b5948a747a0351f100ee7ccaaf466d9f46288bf06de1d59123.css"
         integrity="sha256-SR3zYiH3ObWUinR6A1HxAO58yq9GbZ9GKIvwbeHVkSM="
         crossorigin="anonymous" />
     
@@ -216,18 +216,18 @@
 
 
         <script
-          src="../../jiatong.github.io/js/main.ba969e49a7a874e6938fe689a7dcaa00cb64cb4d429c2cf98d09bde512a16c6d.js"
+          src="https://mydocts.github.io/jiatong.github.io/js/main.ba969e49a7a874e6938fe689a7dcaa00cb64cb4d429c2cf98d09bde512a16c6d.js"
           integrity="sha256-upaeSaeodOaTj&#43;aJp9yqAMtky01CnCz5jQm95RKhbG0="
           crossorigin="anonymous"></script>
 
 
 
-  <script src="../../js/gumshoe.polyfills.min.js"></script>
+  <script src="https://mydocts.github.io/jiatong.github.io/js/gumshoe.polyfills.min.js"></script>
 
 
 
           <script
-            src="../../jiatong.github.io/js/toc.70654aebf0b738a78ae2df95297cc10ebc6e590f3c942dd1325fa852f50038b2.js"
+            src="https://mydocts.github.io/jiatong.github.io/js/toc.70654aebf0b738a78ae2df95297cc10ebc6e590f3c942dd1325fa852f50038b2.js"
             integrity="sha256-cGVK6/C3OKeK4t&#43;VKXzBDrxuWQ88lC3RMl&#43;oUvUAOLI="
             crossorigin="anonymous"
             defer></script>
@@ -235,7 +235,7 @@
 
 
         <script
-          src="../../jiatong.github.io/js/search.de3eba3540834efb8328121784bff4774e06362412ee41eee665f5b4f987f393.js"
+          src="https://mydocts.github.io/jiatong.github.io/js/search.de3eba3540834efb8328121784bff4774e06362412ee41eee665f5b4f987f393.js"
           integrity="sha256-3j66NUCDTvuDKBIXhL/0d04GNiQS7kHu5mX1tPmH85M="
           crossorigin="anonymous"
           defer></script>
@@ -243,7 +243,7 @@
 
 
         <script
-          src="../../jiatong.github.io/js/dock.e68dfcd7c5d37f18f40d8855905ee50c98c58f3b204d0ffb207d4956c987ead0.js"
+          src="https://mydocts.github.io/jiatong.github.io/js/dock.e68dfcd7c5d37f18f40d8855905ee50c98c58f3b204d0ffb207d4956c987ead0.js"
           integrity="sha256-5o3818XTfxj0DYhVkF7lDJjFjzsgTQ/7IH1JVsmH6tA="
           crossorigin="anonymous"
           defer></script>
@@ -421,11 +421,11 @@
       <div class="flex items-center">
         
           <a
-            href="../../"
+            href="https://mydocts.github.io/jiatong.github.io/"
             class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full transition-transform duration-200 hover:scale-105"
             aria-label="Jiatong Blog">
             <img
-              src="../../images/touxiang.jpg"
+              src="https://mydocts.github.io/jiatong.github.io/images/touxiang.jpg"
               alt="Jiatong Blog"
               class="h-full w-full object-cover" />
           </a>
@@ -446,7 +446,7 @@
             
             
             <a
-              href="../../posts/"
+              href="https://mydocts.github.io/jiatong.github.io/posts/"
               class="nav-link 
                 text-muted-foreground hover:text-primary hover:bg-primary/10
                focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
@@ -476,7 +476,7 @@
             
             
             <a
-              href="../../categories/"
+              href="https://mydocts.github.io/jiatong.github.io/categories/"
               class="nav-link 
                 text-muted-foreground hover:text-primary hover:bg-primary/10
                focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
@@ -506,7 +506,7 @@
             
             
             <a
-              href="../../tags/"
+              href="https://mydocts.github.io/jiatong.github.io/tags/"
               class="nav-link 
                 text-muted-foreground hover:text-primary hover:bg-primary/10
                focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
@@ -536,7 +536,7 @@
             
             
             <a
-              href="../../archives/"
+              href="https://mydocts.github.io/jiatong.github.io/archives/"
               class="nav-link 
                 text-muted-foreground hover:text-primary hover:bg-primary/10
                focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
@@ -696,7 +696,7 @@
         
         
         <a
-          href="../../posts/"
+          href="https://mydocts.github.io/jiatong.github.io/posts/"
           class="nav-link 
             text-muted-foreground hover:text-primary hover:bg-primary/10
            focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
@@ -728,7 +728,7 @@
         
         
         <a
-          href="../../categories/"
+          href="https://mydocts.github.io/jiatong.github.io/categories/"
           class="nav-link 
             text-muted-foreground hover:text-primary hover:bg-primary/10
            focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
@@ -760,7 +760,7 @@
         
         
         <a
-          href="../../tags/"
+          href="https://mydocts.github.io/jiatong.github.io/tags/"
           class="nav-link 
             text-muted-foreground hover:text-primary hover:bg-primary/10
            focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
@@ -792,7 +792,7 @@
         
         
         <a
-          href="../../archives/"
+          href="https://mydocts.github.io/jiatong.github.io/archives/"
           class="nav-link 
             text-muted-foreground hover:text-primary hover:bg-primary/10
            focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
@@ -928,7 +928,7 @@
     
     <li class="flex-shrink-0">
       <a
-        href="../../"
+        href="https://mydocts.github.io/jiatong.github.io/"
         class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-0.5 md:gap-1 rounded-lg px-1 md:px-3 py-0.5 md:py-1.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02]">
         
   <svg class="h-4 w-4"
@@ -960,7 +960,7 @@
             
               
               <a
-                href="../../posts"
+                href="https://mydocts.github.io/jiatong.github.io/posts"
                 class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-0.5 md:gap-1 rounded-lg px-1 md:px-3 py-0.5 md:py-1.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] flex-shrink-0">
                 
                   
@@ -991,7 +991,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
 </svg>
-              <span class="max-w-[8rem] md:max-w-[16rem] lg:max-w-none truncate">LLM-RL-PPO</span>
+              <span class="max-w-[8rem] md:max-w-[16rem] lg:max-w-none truncate">LLM-RL-DPO</span>
             </span>
           </div>
         
@@ -1014,7 +1014,7 @@
 <div class="post-meta">
   
   <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    LLM-RL-PPO
+    LLM-RL-DPO
   </h1>
 
   
@@ -1034,8 +1034,8 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Published on"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
-        <time datetime="2025-08-23">
-          August 23, 2025
+        <time datetime="2025-09-23">
+          September 23, 2025
         </time>
       </div>
 
@@ -1053,7 +1053,7 @@
     viewBox="0 0 24 24" aria-label="Reading time"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
           <span
-            >6 minute</span
+            >5 minute</span
           >
         </div>
       
@@ -1068,7 +1068,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>2976 words</span>
+          <span>2426 words</span>
         </div>
       
 
@@ -1078,33 +1078,6 @@
     
       <div class="flex flex-wrap items-center gap-4">
         
-        
-          <div class="flex items-center gap-2">
-            
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24" aria-label="Categories"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-</svg>
-            <span class="text-muted-foreground mr-2 text-sm"
-              >Categories:</span
-            >
-            <div class="flex flex-wrap gap-2">
-              
-                <a
-                  href="../../categories/%E5%88%86%E7%B1%BB1/"
-                  class="bg-primary/10 text-primary hover:bg-primary/20 focus:ring-primary/20 inline-flex items-center rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:shadow-md focus:ring-2 focus:outline-none">
-                  分类1
-                </a>
-              
-                <a
-                  href="../../categories/%E5%88%86%E7%B1%BB2/"
-                  class="bg-primary/10 text-primary hover:bg-primary/20 focus:ring-primary/20 inline-flex items-center rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:shadow-md focus:ring-2 focus:outline-none">
-                  分类2
-                </a>
-              
-            </div>
-          </div>
         
 
 
@@ -1127,13 +1100,13 @@
             <div class="flex flex-wrap gap-2">
               
                 <a
-                  href="../../tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"
+                  href="https://mydocts.github.io/jiatong.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"
                   class="bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary focus:ring-primary/20 inline-flex items-center rounded px-2 py-1 text-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
                   #大模型
                 </a>
               
                 <a
-                  href="../../tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"
+                  href="https://mydocts.github.io/jiatong.github.io/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"
                   class="bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary focus:ring-primary/20 inline-flex items-center rounded px-2 py-1 text-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
                   #强化学习
                 </a>
@@ -1156,636 +1129,466 @@
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <figure><img src="../../images/ppo_1.png"
-    alt="前置基础" width="720">
+    <figure><img src="https://mydocts.github.io/jiatong.github.io/images/ppo_full.png"
+    alt="ppo" width="720">
 </figure>
 
-<h2 id="基础概念i">基础概念I</h2>
-<ul>
-<li>如果你不熟悉强化学习，学习ppo了解这些基础知识就足够了</li>
-</ul>
-<p><strong>Action Space</strong>: 可选择的动作，比如 {left, up, right}</p>
-<p><strong>Policy</strong>: 策略函数，输入 State，输出 Action 的概率分布。一般用 π 表示。</p>
-<ul>
-<li>$\pi(left|s_t) = 0.1$,在状态$s_t$下，采取的动作为left的概率为0.1</li>
-<li>$\pi(up|s_t) = 0.2$ , $\pi(right|s_t) = 0.7$, 这个状态下的 所有动作 概率之和 为1</li>
-</ul>
-<p><strong>Trajectory</strong>: 轨迹，用$τ$表示，一连串状态和动作的序列。又称Episode, Rollout。 ${s0,a0,s1,a1,…}$</p>
-<p>$s_{t+1}=f(st,at)$ 确定状态转移</p>
-<p>$s_{t+1}=P(⋅|st,at)$随机状态转移</p>
-<p><strong>Return</strong>: 回报，从当前时间点到游戏结束的 Reward 的累积和。</p>
-<p><strong>期望</strong>：每个可能结果的概率与其结果值的乘积之和</p>
-<p>$\mathbb{E}(x)_{x \sim p(x)}=\sum x \cdotp(x)\approx \frac{1}{n} \sum_{i=1}^n x, \quad x \sim p(x)$</p>
-<p>$\mathbb{E}[f(\tau)] \approx \frac{1}{N} \sum_{n=1}^N f(\tau^n)$</p>
-<div
-    class="alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-note) 10%, transparent);
-              border-left-color: var(--color-note);
-              --hover-bg: color-mix(in srgb, var(--color-note) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-0-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-0-title"
-          class="m-0 font-semibold text-foreground/90">
-          Note
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-0-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <p>运用的是蒙特卡洛思想，从分布p(x)中随机采样n次求平均，n趋于无穷时样本平均会趋近于期望值/大数定律，期望可以用样本平均近似</p>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<p><strong>轨迹概率</strong>：一条轨迹 $\tau = (s_0, a_0, s_1, a_1, \dots, s_T, a_T)$的概率是：  $P_\theta(\tau) = P(s_0, a_0, s_1, a_1, \dots, s_T, a_T)$
-<strong>概率论基本公式</strong>： $P(x_1, x_2, \dots, x_n) = \prod_{i=1}^n P(x_i \mid x_1, \dots, x_{i-1})$
-把它用在轨迹上，就可以逐步展开：  $P_\theta(\tau) = P(s_0) \cdot P(a_0 \mid s_0) \cdot P(s_1 \mid s_0, a_0) \cdot P(a_1 \mid s_1,a_0,s_0) \cdot \dots$
-在强化学习里，环境通常假设是 马尔可夫决策过程 (MDP)，即：</p>
-<ul>
-<li>下一状态只依赖于当前状态和动作： $P(s_{t+1} \mid s_0, a_0, \dots, s_t, a_t) = P(s_{t+1} \mid s_t, a_t)$</li>
-<li>动作只依赖于当前状态： $P(a_t \mid s_0, a_0, \dots, s_t) = \pi_\theta(a_t \mid s_t)$</li>
-<li>于是上面的展开可以简化为： $\  P_\theta(\tau) = P(s_0) \prod_{t=0}^T \pi_\theta(a_t \mid s_t) , P(s_{t+1} \mid s_t, a_t)$</li>
-<li>$\pi_\theta(a_n^t | s_n^t)$：策略在状态 $s_n^t$下选择动作 $a_n^t$ 的概率（依赖参数 $\theta$）。</li>
-<li>$P(s_{n}^{t+1}|s_n^t, a_n^t)$：环境的转移概率（不依赖 $\theta$）。</li>
-</ul>
-<div
-    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
-              border-left-color: var(--color-important);
-              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-1-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-1-title"
-          class="m-0 font-semibold text-foreground/90">
-          Important
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-1-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <p><strong>目标：</strong>
-训练一个Policy神经网络 $π_{\theta}$ ,在所有的状态S下，给出相应的Action，得到的Return的期望最大
-or
-训练一个Policy神经网络 $\pi_{\theta}$ ,在所有Trajectory中，得到的Return的期望最大</p>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<h2 id="ppo原理-part1">PPO原理-part1</h2>
-<p>我们将刚才的目标翻译成数学表达式，就是希望
-$E(R(\tau))_{\tau \sim P_\theta(\tau)} = \sum_{\tau} R(\tau) P_\theta(\tau)$
-越大越好</p>
-<ul>
-<li>$P_\theta(\tau)$ :在策略$\pi_\theta$下，采样到轨迹 $\tau$ 的概率。</li>
-<li>$R(\tau)$：轨迹 $\tau$ 的总回报（Return）。</li>
-</ul>
-<div
-    class="alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-note) 10%, transparent);
-              border-left-color: var(--color-note);
-              --hover-bg: color-mix(in srgb, var(--color-note) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-2-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-2-title"
-          class="m-0 font-semibold text-foreground/90">
-          Note
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-2-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <p>为什么$R(\tau)$不受$\theta$影响？
-$R(τ)=∑_{t=0}^{T−1}​γ^{t}r(s_t​,a_t​)$ 因为一旦一条轨迹被确定下来，这条轨迹的回报R是由每个状态下的每个动作的得分之和决定的，又因为越远的动作影响对当前状态影响越小，所以要乘上一个衰减因子$\gamma$</p>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<p>我们只能改变神经网络里的参数 θ ,不能改变Reward，所以对 θ求梯度</p>
-<p>$$
-\nabla E(R(\tau))_{\tau \sim P_{\theta}(\tau)}
-$$</p>
-<p>$$ = \nabla \sum_{\tau} R(\tau) P_\theta(\tau)$$ $$= \sum_{\tau} R(\tau) \nabla P_\theta(\tau) \ $$$$= \sum_{\tau} R(\tau) \nabla P_\theta(\tau) \frac{P_\theta(\tau)}{P_\theta(\tau)} \ $$ $$
-= \sum_{\tau} P_\theta(\tau) R(\tau) \frac{\nabla P_\theta(\tau)}{P_\theta(\tau)}
-$$ $$\approx \frac{1}{N} \sum_{n=1}^N R(\tau^n) \frac{\nabla P_\theta(\tau^n)}{P_\theta(\tau^n)} $$</p>
-<div
-    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
-              border-left-color: var(--color-tip);
-              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-3-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-3-title"
-          class="m-0 font-semibold text-foreground/90">
-          Tip
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-3-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <p>$\tau^n$表示第n条轨迹（trajectory）;多次采样取平均</p>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<p>$$ = \frac{1}{N} \sum_{n=1}^N R(\tau^n) \nabla \log P_\theta(\tau^n) \ \ $$</p>
-<div
-    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
-              border-left-color: var(--color-tip);
-              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-4-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-4-title"
-          class="m-0 font-semibold text-foreground/90">
-          Tip
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-4-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <p>因为$\nabla \log f(x) = \frac{\nabla f(x)}{f(x)}$</p>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<p>$$= \frac{1}{N} \sum_{n=1}^N R(\tau^n) \nabla \log \prod_{t=1}^{T_n} P_\theta(a_n^t | s_n^t)$$</p>
-<div
-    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
-              border-left-color: var(--color-tip);
-              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-5-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-5-title"
-          class="m-0 font-semibold text-foreground/90">
-          Tip
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-5-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <p>这里是轨迹分解，因为对 $\theta$  求梯度只关注 $P_\theta$ ,就是前面基础知识中的 $\pi_\theta$,环境转移概率不包含 $\theta$ ,故当作常数，求梯度就没了</p>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<p>$$=\frac{1}{N} \sum_{n=1}^N R(\tau^n) \sum_{t=1}^{T_n} \nabla \log P_\theta(a_n^t | s_n^t)\ = \frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} R(\tau^n),\nabla \log P_\theta(a_n^t | s_n^t)$$</p>
-<p>到这里，我们求出了对于所有可能的Trajectory，期望的最大梯度，用个梯度去更新神经网络参数，就是 Policy gradient梯度策略算法</p>
-<h2 id="ppo原理-part2">PPO原理-part2</h2>
-<p>$$
-\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} R(\tau^n),\nabla \log P_\theta(a_n^t | s_n^t)
-$$
-刚刚我们得到的这个式子，很明显有两点可以改进</p>
-<ul>
-<li>应该看在$S_n$状态下采取动作$a_n$之后的Reward，而不是整个Trajectory（轨迹）的Reward，因为动作action只能影响后面的</li>
-<li>action是只会影响后面的动作，但是影响会逐步衰减</li>
-</ul>
-<p>由此我们修改Reward公式为$$R(\tau^n) \to \sum_{t&rsquo;=t}^{T_n} \gamma^{t&rsquo;-t}r_{t&rsquo;}^n = R_t^n$$ 表示从当前t时刻开始到最后的累积Reward， $\gamma$ 是衰减因子，表示离当前动作越远，在当前状态下采取当前动作的Reward越小，核心就是想突出当前状态下采取当前动作对于Reward的影响.</p>
-<p>另一个值得注意的点是<strong>局势</strong>也会影响算法的稳定性，比如说在好的局势下，采取什么动作都会得分（顺风局当赢的感觉），但是这样就偏离我们的初衷——我们想知道在某种状态下采取哪些动作更好，模型需要明确区分哪个动作“更好”</p>
-<p>因此我们希望让相对好的action的Reward得分增加，相对差的action的Reward减少，这样会加快训练速度。</p>
-<p>由此我们减去一个Baseline</p>
-<p>$$ \frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} \bigl(R_t^n - B(s_n^t)\bigr) \nabla \log P_\theta(a_n^t \mid s_n^t)$$</p>
-<h2 id="基础概念ii">基础概念II</h2>
-<p>强化学习中有几个重要的定义，可以简化上述式子</p>
-<p>$\textbf{Action-Value Function}(动作价值函数)$
-$Q_\theta(s,a) 在 state \ \ s 下，做出 Action \ \ a的回报的期望$</p>
-<p>$\textbf{State-Value Function} (状态价值函数)$
-$V_\theta(s) 在 state \ \ s 下，回报的期望$。</p>
-<p>$\textbf{Advantage Function}(优势函数)$
-$A_\theta(s,a) = Q_\theta(s,a) - V_\theta(s) \quad$
-$在 state \ \ s 下，做出 Action \ \ a，比其他动作能带来多少优势。$于是原式被转化为：
-$$\frac{1}{N} \sum_{n=1}^{N} \sum_{t=1}^{T_n}  A_\theta(s_n^t, a_n^t) \nabla \log P_\theta(a_n^t | s_n^t)$$
-现在我们得到了理论上表达式，但是如何表示实际采样的呢？</p>
-<p>一次采样：</p>
-<p>$Q_\theta(s_t, a) = r_t + \gamma \cdot V_\theta(s_{t+1})$</p>
-<p>$A_\theta(s_t, a) = r_t + \gamma \cdot V_\theta(s_{t+1}) - V_\theta(s_t)$</p>
-<p>$V_\theta(s_{t+1}) \approx r_{t+1} + \gamma \cdot V_\theta(s_{t+2})$</p>
-<div
-    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
-              border-left-color: var(--color-tip);
-              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-6-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-6-title"
-          class="m-0 font-semibold text-foreground/90">
-          Tip
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-6-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <p>上面我们分别对动作价值函数和状态价值函数进行了一次采样，对于动作价值函数Q来说，采用的 动作是固定的，因此可以用等号来表示，对于状态价值函数，采取的动作a还没有固定，因此用约等于表示一次采样</p>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<p>多次采样，虽然会增大方差，但是会减少偏差
-$$
-A_\theta^1(s_t, a) = r_t + \gamma V_\theta(s_{t+1}) - V_\theta(s_t)
-$$</p>
-<p>$$
-A_\theta^2(s_t, a) = r_t + \gamma r_{t+1} + \gamma^2 V_\theta(s_{t+2}) - V_\theta(s_t)
-$$</p>
-<p>$$
-A_\theta^3(s_t, a) = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + \gamma^3 V_\theta(s_{t+3}) - V_\theta(s_t)
-$$</p>
-<p>$$
-\vdots
-$$</p>
-<p>$$
-A_\theta^T(s_t, a) = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + \gamma^3 r_{t+3} + \cdots + \gamma^T r_T - V_\theta(s_t)
-$$
-定义新函数，简化表示
-$$
-\delta_t^V = r_t + \gamma V_\theta(s_{t+1}) - V_\theta(s_t)
-$$</p>
-<p>$$
-\delta_{t+1}^V = r_{t+1} + \gamma V_\theta(s_{t+2}) - V_\theta(s_{t+1})
-$$</p>
-<p>$$
-A_\theta^1(s_t, a) = \delta_t^V
-$$</p>
-<p>$$
-A_\theta^2(s_t, a) = \delta_t^V + \gamma \delta_{t+1}^V
-$$</p>
-<p>$$
-A_\theta^3(s_t, a) = \delta_t^V + \gamma \delta_{t+1}^V + \gamma^2 \delta_{t+2}^V
-$$</p>
-<p>$$
-\vdots
-$$
-所以算法（比如 GAE）会综合使用多个步长 k 的估计，构建出一个平衡版本（平衡方差和偏差）：
-多次采样，并乘上对应衰减权重
-$$
-A_\theta^{GAE}(s_t, a) = (1 - \lambda)\big(A_\theta^1 + \lambda A_\theta^2 + \lambda^2 A_\theta^3 + \cdots \big)
-$$</p>
-<p>$$
-\lambda = 0.9: \quad A_\theta^{GAE} = 0.1 A_\theta^1 + 0.09 A_\theta^2 + 0.081 A_\theta^3 + \cdots
-$$</p>
-<p>$$
-= (1 - \lambda)\big(\delta_t^V + \lambda(\delta_t^V + \gamma \delta_{t+1}^V) + \lambda^2(\delta_t^V + \gamma \delta_{t+1}^V + \gamma^2 \delta_{t+2}^V) + \cdots \big)
-$$</p>
-<p>$$
-= (1 - \lambda)\big(\delta_t^V(1 + \lambda + \lambda^2 + \cdots) + \gamma \delta_{t+1}^V (\lambda + \lambda^2 + \cdots) + \cdots \big)
-$$</p>
-<p>$$
-= (1 - \lambda)\big(\delta_t^V \tfrac{1}{1-\lambda} + \gamma \delta_{t+1}^V \tfrac{\lambda}{1-\lambda} + \cdots \big)
-$$</p>
-<p>$$
-= \sum_{b=0}^{\infty} (\gamma \lambda)^b , \delta_{t+b}^V
-$$
-最后得到这仨表达式
-$$\delta_t^V = r_t + \gamma V_\theta(s_{t+1}) - V_\theta(s_t)
-$$$$A_\theta^{GAE}(s_t, a) = \sum_{b=0}^{\infty} (\gamma \lambda)^b , \delta_{t+b}^V $$
-$$\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n}A_\theta^{GAE}(s_n^t, a_n^t) \nabla \log P_\theta(a_n^t \mid s_n^t)$$</p>
-<h2 id="ppo原理-part3">PPO原理-part3</h2>
-<p><figure><img src="../../images/ppo_2.png"
-    alt="前置基础" width="720">
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/dpo_full.png"
+    alt="dpo_full" width="720">
 </figure>
 
-通过运行模型来采集数据，这样就会导致采集数据时间过长，这也是ppo需要解决的问题,对于此我们采用重要性采样来解决</p>
-<h3 id="重要性采样">重要性采样</h3>
+<h2 id="kl-散度kullbackleibler-divergence">KL 散度（Kullback–Leibler Divergence）</h2>
 <p>$$
-\mathbb{E}(f(x))_{x \sim p(x)} = \sum_x f(x) p(x)
+KL(P | Q) = \sum_{x \in X} P(x) \log \frac{P(x)}{Q(x)}
 $$</p>
+<h3 id="含义">含义</h3>
+<p>P 分布相对于 Q 分布的相似程度。</p>
+<h3 id="性质">性质</h3>
+<ul>
+<li>KL 散度的值 <strong>大于等于 0</strong>。</li>
+<li>P 和 Q 越相似，KL 散度越接近 0。</li>
+<li>如果 P 和 Q 分布完全一致，则 <strong>KL 散度 = 0</strong>。</li>
+<li>注意：<br>
+$$
+KL(P | Q) \neq KL(Q | P)
+$$</li>
+</ul>
+<h3 id="kl-散度大于等于-0-的直观理解">KL 散度大于等于 0 的直观理解</h3>
+<p><strong>直观理解</strong>：KL 散度是一个非负数，因为我们在比较两个分布时，
+只有在完全一致时，它们之间的“差异”才为 0。</p>
 <p>$$
-= \sum_x f(x) p(x) \frac{q(x)}{q(x)}
+KL(P | Q) = \sum_{x \in X} P(x) \log \frac{P(x)}{Q(x)}
 $$</p>
+<h3 id="示例">示例</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">变量</th>
+          <th style="text-align: center">P(x)</th>
+          <th style="text-align: center">Q(x)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">x = 0</td>
+          <td style="text-align: center">0.2</td>
+          <td style="text-align: center">0.8</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">x = 1</td>
+          <td style="text-align: center">0.8</td>
+          <td style="text-align: center">0.2</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="计算过程">计算过程</h3>
 <p>$$
-= \sum_x f(x) \frac{p(x)}{q(x)} q(x)
+KL(P | Q) = 0.2 \times \log \frac{0.2}{0.8} + 0.8 \times \log \frac{0.8}{0.2}
 $$</p>
+<h3 id="直观理解">直观理解</h3>
+<ul>
+<li>KL 散度衡量 <strong>P 分布相对于 Q 分布的差异程度</strong>。</li>
+<li>由于对数函数的凸性，KL 散度始终 <strong>大于等于 0</strong>。</li>
+<li>当 P 和 Q 分布完全一致时，KL 散度 <strong>等于 0</strong>。</li>
+<li>若 P 与 Q 差异越大，KL 散度值越大。</li>
+</ul>
+<h2 id="bradleyterry-模型成对比较模型">Bradley–Terry 模型（成对比较模型）</h2>
+<h3 id="基本思想">基本思想</h3>
+<p>用于描述多个选手（或元素）之间的<strong>成对胜负概率</strong>。<br>
+假设每个元素 $i$ 都有一个“实力参数”  $\alpha_i &gt; 0$。</p>
+<p>定义：
+$$
+P(i &gt; j) = \frac{\alpha_i}{\alpha_i + \alpha_j}
+$$
+其中：</p>
+<ul>
+<li>$\alpha_i$：第 ( i ) 个元素的真实实力；</li>
+<li>$P(i &gt; j)$：第 $i$ 个元素战胜第 $j$ 个元素的概率。</li>
+</ul>
+<hr>
+<h3 id="对数似然函数maximum-likelihood-estimation">对数似然函数（Maximum Likelihood Estimation）</h3>
+<p>模型给出每次对战的概率：</p>
+<p>$$P(i&gt;j)= \frac{\alpha_i}{\alpha_i + \alpha_j}$$​​</p>
+<p>我们可以计算出“在当前参数 $\alpha$下，<strong>所有比赛结果同时发生的概率</strong>：
+$$
+L(\boldsymbol{\alpha}) = \prod_{\text{所有比赛}} P(\text{胜方} &gt; \text{负方})
+$$
+这就是所谓的 <strong>似然函数（Likelihood Function）</strong>。<br>
+它衡量了：</p>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>给定参数 $\alpha$，观测到这些比赛结果的可能性有多大”。</p>
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<p>根据观测数据构建似然函数并取对数：</p>
 <p>$$
-= \mathbb{E}!\left(f(x) \frac{p(x)}{q(x)}\right)_{x \sim q(x)}
+\ln L =
+8 \ln\left(\frac{\alpha_A}{\alpha_A + \alpha_B}\right)+ 4 \ln\left(\frac{\alpha_B}{\alpha_A + \alpha_B}\right)+ 3 \ln\left(\frac{\alpha_A}{\alpha_A + \alpha_C}\right)+ 5 \ln\left(\frac{\alpha_C}{\alpha_A + \alpha_C}\right)
 $$</p>
+<p>通过最大化对数似然，可以求得各选手的相对实力参数。</p>
+<hr>
+<h3 id="参数估计结果">参数估计结果</h3>
 <p>$$
-\approx \frac{1}{N} \sum_{n=1}^N f(x) \frac{p(x)}{q(x)}, \quad x \sim q(x)
-$$</p>
-<p>由此我们可以变换我们的公式，由On-Policy 转向Off-Policy</p>
+\alpha_A = 1, \quad
+\alpha_B = \frac{1}{2}, \quad
+\alpha_C = \frac{5}{3}
+$$
+指定$\alpha_A$ 的值，可的得到剩下两个的值</p>
+<h3 id="推导新的对战概率">推导新的对战概率</h3>
+<p>例如计算 ( P(B &gt; C) )：</p>
 <p>$$
-\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n}  A_{\theta}^{GAE}(s_n^t, a_n^t) \nabla \log P_\theta(a_n^t \mid s_n^t)
+P(B &gt; C) = \frac{\alpha_B}{\alpha_B + \alpha_C}
+= \frac{1/2}{1/2 + 5/3}
+\approx 0.23
 $$</p>
+<hr>
+<p><strong>直观理解：</strong></p>
+<ul>
+<li>模型通过比较胜负记录估计出每个选手的“潜在实力”；</li>
+<li>实力越大，战胜其他人的概率越高；</li>
+<li>可推广用于比赛预测、排序、推荐系统等任务。</li>
+</ul>
+<h2 id="一般的-loss-函数bradleyterry-模型">一般的 Loss 函数（Bradley–Terry 模型）</h2>
+<p>模型目标是最大化对数似然，对应的最小化损失函数（负对数似然）为：</p>
 <p>$$
-= \frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s_n^t, a_n^t) \frac{P_\theta(a_n^t \mid s_n^t)}{P_{\theta’}(a_n^t \mid s_n^t)} \nabla \log P_\theta(a_n^t \mid s_n^t)
+Loss = - \mathbb{E}_{(a_x, a_y) \sim D}
+\left[
+\ln \frac{a_x}{a_x + a_y}
+\right]
 $$</p>
+<h3 id="强化学习中的比较建模pairwise-preference-in-rlhf">强化学习中的比较建模（Pairwise Preference in RLHF）</h3>
+<p>在强化学习中：</p>
+<ul>
+<li>大模型的输入是 <strong>prompt</strong>，记作 $x$；</li>
+<li>模型的输出（回答）是 <strong>response</strong>，记作 $y$；</li>
+<li>回答 $y$ 的好坏（即“得分”或“实力”）由 <strong>Reward 模型</strong> $r(x, y)$ 进行评估。</li>
+</ul>
+<hr>
+<h3 id="比较两个回答的优劣概率">比较两个回答的优劣概率</h3>
+<p>对于同一个输入 $x$，有两个不同回答 $y_1$ 和 $y_2$。</p>
+<p>原始形式为：
+$$
+P(y_1 \succ y_2) = \frac{r(x, y_1)}{r(x, y_1) + r(x, y_2)}
+$$</p>
+<p>由于 $r(x, y)$ 可能返回负数，因此引入指数函数，使概率始终为正：</p>
 <p>$$
-= \frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s_n^t, a_n^t) \frac{\nabla P_\theta(a_n^t \mid s_n^t)}{P_{\theta’}(a_n^t \mid s_n^t)}
+P(y_1 \succ y_2) =
+\frac{\exp(r(x, y_1))}{\exp(r(x, y_1)) + \exp(r(x, y_2))}
 $$</p>
-<p>这里我们的做法是用旧策略(off-policy)的优势函数乘一个比例系数去模拟新的策略函数(on-policy)</p>
-<p>最后去掉梯度我们可以得到最终的loss函数（中间对$\theta$求梯度是为了消去不影响$theta$的状态转移概率）
-$$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s_n^t, a_n^t) \frac{P_\theta(a_n^t \mid s_n^t)}{P_{\theta’}(a_n^t \mid s_n^t)}$$
-注意：旧策略与新策略之间的分布不能差距过大，否则很难学到有用的经验</p>
-<p>可以采用KL散度进行约束或者clip函数（限定那个新旧两种策略之间的比例在1左右，不能相差过大）</p>
-<p>$$\text{Loss}_{ppo_1}  = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n}  A_{\theta&rsquo;}^{GAE}(s_n^t, a_n^t)  \frac{P_\theta(a_n^t \mid s_n^t)}{P_{\theta&rsquo;}(a_n^t \mid s_n^t)} + \beta , KL(P_\theta, P_{\theta&rsquo;})$$</p>
-<p>$$\text{Loss}_{ppo_2}  = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n}  \min \Bigg( A_{\theta&rsquo;}^{GAE}(s_n^t, a_n^t)  \frac{P_\theta(a_n^t \mid s_n^t)}{P_{\theta&rsquo;}(a_n^t \mid s_n^t)} , \text{clip}!\left( \frac{P_\theta(a_n^t \mid s_n^t)}{P_{\theta&rsquo;}(a_n^t \mid s_n^t)}, 1-\epsilon,1+\epsilon \right)  A_{\theta&rsquo;}^{GAE}(s_n^t, a_n^t) \Bigg)$$</p>
+<hr>
+<h3 id="说明">说明</h3>
+<ul>
+<li>$r(x, y)$：Reward 模型给出的得分（越大表示回答越好）；</li>
+<li>$P(y_1 \succ y_2)$：模型预测回答 $y_1$ 优于 $y_2$ 的概率；</li>
+<li>该形式本质上是 <strong>Bradley–Terry 模型</strong> 在强化学习（RLHF）中的应用。</li>
+</ul>
+<h4 id="偏好概率建模">偏好概率建模</h4>
+<p>对于同一输入 $x$，Reward 模型给出两个回答 $y_w$（获胜回答）和 $y_l$（失败回答）的得分：
+$$
+P(y_w \succ y_l) =
+\frac{\exp(r(x, y_w))}{\exp(r(x, y_w)) + \exp(r(x, y_l))}
+$$</p>
+<h4 id="sigmoid-形式表示">Sigmoid 形式表示</h4>
+<p>Sigmoid 函数定义为：
+$$
+\sigma(x) = \frac{1}{1 + \exp(-x)}
+$$</p>
+<h4 id="损失函数loss-function">损失函数（Loss Function）</h4>
+<p>Reward 模型的目标是最小化负对数似然（Negative Log-Likelihood）：</p>
+<p>$$
+Loss = -\mathbb{E}_{(x, y_w, y_l) \sim D}
+\left[
+\ln
+\frac{\exp(r(x, y_w))}{\exp(r(x, y_w)) + \exp(r(x, y_l))}
+\right]
+$$</p>
+<p>等价地：</p>
+<p>$$
+Loss = - \mathbb{E}_{(x, y_w, y_l) \sim D}
+\left[
+\ln
+\frac{1}{1 + \exp(r(x, y_l) - r(x, y_w))}
+\right]
+$$</p>
+<p>最终可写为简洁的 <strong>Sigmoid 形式</strong>：
+$$
+Loss = - \mathbb{E}_{(x, y_w, y_l) \sim D}
+\left[
+\ln \sigma(r(x, y_w) - r(x, y_l))
+\right]
+$$</p>
+<h3 id="dpo-的训练目标direct-preference-optimization">DPO 的训练目标（Direct Preference Optimization）</h3>
+<h4 id="基本定义">基本定义</h4>
+<ul>
+<li>奖励函数：$r(x, y)$，其中 $x$ 为 <strong>prompt</strong>，$y$ 为 <strong>response</strong></li>
+<li>基准模型（reference model）：$\pi_{\text{ref}}(y|x)$</li>
+<li>训练模型（policy model）：$\pi(y|x)$</li>
+</ul>
+<p>DPO 的目标是在获得高奖励的同时，使新模型不偏离参考模型：</p>
+<p>$$
+\max_{\pi} \; \mathbb{E}_{x\sim D, y\sim \pi(y|x)}[r(x,y)]
+-\beta \mathbb{D}_{\mathrm{KL}}\big(\pi(y|x)|\pi_{\mathrm{ref}}(y|x)\big)
+$$</p>
+<ul>
+<li>第一项：希望得到尽可能多的奖励；</li>
+<li>第二项：限制新模型与基准模型的分布差距；</li>
+<li>$\beta$：超参数，用于平衡两者。</li>
+</ul>
+<h3 id="目标函数的等价形式推导">目标函数的等价形式推导</h3>
+<p>将 KL 散度展开：</p>
+<p>$$
+\max_{\pi} \mathbb{E}_{x, y \sim \pi}
+[r(x, y)] - \beta , \mathbb{E}_{x, y \sim \pi}
+\left[\log \frac{\pi(y|x)}{\pi_{\text{ref}}(y|x)} \right]
+$$</p>
+<p>等价地（加负号取最小值且两项同时除以$\beta$）：</p>
+<p>$$
+\min_{\pi} \mathbb{E}_{x, y \sim \pi}
+\left[\log \frac{\pi(y|x)}{\pi_{\text{ref}}(y|x)} - \frac{1}{\beta} r(x, y)\right]
+$$</p>
+<p>将减法项写成对数形式</p>
+<p>$$
+= \min_{\pi} ;
+\mathbb{E}_{x, y \sim \pi}
+\left[
+\log \frac{\pi(y|x)}{\pi_{\text{ref}}(y|x)} -
+\log \exp!\left(\frac{1}{\beta} r(x, y)\right)
+\right]
+$$
+合并为单个对数项</p>
+<p>$$
+= \min_{\pi} ;
+\mathbb{E}_{x, y \sim \pi}
+\left[
+\log
+\frac{\pi(y|x)}
+{\pi_{\text{ref}}(y|x) \exp!\left(\frac{1}{\beta} r(x, y)\right)}
+\right]
+$$</p>
+<p>引入归一化常数 $Z(x)$</p>
+<p>$$
+= \min_{\pi} ;
+\mathbb{E}_{x, y \sim \pi}
+\left[
+\log
+\frac{\pi(y|x)}
+{\pi_{\text{ref}}(y|x) \exp!\left(\frac{1}{\beta} r(x, y)\right) \frac{1}{Z(x)} Z(x)}
+\right]
+$$</p>
+<p>拆出常数项</p>
+<p>$$
+=\min_{\pi} ;
+\mathbb{E}_{x, y \sim \pi}
+\left[
+\log
+\frac{\pi(y|x)}{\frac{1}{Z(x)} \pi_{\text{ref}}(y|x)
+\exp!\left(\frac{1}{\beta} r(x, y)\right)}
+-\log Z(x)
+\right]
+$$</p>
+<h3 id="求解最优策略分布">求解最优策略分布</h3>
+<p>定义：</p>
+<p>$$
+\pi^*(y|x) =
+\frac{1}{Z(x)} , \pi_{\text{ref}}(y|x)
+\exp!\left(\frac{1}{\beta} r(x, y)\right)
+$$</p>
+<p>其中：</p>
+<p>$$
+Z(x) = \sum_y \pi_{\text{ref}}(y|x)
+\exp!\left(\frac{1}{\beta} r(x, y)\right)
+$$</p>
+<p>表示归一化常数，是我们自己定义的，这么定义的原因是为了能和后面的式子消去，简化式子。</p>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p><strong>解释</strong>：最优策略 $\pi^*(y|x)$ 是在参考模型分布上，通过奖励函数加权后的归一化分布。</p>
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<p>代入 $\pi^*(y|x)$，目标可写为：</p>
+<p>$$
+\min_{\pi} \mathbb{E}_{x \sim D}
+\left[ D_{KL}(\pi(y|x) | \pi^*(y|x)) \right]
+$$</p>
+<p>因此最优时：
+$$
+\pi(y|x)
+= \pi^*(y|x)
+= \frac{1}{Z(x)} \pi_{\text{ref}}(y|x)
+\exp\left(\frac{1}{\beta} r(x, y)\right)
+$$</p>
+<h3 id="奖励函数反求形式">奖励函数反求形式</h3>
+<p>由上式反推奖励：
+由 DPO 的最优策略定义：</p>
+<p>$$
+\pi^*(y|x)
+= \frac{1}{Z(x)} \pi_{\text{ref}}(y|x)
+\exp  \left(\frac{1}{\beta} r(x, y)\right)
+$$</p>
+<p>可得：</p>
+<p>$$
+\exp\left(\frac{1}{\beta} r(x, y)\right)
+= \frac{\pi(y|x)}{\pi_{\text{ref}}(y|x)} Z(x)
+$$</p>
+<p>两边取对数并乘以 $\beta$，得到：</p>
+<p>$$
+r(x, y)
+= \beta \ln!\left(
+\frac{\pi(y|x)}{\pi_{\text{ref}}(y|x)} Z(x)
+\right)
+$$
+即：</p>
+<p>$$
+r(x, y)
+= \beta \ln \frac{\pi(y|x)}{\pi_{\text{ref}}(y|x)} + \beta \ln Z(x)
+$$</p>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>解释：<br>
+奖励函数可以理解为模型输出相对参考模型的“对数优势”。
+它衡量了当前模型相对参考模型在特定回答上的改进幅度</p>
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<h3 id="与偏好建模的联系">与偏好建模的联系</h3>
+<p>在成对偏好比较中，假设有更优回答 $y_w$ 与较差回答 $y_l$，则：</p>
+<p>$$
+-\ln \sigma(r(x, y_w) - r(x, y_l))
+= - \ln \sigma!\left(
+\beta \ln \frac{\pi(y_w|x)}{\pi_{\text{ref}}(y_w|x)} -
+\beta \ln \frac{\pi(y_l|x)}{\pi_{\text{ref}}(y_l|x)}
+\right)
+$$</p>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>这表明 DPO 的优化目标实际上是将 <strong>Reward 模型的比较学习</strong>
+转换为对 <strong>策略分布比值</strong> 的直接优化。</p>
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<h3 id="总结">总结</h3>
+<p>DPO的核心洞察在于原始强化学习问题存在解析最优解，表明最优策略与奖励函数存在一一映射关系。DPO将此关系反解后代入Bradley-Terry偏好模型，将对奖励函数的似然最大化，等价地转化为直接对策略的似然最大化。因此，优化DPO损失函数即是在直接寻找那个能同时最大化人类偏好概率且满足最优解形式的策略，避免了先用偏好数据拟合奖励模型再进行强化学习过程寻找最优策略</p>
 
   </article>
 
@@ -1887,7 +1690,7 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
       <div class="nav-item">
         
           <a
-            href="../../posts/test-alert/"
+            href="https://mydocts.github.io/jiatong.github.io/posts/custom-url/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
             <div>
               <div class="mb-3 flex items-center gap-3">
@@ -1904,7 +1707,7 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
 
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200">
-                GitHub Style Alert Test
+                LLM-RL-PPO
               </h3>
             </div>
 
@@ -1916,8 +1719,8 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
-              <time datetime="2025-06-01">
-                Jun 01
+              <time datetime="2025-08-23">
+                Aug 23
               </time>
             </div>
           </a>
@@ -1928,7 +1731,7 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
       <div class="nav-item">
         
           <a
-            href="../../posts/custom-url/"
+            href="https://mydocts.github.io/jiatong.github.io/posts/grid/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
             <div>
               <div class="mb-3 flex items-center justify-end gap-3">
@@ -1945,14 +1748,14 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
 
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200">
-                LLM-RL-DPO
+                GRID
               </h3>
             </div>
 
             <div
               class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
-              <time datetime="2025-09-23">
-                Sep 23
+              <time datetime="2025-10-01">
+                Oct 01
               </time>
               
   <svg class="h-3 w-3"
@@ -1979,6 +1782,36 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
 
 
 
+  <section class="related-posts mb-12">
+    
+    <div class="mb-6 flex items-center gap-3">
+      
+  <svg class="h-5 w-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+</svg>
+      <h2 class="text-foreground text-2xl font-bold">
+        Related Posts
+      </h2>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      
+        <article class="group">
+          <a href="https://mydocts.github.io/jiatong.github.io/posts/custom-url/" class="block">
+            <div class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none min-h-[120px]">
+              <h3 class="text-foreground group-hover:text-primary text-lg font-semibold leading-snug line-clamp-3 w-full">
+                LLM-RL-PPO
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+    </div>
+  </section>
+
 
 
   
@@ -2002,7 +1835,7 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
               
             
             <a
-              href="../../about/"
+              href="https://mydocts.github.io/jiatong.github.io/about/"
               
               class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
               
@@ -2052,7 +1885,7 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
             
             
             <a
-              href="../../index.xml"
+              href="https://mydocts.github.io/jiatong.github.io/index.xml"
               
               class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
               
@@ -2402,13 +2235,45 @@ $$\text{Loss} = -\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A_{\theta’}^{GAE}(s
           <div id="toc-content">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#基础概念i">基础概念I</a></li>
-    <li><a href="#ppo原理-part1">PPO原理-part1</a></li>
-    <li><a href="#ppo原理-part2">PPO原理-part2</a></li>
-    <li><a href="#基础概念ii">基础概念II</a></li>
-    <li><a href="#ppo原理-part3">PPO原理-part3</a>
+    <li><a href="#kl-散度kullbackleibler-divergence">KL 散度（Kullback–Leibler Divergence）</a>
       <ul>
-        <li><a href="#重要性采样">重要性采样</a></li>
+        <li><a href="#含义">含义</a></li>
+        <li><a href="#性质">性质</a></li>
+        <li><a href="#kl-散度大于等于-0-的直观理解">KL 散度大于等于 0 的直观理解</a></li>
+        <li><a href="#示例">示例</a></li>
+        <li><a href="#计算过程">计算过程</a></li>
+        <li><a href="#直观理解">直观理解</a></li>
+      </ul>
+    </li>
+    <li><a href="#bradleyterry-模型成对比较模型">Bradley–Terry 模型（成对比较模型）</a>
+      <ul>
+        <li><a href="#基本思想">基本思想</a></li>
+        <li><a href="#对数似然函数maximum-likelihood-estimation">对数似然函数（Maximum Likelihood Estimation）</a></li>
+        <li><a href="#参数估计结果">参数估计结果</a></li>
+        <li><a href="#推导新的对战概率">推导新的对战概率</a></li>
+      </ul>
+    </li>
+    <li><a href="#一般的-loss-函数bradleyterry-模型">一般的 Loss 函数（Bradley–Terry 模型）</a>
+      <ul>
+        <li><a href="#强化学习中的比较建模pairwise-preference-in-rlhf">强化学习中的比较建模（Pairwise Preference in RLHF）</a></li>
+        <li><a href="#比较两个回答的优劣概率">比较两个回答的优劣概率</a></li>
+        <li><a href="#说明">说明</a>
+          <ul>
+            <li><a href="#偏好概率建模">偏好概率建模</a></li>
+            <li><a href="#sigmoid-形式表示">Sigmoid 形式表示</a></li>
+            <li><a href="#损失函数loss-function">损失函数（Loss Function）</a></li>
+          </ul>
+        </li>
+        <li><a href="#dpo-的训练目标direct-preference-optimization">DPO 的训练目标（Direct Preference Optimization）</a>
+          <ul>
+            <li><a href="#基本定义">基本定义</a></li>
+          </ul>
+        </li>
+        <li><a href="#目标函数的等价形式推导">目标函数的等价形式推导</a></li>
+        <li><a href="#求解最优策略分布">求解最优策略分布</a></li>
+        <li><a href="#奖励函数反求形式">奖励函数反求形式</a></li>
+        <li><a href="#与偏好建模的联系">与偏好建模的联系</a></li>
+        <li><a href="#总结">总结</a></li>
       </ul>
     </li>
   </ul>
