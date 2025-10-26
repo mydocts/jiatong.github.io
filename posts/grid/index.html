@@ -11,9 +11,7 @@
 
 <title>GRID | Jiatong Blog</title>
 
-<meta name="description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。
-1.前言 GR 利用生成模型的进步，实现两种主要方式：
-直接生成用户感兴趣物品的文本内容 或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识，本文中的..." />
+<meta name="description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。" />
 <meta name="keywords" content="生成式推荐" />
 <meta name="author" content="Hugo Narrow" />
 <meta name="language" content="en-US" />
@@ -31,9 +29,7 @@
 <meta property="og:url" content="https://mydocts.github.io/jiatong.github.io/posts/grid/">
   <meta property="og:site_name" content="Jiatong Blog">
   <meta property="og:title" content="GRID">
-  <meta property="og:description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。
-1.前言 GR 利用生成模型的进步，实现两种主要方式：
-直接生成用户感兴趣物品的文本内容 或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识，本文中的模型是后者。 2.语义ID（Semantic IDs） 2.1语义ID是什么 促成 GR（Generative Recommender） 成功的关键因素之一是 语义 ID（SID, Semantic ID）。它将连续的语义表示（例如来自大型语言模型的向量表示）转换为离散的 ID 序列。 2.2传统ID与语义ID对比 传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号 语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。 当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的语义相似性；同时，下一步的监督学习（next-item supervision）使模型能够学习跨 SID 的协同过滤信号 2.3怎么得到语义ID 首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示； 然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。 常见的基于量化的标记器包括： RQ-VAE ，RVQ ，Residual K-Means 。 2.4如何将语义ID用于生成式推荐 TIGER 首次将 Transformer 应用于推荐任务， 用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：">
+  <meta property="og:description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -46,18 +42,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
   <meta name="twitter:title" content="GRID">
-  <meta name="twitter:description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。
-1.前言 GR 利用生成模型的进步，实现两种主要方式：
-直接生成用户感兴趣物品的文本内容 或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识，本文中的模型是后者。 2.语义ID（Semantic IDs） 2.1语义ID是什么 促成 GR（Generative Recommender） 成功的关键因素之一是 语义 ID（SID, Semantic ID）。它将连续的语义表示（例如来自大型语言模型的向量表示）转换为离散的 ID 序列。 2.2传统ID与语义ID对比 传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号 语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。 当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的语义相似性；同时，下一步的监督学习（next-item supervision）使模型能够学习跨 SID 的协同过滤信号 2.3怎么得到语义ID 首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示； 然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。 常见的基于量化的标记器包括： RQ-VAE ，RVQ ，Residual K-Means 。 2.4如何将语义ID用于生成式推荐 TIGER 首次将 Transformer 应用于推荐任务， 用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：">
+  <meta name="twitter:description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。">
 
 
   <meta itemprop="name" content="GRID">
-  <meta itemprop="description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。
-1.前言 GR 利用生成模型的进步，实现两种主要方式：
-直接生成用户感兴趣物品的文本内容 或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识，本文中的模型是后者。 2.语义ID（Semantic IDs） 2.1语义ID是什么 促成 GR（Generative Recommender） 成功的关键因素之一是 语义 ID（SID, Semantic ID）。它将连续的语义表示（例如来自大型语言模型的向量表示）转换为离散的 ID 序列。 2.2传统ID与语义ID对比 传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号 语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。 当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的语义相似性；同时，下一步的监督学习（next-item supervision）使模型能够学习跨 SID 的协同过滤信号 2.3怎么得到语义ID 首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示； 然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。 常见的基于量化的标记器包括： RQ-VAE ，RVQ ，Residual K-Means 。 2.4如何将语义ID用于生成式推荐 TIGER 首次将 Transformer 应用于推荐任务， 用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：">
+  <meta itemprop="description" content="GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。">
   <meta itemprop="datePublished" content="2025-10-01T10:00:00+08:00">
   <meta itemprop="dateModified" content="2025-10-01T10:00:00+08:00">
-  <meta itemprop="wordCount" content="3331">
+  <meta itemprop="wordCount" content="3296">
   <meta itemprop="image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
   <meta itemprop="keywords" content="生成式推荐">
 
@@ -1075,7 +1067,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>3331 words</span>
+          <span>3296 words</span>
         </div>
       
 
@@ -1151,8 +1143,7 @@
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <p><strong>GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。</strong></p>
-<h2 id="1前言">1.前言</h2>
+    <h2 id="1前言">1.前言</h2>
 <p>GR 利用生成模型的进步，实现两种主要方式：</p>
 <ul>
 <li>直接生成用户感兴趣物品的文本内容</li>
@@ -1465,7 +1456,7 @@ GRID 还内置了多种技巧，比如：</p>
       <div class="nav-item">
         
           <a
-            href="https://mydocts.github.io/jiatong.github.io/posts/custom-url/"
+            href="https://mydocts.github.io/jiatong.github.io/posts/dpo/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
             <div>
               <div class="mb-3 flex items-center gap-3">
@@ -1505,23 +1496,41 @@ GRID 还内置了多种技巧，比如：</p>
       
       <div class="nav-item">
         
-          <div
-            class="bg-muted/30 border-border/50 flex min-h-[140px] flex-col justify-center rounded-xl border p-6">
-            <div class="mb-3 flex items-center justify-end gap-3">
-              <span class="text-muted-foreground/50 text-sm font-medium">
-                No next post
-              </span>
-              
+          <a
+            href="https://mydocts.github.io/jiatong.github.io/posts/grpo/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
+            <div>
+              <div class="mb-3 flex items-center justify-end gap-3">
+                <span class="text-muted-foreground text-sm font-medium">
+                  Next
+                </span>
+                
   <svg class="h-4 w-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 </svg>
+              </div>
+
+              <h3
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200">
+                LLM-RL-GRPO
+              </h3>
             </div>
-            <p class="text-muted-foreground/50 text-right text-sm">
-              This is the latest post
-            </p>
-          </div>
+
+            <div
+              class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
+              <time datetime="2025-10-14">
+                Oct 14
+              </time>
+              
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+            </div>
+          </a>
         
       </div>
     </div>

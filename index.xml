@@ -6,27 +6,55 @@
     <description>Recent content in Home on Jiatong Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 01 Oct 2025 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mydocts.github.io/jiatong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GenRecsys</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/tigger/</link>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/tigger/</guid>
+      <description>&lt;p&gt;![[Pasted image 20251024184731.png]]&lt;/p&gt;&#xA;&lt;p&gt;输入特征-文本嵌入-隐藏层（RNN，深度学习网络），得到更精准的预测表征-预测层（通过查询与物品的相似性度量，点击，对相关物品进行排序，得到预测）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HSTU</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/hstu/</link>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/hstu/</guid>
+      <description>&lt;h2 id=&#34;dlrm深度学习推荐系统&#34;&gt;DLRM（深度学习推荐系统）：&lt;/h2&gt;&#xA;&lt;p&gt;一个经典的，标准的，符合工业界趋势的深度学习推荐系统模型应该如何构建？&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bottom MLP：处理连续数值特征。&lt;/li&gt;&#xA;&lt;li&gt;EmbeddingLookup：将离散类别特征映射到向量空间。&lt;/li&gt;&#xA;&lt;li&gt;Feature Interaction Layer: 融合 dense 与 sparse 特征。&lt;/li&gt;&#xA;&lt;li&gt;Top MLP：进行最终预测（如点击率）。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;DLRM 成为推荐系统工业界（如 Meta、Tencent、ByteDance）广泛采用的标准架构之一，因为它兼顾：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TIGER &amp; Semantic ID</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/tiger/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/tiger/</guid>
+      <description>&lt;h1 id=&#34;tiger&#34;&gt;TIGER&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;推荐系统深度学习基本流程&#34;&gt;推荐系统深度学习基本流程&lt;/h2&gt;&#xA;&lt;p&gt;现有深度学习架构：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;输入特征 → 文本嵌入 → 隐藏层（RNN，深度学习网络）&lt;br&gt;&#xA;得到更精准的预测表征 → 预测层（通过查询与物品的相似性度量、点击，对相关物品进行排序，得到预测）&lt;/li&gt;&#xA;&lt;li&gt;检索 / 召回一系列可行的候选对象，然后用排序模型对其进行排序。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;检索阶段&#34;&gt;检索阶段&lt;/h3&gt;&#xA;&lt;p&gt;通过矩阵分解，在同一空间学习查询和候选的嵌入。&lt;br&gt;&#xA;为了更好地捕获数据中的非线性关系，近年来采用 &lt;strong&gt;内积查询和候选嵌入到同一空间的双塔编码架构&lt;/strong&gt;（一个塔用于查询(用户)，另一个塔用于候选(物品)）成为主流。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LLM-RL-GRPO</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/grpo/</link>
+      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/grpo/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;GRPO是针对LLM的一种改进PPO算法&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;回顾&#34;&gt;回顾：&lt;/h1&gt;&#xA;&lt;h2 id=&#34;policy-gradient&#34;&gt;Policy Gradient&lt;/h2&gt;&#xA;&lt;p&gt;$$&#xA;\nabla_\theta J(\theta)&#xA;\approx&#xA;\frac{1}{N}&#xA;\sum_{n=1}^{N}&#xA;\sum_{t=1}^{T_n}&#xA;R(\tau^{(n)})&#xA;\nabla_\theta&#xA;\log P_\theta(a_t^{(n)} \mid s_t^{(n)})&#xA;$$&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;符号解释&#34;&gt;符号解释&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;符号&lt;/th&gt;&#xA;          &lt;th&gt;含义&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$\nabla_\theta J(\theta)$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;目标函数（期望回报）关于参数$\theta$的梯度&lt;/strong&gt;，即策略更新的方向。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$N$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;采样的轨迹数量（episodes）&lt;/strong&gt;，即从环境中采样的完整回合数。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$T_n$&lt;/td&gt;&#xA;          &lt;td&gt;第$n$条轨迹的时间步数（episode的长度）。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$\tau^{(n)}$&lt;/td&gt;&#xA;          &lt;td&gt;第$n$条&lt;strong&gt;轨迹（trajectory）&lt;/strong&gt;：&lt;br&gt; $\tau^{(n)} = (s_1^{(n)}, a_1^{(n)}, r_1^{(n)}, \dots, s_{T_n}^{(n)}, a_{T_n}^{(n)}, r_{T_n}^{(n)})$。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$R(\tau^{(n)})$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;整条轨迹的总回报（return）&lt;/strong&gt;，通常为折扣累计奖励：&lt;br&gt; $R(\tau^{(n)}) = \sum_{t=1}^{T_n}\gamma^{t-1}r_t^{(n)}$。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$\nabla_\theta \log P_\theta(a_t^{(n)}\mid s_t^{(n)})$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;策略梯度项&lt;/strong&gt;，表示策略在状态$s_t^{(n)}$下选择动作$a_t^{(n)}$的对数概率的梯度，用于指导参数更新。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$P_\theta(a_t^{(n)}\mid s_t^{(n)})$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;参数化策略（policy）&lt;/strong&gt;，给定状态$s_t^{(n)}$时采取动作$a_t^{(n)}$的概率，由参数$\theta$控制。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;直观理解&lt;/strong&gt;&lt;br&gt;&#xA;这个公式的含义是：如果一条轨迹带来的总奖励$R(\tau)$很高，那么模型应该调整参数$\theta$，让在这条轨迹中采取的动作$a_t$的概率更高；反之则降低这些动作的概率。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>GRID</title>
       <link>https://mydocts.github.io/jiatong.github.io/posts/grid/</link>
       <pubDate>Wed, 01 Oct 2025 10:00:00 +0800</pubDate>
       <guid>https://mydocts.github.io/jiatong.github.io/posts/grid/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;GRID —— 一个易于使用、灵活高效的开源平台，用于快速原型化基于 SID 的 GR 方法。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1前言&#34;&gt;1.前言&lt;/h2&gt;&#xA;&lt;p&gt;GR 利用生成模型的进步，实现两种主要方式：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;直接生成用户感兴趣物品的文本内容&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识&lt;/strong&gt;，本文中的模型是后者。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2语义idsemantic-ids&#34;&gt;2.语义ID（Semantic IDs）&lt;/h2&gt;&#xA;&lt;h3 id=&#34;21语义id是什么&#34;&gt;2.1语义ID是什么&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;促成 &lt;strong&gt;GR（Generative Recommender）&lt;/strong&gt; 成功的关键因素之一是 &lt;strong&gt;语义 ID（SID, Semantic ID）&lt;/strong&gt;。它将连续的语义表示（例如来自大型语言模型的向量表示）&lt;strong&gt;转换为离散的 ID 序列&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;22传统id与语义id对比&#34;&gt;2.2传统ID与语义ID对比&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号&lt;/li&gt;&#xA;&lt;li&gt;语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。&lt;/li&gt;&#xA;&lt;li&gt;当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的&lt;strong&gt;语义相似性&lt;/strong&gt;；同时，下一步的监督学习（next-item supervision）使模型能够学习&lt;strong&gt;跨 SID 的协同过滤信号&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;23怎么得到语义id&#34;&gt;2.3怎么得到语义ID&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示；&lt;/li&gt;&#xA;&lt;li&gt;然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。&lt;/li&gt;&#xA;&lt;li&gt;常见的基于量化的标记器包括：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;RQ-VAE&lt;/strong&gt; ，&lt;strong&gt;RVQ&lt;/strong&gt; ，&lt;strong&gt;Residual K-Means&lt;/strong&gt; 。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;24如何将语义id用于生成式推荐&#34;&gt;2.4如何将语义ID用于生成式推荐&lt;/h3&gt;&#xA;&lt;p&gt;TIGER 首次将 Transformer 应用于推荐任务，&#xA;用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;1前言&#34;&gt;1.前言&lt;/h2&gt;&#xA;&lt;p&gt;GR 利用生成模型的进步，实现两种主要方式：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;直接生成用户感兴趣物品的文本内容&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识&lt;/strong&gt;，本文中的模型是后者。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2语义idsemantic-ids&#34;&gt;2.语义ID（Semantic IDs）&lt;/h2&gt;&#xA;&lt;h3 id=&#34;21语义id是什么&#34;&gt;2.1语义ID是什么&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;促成 &lt;strong&gt;GR（Generative Recommender）&lt;/strong&gt; 成功的关键因素之一是 &lt;strong&gt;语义 ID（SID, Semantic ID）&lt;/strong&gt;。它将连续的语义表示（例如来自大型语言模型的向量表示）&lt;strong&gt;转换为离散的 ID 序列&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;22传统id与语义id对比&#34;&gt;2.2传统ID与语义ID对比&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号&lt;/li&gt;&#xA;&lt;li&gt;语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。&lt;/li&gt;&#xA;&lt;li&gt;当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的&lt;strong&gt;语义相似性&lt;/strong&gt;；同时，下一步的监督学习（next-item supervision）使模型能够学习&lt;strong&gt;跨 SID 的协同过滤信号&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;23怎么得到语义id&#34;&gt;2.3怎么得到语义ID&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示；&lt;/li&gt;&#xA;&lt;li&gt;然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。&lt;/li&gt;&#xA;&lt;li&gt;常见的基于量化的标记器包括：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;RQ-VAE&lt;/strong&gt; ，&lt;strong&gt;RVQ&lt;/strong&gt; ，&lt;strong&gt;Residual K-Means&lt;/strong&gt; 。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;24如何将语义id用于生成式推荐&#34;&gt;2.4如何将语义ID用于生成式推荐&lt;/h3&gt;&#xA;&lt;p&gt;TIGER 首次将 Transformer 应用于推荐任务，&#xA;用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLM-RL-DPO</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/custom-url/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/dpo/</link>
       <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/custom-url/</guid>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/dpo/</guid>
       <description>&lt;figure&gt;&lt;img src=&#34;https://mydocts.github.io/jiatong.github.io/images/ppo_full.png&#34;&#xA;    alt=&#34;ppo&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;https://mydocts.github.io/jiatong.github.io/images/dpo_full.png&#34;&#xA;    alt=&#34;dpo_full&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;kl-散度kullbackleibler-divergence&#34;&gt;KL 散度（Kullback–Leibler Divergence）&lt;/h2&gt;&#xA;&lt;p&gt;$$&#xA;KL(P | Q) = \sum_{x \in X} P(x) \log \frac{P(x)}{Q(x)}&#xA;$$&lt;/p&gt;&#xA;&lt;h3 id=&#34;含义&#34;&gt;含义&lt;/h3&gt;&#xA;&lt;p&gt;P 分布相对于 Q 分布的相似程度。&lt;/p&gt;&#xA;&lt;h3 id=&#34;性质&#34;&gt;性质&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;KL 散度的值 &lt;strong&gt;大于等于 0&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;P 和 Q 越相似，KL 散度越接近 0。&lt;/li&gt;&#xA;&lt;li&gt;如果 P 和 Q 分布完全一致，则 &lt;strong&gt;KL 散度 = 0&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;注意：&lt;br&gt;&#xA;$$&#xA;KL(P | Q) \neq KL(Q | P)&#xA;$$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;kl-散度大于等于-0-的直观理解&#34;&gt;KL 散度大于等于 0 的直观理解&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;直观理解&lt;/strong&gt;：KL 散度是一个非负数，因为我们在比较两个分布时，&#xA;只有在完全一致时，它们之间的“差异”才为 0。&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLM-RL-PPO</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/custom-url/</link>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/ppo/</link>
       <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/custom-url/</guid>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/ppo/</guid>
       <description>&lt;figure&gt;&lt;img src=&#34;https://mydocts.github.io/jiatong.github.io/images/ppo_1.png&#34;&#xA;    alt=&#34;前置基础&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;基础概念i&#34;&gt;基础概念I&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果你不熟悉强化学习，学习ppo了解这些基础知识就足够了&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Action Space&lt;/strong&gt;: 可选择的动作，比如 {left, up, right}&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Policy&lt;/strong&gt;: 策略函数，输入 State，输出 Action 的概率分布。一般用 π 表示。&lt;/p&gt;</description>
     </item>
     <item>
