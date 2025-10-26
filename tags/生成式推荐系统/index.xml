@@ -9,13 +9,6 @@
     <lastBuildDate>Fri, 24 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mydocts.github.io/jiatong.github.io/tags/%E7%94%9F%E6%88%90%E5%BC%8F%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GenRecsys</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/tigger/</link>
-      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/tigger/</guid>
-      <description>&lt;p&gt;![[Pasted image 20251024184731.png]]&lt;/p&gt;&#xA;&lt;p&gt;输入特征-文本嵌入-隐藏层（RNN，深度学习网络），得到更精准的预测表征-预测层（通过查询与物品的相似性度量，点击，对相关物品进行排序，得到预测）&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>HSTU</title>
       <link>https://mydocts.github.io/jiatong.github.io/posts/hstu/</link>
       <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
