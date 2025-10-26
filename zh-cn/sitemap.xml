@@ -2,32 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/categories/</loc>
-    <lastmod>2024-01-17T10:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://mydocts.github.io/jiatong.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://mydocts.github.io/jiatong.github.io/zh-cn/categories/"
-                />
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/posts/katex-mermaid-test/</loc>
-    <lastmod>2024-01-17T10:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://mydocts.github.io/jiatong.github.io/posts/katex-and-mermaid-test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://mydocts.github.io/jiatong.github.io/zh-cn/posts/katex-mermaid-test/"
-                />
-  </url><url>
     <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/posts/</loc>
     <lastmod>2024-01-17T10:00:00+08:00</lastmod>
     <xhtml:link
@@ -40,85 +14,6 @@
                 hreflang="zh-CN"
                 href="https://mydocts.github.io/jiatong.github.io/zh-cn/posts/"
                 />
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/</loc>
-    <lastmod>2024-01-17T10:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://mydocts.github.io/jiatong.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://mydocts.github.io/jiatong.github.io/zh-cn/tags/"
-                />
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2024-01-17T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/categories/%E6%95%B0%E5%AD%A6%E5%9B%BE%E8%A1%A8/</loc>
-    <lastmod>2024-01-17T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2024-01-16T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2024-01-16T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/categories/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</loc>
-    <lastmod>2024-01-16T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/posts/code-highlighting-test/</loc>
-    <lastmod>2024-01-16T10:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://mydocts.github.io/jiatong.github.io/posts/code-highlighting-test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://mydocts.github.io/jiatong.github.io/zh-cn/posts/code-highlighting-test/"
-                />
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE/</loc>
-    <lastmod>2024-01-16T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/markdown/</loc>
-    <lastmod>2024-01-15T10:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://mydocts.github.io/jiatong.github.io/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://mydocts.github.io/jiatong.github.io/zh-cn/tags/markdown/"
-                />
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/posts/markdown-%E8%AF%AD%E6%B3%95%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</loc>
-    <lastmod>2024-01-15T10:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://mydocts.github.io/jiatong.github.io/posts/markdown-syntax-test-document/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://mydocts.github.io/jiatong.github.io/zh-cn/posts/markdown-%E8%AF%AD%E6%B3%95%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/"
-                />
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2024-01-15T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/%E6%96%87%E6%A1%A3/</loc>
-    <lastmod>2024-01-15T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/%E6%A0%B7%E5%BC%8F/</loc>
-    <lastmod>2024-01-15T10:00:00+08:00</lastmod>
   </url><url>
     <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/about/</loc>
     <lastmod>2024-01-01T00:00:00+08:00</lastmod>
@@ -144,6 +39,30 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="https://mydocts.github.io/jiatong.github.io/zh-cn/"
+                />
+  </url><url>
+    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mydocts.github.io/jiatong.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://mydocts.github.io/jiatong.github.io/zh-cn/categories/"
+                />
+  </url><url>
+    <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mydocts.github.io/jiatong.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://mydocts.github.io/jiatong.github.io/zh-cn/tags/"
                 />
   </url><url>
     <loc>https://mydocts.github.io/jiatong.github.io/zh-cn/archives/</loc>
