@@ -117,21 +117,3 @@ Bookmark 框架提出了一种**动态上下文压缩与检索**机制：
 3. **跨模型验证**：在 Llama-3、32B 等更大模型上验证框架的通用性。
 
 ---
-
-## 6. 团队贡献
-
-| 成员                   | 角色          | 贡献详情                         |
-| :--------------------- | :------------ | :------------------------------- |
-| **Hua Tang**     | Project Lead  | RL (GRPO) 算法设计, 奖励函数实现 |
-| **Jie Li**       | Data Engineer | 数据集构建, SFT 训练, 评估流程   |
-| **Jiatong Song** | Researcher    | 方法设计, 文献综述, 报告撰写     |
-
----
-
-## 参考文献
-
-* Liu et al. (2024). *Lost in the Middle: How Language Models Use Long Contexts.* TACL.
-* Kuratov et al. (2024). *BABILong: Testing the Limits of LLMs with Long Context Reasoning-in-a-Haystack.* NeurIPS.
-* Liu et al. (2024). *DeepSeek-V3 Technical Report.* arXiv:2412.19437.
-* Yang et al. (2025). *Pencil: Long Thoughts with Short Memory.* arXiv:2503.14337.
-* Yan et al. (2025). *InftyThink: Breaking the Length Limits of Long-Context Reasoning in LLMs.* arXiv:2503.06692.
