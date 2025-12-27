@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "39e952dd07ed7b8f",
+    "type": "split",
+    "children": [
+      {
+        "id": "e8ea3ecf9c05bd25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "013fe8889cf47e4f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/Paper_Reading 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Paper_Reading 2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "74efde1ef29bc822",
+    "type": "split",
+    "children": [
+      {
+        "id": "b874e78d73f04ce7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "063845a0baee96c2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "144c64fd9e30e514",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "280cc067abec887b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d5b160eed22efb64",
+    "type": "split",
+    "children": [
+      {
+        "id": "7347ec5de6304dd3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca3a054116d34c38",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/posts/互联网广告.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "互联网广告 的反向链接列表"
+            }
+          },
+          {
+            "id": "5bda64c273f4ae91",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/posts/互联网广告.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "互联网广告 的出链列表"
+            }
+          },
+          {
+            "id": "bf113b895feb7e2a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "83f2db47a3bf84f9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/posts/互联网广告.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "互联网广告 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:创建新数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "013fe8889cf47e4f",
+  "lastOpenFiles": [
+    "public/images/paper_reading/GRPO_3.png",
+    "static/images/paper_reading/GRPO_3.png",
+    "public/images/paper_reading/GRPO_2.png",
+    "static/images/paper_reading/GRPO_2.png",
+    "public/images/paper_reading/GRPO_1.png",
+    "static/images/paper_reading/GRPO_1.png",
+    "content/posts/Paper_Reading.md",
+    "content/posts/Paper_Reading 2.md",
+    "public/images/paper_reading/LIM_Prop_2.png",
+    "static/images/paper_reading/LIM_Prop_2.png",
+    "public/images/paper_reading/LIM_Prop_1.png",
+    "static/images/paper_reading/LIM_Prop_1.png",
+    "public/images/paper_reading/pb_1.png",
+    "public/posts/paper2/index.html",
+    "public/posts/paper2",
+    "public/css/custom/table-scroll.css",
+    "public/css/custom",
+    "assets/css/custom/table-scroll.css",
+    "assets/css/custom",
+    "assets/css",
+    "assets",
+    "public/images/paper_reading/special_token",
+    "static/images/paper_reading/special_token",
+    "content/posts/GRID.md",
+    "content/posts/Tiger.md",
+    "content/posts/HSTU.md",
+    "content/posts/code-highlighting-test.zh-cn.md",
+    "content/posts/LLM SFT.md",
+    "content/posts/LLM-RL-PPO.md",
+    "content/posts/LLM-RL-DPO.md",
+    "未命名.md",
+    "content/posts/Internet Ads.md",
+    "content/posts/LLM-RL-GRPO.md",
+    "content/posts/katex-mermaid-test.zh-cn.md",
+    "content/posts/markdown-test.md",
+    "2025-10-14.md",
+    "content/posts/Transformer.md",
+    "content/posts/markdown-test.zh-cn.md",
+    "content/posts/alert-test.md",
+    "content/posts/GenRecsys 1.md",
+    "hugo_update.md",
+    "content/posts/katex-mermaid-test.md",
+    "content/posts/未命名.md",
+    "content/posts/GenRecsys.md",
+    "content/posts/LLM-RL-GRPO 1.md",
+    "content/posts/LLM-RL-DPO 1.md"
+  ]
+}

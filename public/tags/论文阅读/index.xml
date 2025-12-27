@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>论文阅读 on Jiatong Blog</title>
+    <link>https://mydocts.github.io/jiatong.github.io/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+    <description>Recent content in 论文阅读 on Jiatong Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 15 Nov 2025 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://mydocts.github.io/jiatong.github.io/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paper Reading 2</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/paper2/</link>
+      <pubDate>Sat, 15 Nov 2025 10:00:00 +0800</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/paper2/</guid>
+      <description>&lt;h2 id=&#34;lost-in-the-middle&#34;&gt;Lost In the Middle&lt;/h2&gt;&#xA;&lt;p&gt;我们在这项工作中观察到的 U 形曲线，与心理学中的一个现象有关——&lt;strong&gt;系列位置效应（serial-position effect）&lt;/strong&gt;（Ebbinghaus，1913；Murdock Jr，1962）。这一效应指出：在让人们自由回忆一串列表元素的实验中，人类往往&lt;strong&gt;最容易记住列表中的第一个和最后一个元素&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Paper Reading</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/paper/</link>
+      <pubDate>Tue, 11 Nov 2025 10:00:00 +0800</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/paper/</guid>
+      <description>&lt;h4 id=&#34;基于历史信息生成时对不同位置信息的关注不同&#34;&gt;基于历史信息生成时，对不同位置信息的关注不同&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lost In the Middle&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;注意力层面校准差分选择性注意削弱首尾优势&#34;&gt;注意力层面：校准/差分/选择性注意，削弱“首尾优势”；&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Found In the Middle&lt;/li&gt;&#xA;&lt;li&gt;DIFF&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;训练数据位置无关信息密集型合成任务让模型学会任何位置都可能关键&#34;&gt;&lt;strong&gt;训练数据&lt;/strong&gt;：位置无关/信息密集型合成任务，让模型学会“任何位置都可能关键”；&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Never Lost in the Model&lt;/li&gt;&#xA;&lt;li&gt;Fill in the Model&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;提示工程预处理压缩与重排把关键信息放到模型更易注意的位置或在对话中状态化总结与提醒&#34;&gt;&lt;strong&gt;提示工程/预处理&lt;/strong&gt;：压缩与&lt;strong&gt;重排&lt;/strong&gt;把关键信息放到模型更易注意的位置，或在对话中&lt;strong&gt;状态化总结与提醒&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LongLLMLingua&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;lost-in-the-middle&#34;&gt;Lost In the Middle&lt;/h2&gt;&#xA;&lt;p&gt;目标信息的位置会显著影响模型推理的表现，当目标信息在上下文的开头和结尾时，模型表现好；在中间位置时，模型表现较差。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

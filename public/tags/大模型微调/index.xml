@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>大模型微调 on Jiatong Blog</title>
+    <link>http://localhost:1313/jiatong.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/</link>
+    <description>Recent content in 大模型微调 on Jiatong Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 09 Nov 2025 10:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/jiatong.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RLHF</title>
+      <link>http://localhost:1313/jiatong.github.io/posts/fine_tune/</link>
+      <pubDate>Sun, 09 Nov 2025 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/jiatong.github.io/posts/fine_tune/</guid>
+      <description>&lt;p&gt;SFT&#xA;1.用数据集训练模型，增强其指令遵循点能力&#xA;2.用GPT生成20条指令，喂给训练好的模型和原始模型，分别得到答案a和答案b&#xA;3.用GPT去比较答案a和答案b，定性判断谁的效果更好。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

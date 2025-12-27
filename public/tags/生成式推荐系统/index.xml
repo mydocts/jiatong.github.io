@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生成式推荐系统 on Jiatong Blog</title>
+    <link>https://mydocts.github.io/jiatong.github.io/tags/%E7%94%9F%E6%88%90%E5%BC%8F%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 生成式推荐系统 on Jiatong Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 24 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mydocts.github.io/jiatong.github.io/tags/%E7%94%9F%E6%88%90%E5%BC%8F%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HSTU</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/hstu/</link>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/hstu/</guid>
+      <description>&lt;h2 id=&#34;dlrm深度学习推荐系统&#34;&gt;DLRM（深度学习推荐系统）：&lt;/h2&gt;&#xA;&lt;p&gt;一个经典的，标准的，符合工业界趋势的深度学习推荐系统模型应该如何构建？&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bottom MLP：处理连续数值特征。&lt;/li&gt;&#xA;&lt;li&gt;EmbeddingLookup：将离散类别特征映射到向量空间。&lt;/li&gt;&#xA;&lt;li&gt;Feature Interaction Layer: 融合 dense 与 sparse 特征。&lt;/li&gt;&#xA;&lt;li&gt;Top MLP：进行最终预测（如点击率）。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;DLRM 成为推荐系统工业界（如 Meta、Tencent、ByteDance）广泛采用的标准架构之一，因为它兼顾：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TIGER &amp; Semantic ID</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/tiger/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/tiger/</guid>
+      <description>&lt;h1 id=&#34;tiger&#34;&gt;TIGER&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;推荐系统深度学习基本流程&#34;&gt;推荐系统深度学习基本流程&lt;/h2&gt;&#xA;&lt;p&gt;现有深度学习架构：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;输入特征 → 文本嵌入 → 隐藏层（RNN，深度学习网络）&lt;br&gt;&#xA;得到更精准的预测表征 → 预测层（通过查询与物品的相似性度量、点击，对相关物品进行排序，得到预测）&lt;/li&gt;&#xA;&lt;li&gt;检索 / 召回一系列可行的候选对象，然后用排序模型对其进行排序。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;检索阶段&#34;&gt;检索阶段&lt;/h4&gt;&#xA;&lt;p&gt;通过矩阵分解，在同一空间学习查询和候选的嵌入。&lt;br&gt;&#xA;为了更好地捕获数据中的非线性关系，近年来采用 &lt;strong&gt;内积查询和候选嵌入到同一空间的双塔编码架构&lt;/strong&gt;（一个塔用于查询(用户)，另一个塔用于候选(物品)）成为主流。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GRID</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/grid/</link>
+      <pubDate>Wed, 01 Oct 2025 10:00:00 +0800</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/grid/</guid>
+      <description>&lt;h2 id=&#34;1前言&#34;&gt;1.前言&lt;/h2&gt;&#xA;&lt;p&gt;GR 利用生成模型的进步，实现两种主要方式：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;直接生成用户感兴趣物品的文本内容&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识&lt;/strong&gt;，本文中的模型是后者。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2语义idsemantic-ids&#34;&gt;2.语义ID（Semantic IDs）&lt;/h2&gt;&#xA;&lt;h4 id=&#34;21语义id是什么&#34;&gt;2.1语义ID是什么&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;促成 &lt;strong&gt;GR（Generative Recommender）&lt;/strong&gt; 成功的关键因素之一是 &lt;strong&gt;语义 ID（SID, Semantic ID）&lt;/strong&gt;。它将连续的语义表示（例如来自大型语言模型的向量表示）&lt;strong&gt;转换为离散的 ID 序列&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;22传统id与语义id对比&#34;&gt;2.2传统ID与语义ID对比&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号&lt;/li&gt;&#xA;&lt;li&gt;语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。&lt;/li&gt;&#xA;&lt;li&gt;当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的&lt;strong&gt;语义相似性&lt;/strong&gt;；同时，下一步的监督学习（next-item supervision）使模型能够学习&lt;strong&gt;跨 SID 的协同过滤信号&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;23怎么得到语义id&#34;&gt;2.3怎么得到语义ID&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示；&lt;/li&gt;&#xA;&lt;li&gt;然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。&lt;/li&gt;&#xA;&lt;li&gt;常见的基于量化的标记器包括：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;RQ-VAE&lt;/strong&gt; ，&lt;strong&gt;RVQ&lt;/strong&gt; ，&lt;strong&gt;Residual K-Means&lt;/strong&gt; 。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;24如何将语义id用于生成式推荐&#34;&gt;2.4如何将语义ID用于生成式推荐&lt;/h4&gt;&#xA;&lt;p&gt;TIGER 首次将 Transformer 应用于推荐任务，&#xA;用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2368 @@
+<!doctype html>
+<html
+  lang="en-US"
+  data-theme="default">
+  <head>
+    <meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>TIGER &amp; Semantic ID | Jiatong Blog</title>
+
+<meta name="description" content="生成式推荐开山鼻祖，含金量无需多言" />
+<meta name="keywords" content="生成式推荐系统" />
+<meta name="author" content="Hugo Narrow" />
+<meta name="language" content="en-US" />
+
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://mydocts.github.io/jiatong.github.io/posts/tiger/" />
+
+
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+
+
+<link rel="manifest" href="https://mydocts.github.io/jiatong.github.io/site.webmanifest" />
+<meta property="og:url" content="https://mydocts.github.io/jiatong.github.io/posts/tiger/">
+  <meta property="og:site_name" content="Jiatong Blog">
+  <meta property="og:title" content="TIGER & Semantic ID">
+  <meta property="og:description" content="生成式推荐开山鼻祖，含金量无需多言">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-20T00:00:00+00:00">
+    <meta property="article:tag" content="生成式推荐系统">
+    <meta property="og:image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
+  <meta name="twitter:title" content="TIGER & Semantic ID">
+  <meta name="twitter:description" content="生成式推荐开山鼻祖，含金量无需多言">
+
+
+  <meta itemprop="name" content="TIGER & Semantic ID">
+  <meta itemprop="description" content="生成式推荐开山鼻祖，含金量无需多言">
+  <meta itemprop="datePublished" content="2025-10-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="4098">
+  <meta itemprop="image" content="https://mydocts.github.io/jiatong.github.io/images/og-default.avif">
+  <meta itemprop="keywords" content="生成式推荐系统">
+
+
+
+
+
+
+
+<script>
+  window.HUGO_SEARCH_CONFIG = {
+    searchIndexURL: "\"/index.json\""
+  };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+<script>
+
+  window.HUGO_GALLERY_CONFIG = {
+    justified_gallery:  false ,
+    lightbox:  false ,
+    justified: "{\"calculateitemsheight\":false,\"gutter\":30,\"lastrow\":\"center\",\"maxrowscount\":999999,\"resizedebounce\":100,\"rowheight\":300,\"rowheighttolerance\":0.25,\"transitionduration\":\"0.3s\"}",
+    lightbox_options: "{\"descposition\":\"bottom\",\"draggable\":true,\"height\":\"80vh\",\"loop\":true,\"preload\":true,\"touchnavigation\":true,\"width\":\"80vw\",\"zoomable\":true}"
+  };
+</script>
+
+
+
+
+  
+    
+      <link
+        rel="stylesheet"
+        href="https://mydocts.github.io/jiatong.github.io/css/compiled.min.0fdcf186a51cbe31d817748e6625893fdecb7c4081cdfd4c090e5b6864f6d4b8.css"
+        integrity="sha256-D9zxhqUcvjHYF3SOZiWJP97LfECBzf1MCQ5baGT21Lg="
+        crossorigin="anonymous" />
+    
+  
+
+
+
+
+
+  
+    
+      <link
+        rel="stylesheet"
+        href="https://mydocts.github.io/jiatong.github.io/css/chroma.min.491df36221f739b5948a747a0351f100ee7ccaaf466d9f46288bf06de1d59123.css"
+        integrity="sha256-SR3zYiH3ObWUinR6A1HxAO58yq9GbZ9GKIvwbeHVkSM="
+        crossorigin="anonymous" />
+    
+  
+
+
+
+
+
+  
+    
+      <link
+        rel="stylesheet"
+        href="https://mydocts.github.io/jiatong.github.io/css/custom/table-scroll.min.5b383174bbb66958447e4bcf95ca72a114556e2677ac27cfc602703fd5685f99.css"
+        integrity="sha256-WzgxdLu2aVhEfkvPlcpyoRRVbiZ3rCfPxgJwP9VoX5k="
+        crossorigin="anonymous" />
+    
+  
+
+
+
+
+
+
+
+
+        <script
+          src="https://mydocts.github.io/jiatong.github.io/js/main.ba969e49a7a874e6938fe689a7dcaa00cb64cb4d429c2cf98d09bde512a16c6d.js"
+          integrity="sha256-upaeSaeodOaTj&#43;aJp9yqAMtky01CnCz5jQm95RKhbG0="
+          crossorigin="anonymous"></script>
+
+
+
+    <script src="https://mydocts.github.io/jiatong.github.io/js/gumshoe.polyfills.min.js"></script>
+
+
+
+            <script
+              src="https://mydocts.github.io/jiatong.github.io/js/toc.660e1ba968c600238038998fa7b9f0b92a6db1e27f7983f0a3868da6e335c773.js"
+              integrity="sha256-Zg4bqWjGACOAOJmPp7nwuSptseJ/eYPwo4aNpuM1x3M="
+              crossorigin="anonymous"
+              defer></script>
+
+
+
+        <script
+          src="https://mydocts.github.io/jiatong.github.io/js/search.de3eba3540834efb8328121784bff4774e06362412ee41eee665f5b4f987f393.js"
+          integrity="sha256-3j66NUCDTvuDKBIXhL/0d04GNiQS7kHu5mX1tPmH85M="
+          crossorigin="anonymous"
+          defer></script>
+
+
+
+        <script
+          src="https://mydocts.github.io/jiatong.github.io/js/dock.e68dfcd7c5d37f18f40d8855905ee50c98c58f3b204d0ffb207d4956c987ead0.js"
+          integrity="sha256-5o3818XTfxj0DYhVkF7lDJjFjzsgTQ/7IH1JVsmH6tA="
+          crossorigin="anonymous"
+          defer></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      
+      (function() {
+        const theme = localStorage.getItem('theme') || 'system';
+        const colorScheme = localStorage.getItem('colorScheme') || 'default';
+
+        
+        document.documentElement.setAttribute('data-theme', colorScheme);
+
+        
+        function applyTheme() {
+          if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+
+        applyTheme();
+
+        
+        if (theme === 'system') {
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+        }
+      })();
+    </script>
+  </head>
+
+  <body class="bg-background text-foreground min-h-screen antialiased">
+    
+    
+  <div
+    id="reading-progress-container"
+    class="reading-progress-container pointer-events-none fixed top-0 right-0 left-0 z-50 transition-opacity duration-300 ease-out"
+    data-height="3"
+    data-smooth-scroll="true"
+    data-hide-on-complete="false">
+    
+    <div class="reading-progress-bg w-full"></div>
+
+    
+    <div
+      id="reading-progress-bar"
+      class="from-primary to-primary/80 reading-progress-bar 
+        transition-all duration-150 ease-out
+       absolute top-0 left-0 w-0 bg-gradient-to-r"></div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const progressContainer = document.getElementById(
+        "reading-progress-container",
+      );
+      const progressBar = document.getElementById("reading-progress-bar");
+
+      if (!progressContainer || !progressBar) return;
+
+      
+      const config = {
+        smoothScroll: progressContainer.dataset.smoothScroll === "true",
+        hideOnComplete: progressContainer.dataset.hideOnComplete === "true",
+      };
+
+      let isVisible = true;
+      let gumshoeInstance = null;
+
+      
+      function calculateProgress() {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
+        const scrollableHeight = documentHeight - windowHeight;
+
+        if (scrollableHeight <= 0) return 0;
+
+        return Math.min(Math.max((scrollTop / scrollableHeight) * 100, 0), 100);
+      }
+
+      
+      function updateProgress() {
+        const progress = calculateProgress();
+        progressBar.style.width = progress + "%";
+
+        
+        if (config.hideOnComplete && progress >= 99.5) {
+          if (isVisible) {
+            progressContainer.style.opacity = "0";
+            isVisible = false;
+          }
+        } else if (!isVisible) {
+          progressContainer.style.opacity = "1";
+          isVisible = true;
+        }
+      }
+
+      
+      let ticking = false;
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            updateProgress();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+
+      
+      function init() {
+        
+        window.addEventListener("scroll", requestTick, { passive: true });
+        window.addEventListener("resize", requestTick, { passive: true });
+        document.addEventListener("visibilitychange", () => {
+          if (!document.hidden) requestTick();
+        });
+
+        
+        requestTick();
+
+        
+        window.addEventListener("beforeunload", () => {
+          window.removeEventListener("scroll", requestTick);
+          window.removeEventListener("resize", requestTick);
+        });
+      }
+
+      
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+
+    <header class=" mx-auto max-w-4xl px-4 py-6">
+  <div
+    class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm">
+    
+    <div class="hidden w-full items-center md:flex">
+      
+      <div class="flex items-center">
+          <a
+            href="https://mydocts.github.io/jiatong.github.io/"
+            class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full transition-transform duration-200 hover:scale-105"
+            aria-label="Jiatong Blog">
+            <img
+              src="https://mydocts.github.io/jiatong.github.io/images/touxiang.jpg"
+              alt="Jiatong Blog"
+              class="h-full w-full object-cover" />
+          </a>
+        
+      </div>
+
+      
+      <nav class="mx-8 flex flex-1 items-center justify-center">
+        <div class="flex items-center space-x-1">
+          
+          
+            
+            
+            
+              
+                
+              
+            
+            
+            <a
+              href="https://mydocts.github.io/jiatong.github.io/posts/"
+              class="nav-link 
+                text-muted-foreground hover:text-primary hover:bg-primary/10
+               focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
+              
+                <svg class="h-5 w-5" aria-label="nav.posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+</svg>
+
+              
+              <span
+                >
+                  Posts
+                </span
+              >
+            </a>
+          
+            
+            
+            
+              
+                
+              
+            
+            
+            <a
+              href="https://mydocts.github.io/jiatong.github.io/categories/"
+              class="nav-link 
+                text-muted-foreground hover:text-primary hover:bg-primary/10
+               focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
+              
+                <svg class="h-5 w-5" aria-label="nav.categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+
+              
+              <span
+                >
+                  Categories
+                </span
+              >
+            </a>
+          
+            
+            
+            
+              
+                
+              
+            
+            
+            <a
+              href="https://mydocts.github.io/jiatong.github.io/tags/"
+              class="nav-link 
+                text-muted-foreground hover:text-primary hover:bg-primary/10
+               focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
+              
+                <svg class="h-5 w-5" aria-label="nav.tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+</svg>
+
+              
+              <span
+                >
+                  Tags
+                </span
+              >
+            </a>
+          
+            
+            
+            
+              
+                
+              
+            
+            
+            <a
+              href="https://mydocts.github.io/jiatong.github.io/archives/"
+              class="nav-link 
+                text-muted-foreground hover:text-primary hover:bg-primary/10
+               focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
+              
+                <svg class="h-5 w-5" aria-label="nav.archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+</svg>
+
+              
+              <span
+                >
+                  Archives
+                </span
+              >
+            </a>
+          
+        </div>
+      </nav>
+
+      
+      <div class="flex items-center space-x-2">
+        
+        
+<div class="relative">
+  <button id="language-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="language"
+    aria-label="Switch language"
+    aria-expanded="false"
+    aria-haspopup="true">
+      <svg class="h-5 w-5 relative z-10" aria-label="Switch language" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 8l6 6m-7 0l6-6l2-3M2 5h12M7 2h1m14 20l-5-10l-5 10m2-4h6" />
+</svg></button>
+
+  
+  <div id="language-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="language"
+    role="menu"
+    aria-labelledby="language-toggle"><a href="https://mydocts.github.io/jiatong.github.io/en/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem" aria-current="true"><span class="font-medium">English</span></a><a href="https://mydocts.github.io/jiatong.github.io/zh-cn/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem"><span class="font-medium">简体中文</span></a></div>
+</div>
+
+        
+        
+<div class="relative">
+  <button id="color-scheme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="color-scheme"
+    aria-label="Toggle theme"
+    aria-expanded="false"
+    aria-haspopup="true">
+      <svg class="h-5 w-5 relative z-10" aria-label="Toggle theme" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
+</svg>
+</button>
+
+  
+  <div id="color-scheme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-44 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="color-scheme"><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+</div>
+
+        
+        
+<div class="relative">
+  <button id="theme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="theme"
+    aria-label="Toggle theme"
+    aria-expanded="false"
+    aria-haspopup="true">
+      
+      <svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="Light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="Dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="System" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</button>
+
+  
+  <div id="theme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="theme"><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+<span>Light</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+<span>Dark</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="System" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+<span>System</span></button></div>
+</div>
+      </div>
+    </div>
+
+    
+    <div class="flex w-full items-center justify-between md:hidden">
+      
+      
+<div class="relative">
+  <button
+    id="mobile-menu-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
+    data-dropdown-type="mobile-menu"
+    aria-label="Menu"
+    aria-expanded="false"
+    aria-haspopup="true">
+    <svg class="h-5 w-5" aria-label="Menu" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+
+  </button>
+
+  
+  <div
+    id="mobile-menu"
+    class="mobile-menu dropdown-menu border-border bg-popover/95 absolute top-12 left-0 z-[60] hidden w-80 max-w-[calc(100vw-2rem)] rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out md:hidden"
+    data-dropdown-type="mobile-menu"
+    role="menu"
+    aria-labelledby="mobile-menu-toggle">
+    <nav class="flex flex-col">
+      
+      
+        
+        
+        
+          
+            
+          
+        
+        
+        <a
+          href="https://mydocts.github.io/jiatong.github.io/posts/"
+          class="nav-link 
+            text-muted-foreground hover:text-primary hover:bg-primary/10
+           focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
+          role="menuitem"
+          >
+          
+            <svg class="h-5 w-5" aria-label="nav.posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+</svg>
+
+          
+          <span
+            >
+              Posts
+            </span
+          >
+        </a>
+      
+        
+        
+        
+          
+            
+          
+        
+        
+        <a
+          href="https://mydocts.github.io/jiatong.github.io/categories/"
+          class="nav-link 
+            text-muted-foreground hover:text-primary hover:bg-primary/10
+           focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
+          role="menuitem"
+          >
+          
+            <svg class="h-5 w-5" aria-label="nav.categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+
+          
+          <span
+            >
+              Categories
+            </span
+          >
+        </a>
+      
+        
+        
+        
+          
+            
+          
+        
+        
+        <a
+          href="https://mydocts.github.io/jiatong.github.io/tags/"
+          class="nav-link 
+            text-muted-foreground hover:text-primary hover:bg-primary/10
+           focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
+          role="menuitem"
+          >
+          
+            <svg class="h-5 w-5" aria-label="nav.tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+</svg>
+
+          
+          <span
+            >
+              Tags
+            </span
+          >
+        </a>
+      
+        
+        
+        
+          
+            
+          
+        
+        
+        <a
+          href="https://mydocts.github.io/jiatong.github.io/archives/"
+          class="nav-link 
+            text-muted-foreground hover:text-primary hover:bg-primary/10
+           focus:ring-primary/20 relative flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all duration-200 ease-out hover:translate-x-1 focus:ring-2 focus:outline-none"
+          role="menuitem"
+          >
+          
+            <svg class="h-5 w-5" aria-label="nav.archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+</svg>
+
+          
+          <span
+            >
+              Archives
+            </span
+          >
+        </a>
+      
+    </nav>
+  </div>
+</div>
+
+
+      
+      <div class="flex items-center space-x-2">
+        
+        
+<div class="relative">
+  <button id="language-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="language"
+    aria-label="Switch language"
+    aria-expanded="false"
+    aria-haspopup="true">
+      <svg class="h-5 w-5 relative z-10" aria-label="Switch language" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 8l6 6m-7 0l6-6l2-3M2 5h12M7 2h1m14 20l-5-10l-5 10m2-4h6" />
+</svg></button>
+
+  
+  <div id="language-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="language"
+    role="menu"
+    aria-labelledby="language-toggle"><a href="https://mydocts.github.io/jiatong.github.io/en/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem" aria-current="true"><span class="font-medium">English</span></a><a href="https://mydocts.github.io/jiatong.github.io/zh-cn/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem"><span class="font-medium">简体中文</span></a></div>
+</div>
+
+        
+        
+<div class="relative">
+  <button id="color-scheme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="color-scheme"
+    aria-label="Toggle theme"
+    aria-expanded="false"
+    aria-haspopup="true">
+      <svg class="h-5 w-5 relative z-10" aria-label="Toggle theme" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
+</svg>
+</button>
+
+  
+  <div id="color-scheme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-44 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="color-scheme"><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+</div>
+
+        
+        
+<div class="relative">
+  <button id="theme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="theme"
+    aria-label="Toggle theme"
+    aria-expanded="false"
+    aria-haspopup="true">
+      
+      <svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="Light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="Dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="System" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</button>
+
+  
+  <div id="theme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="theme"><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+<span>Light</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+<span>Dark</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="System" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+<span>System</span></button></div>
+</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+    <main class="mx-auto max-w-4xl px-4 py-6">
+      
+  
+  <nav
+  class="breadcrumb mb-4 md:mb-6 py-1"
+  aria-label="Breadcrumb navigation">
+  <ol class="text-muted-foreground flex items-center space-x-1 md:space-x-2 text-sm overflow-x-auto whitespace-nowrap scrollbar-hide py-1">
+    
+    <li class="flex-shrink-0">
+      <a
+        href="https://mydocts.github.io/jiatong.github.io/"
+        class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-0.5 md:gap-1 rounded-lg px-1 md:px-3 py-0.5 md:py-1.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02]">
+        <svg class="h-4 w-4" aria-label="Home" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 12 2-2m0 0 7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+</svg>
+
+        <span class="max-w-[4rem] md:max-w-none truncate">Home</span>
+      </a>
+    </li>
+
+    
+    
+      <li class="flex items-center gap-1 md:gap-2 min-w-0">
+        <span class="text-muted-foreground/50 flex-shrink-0"
+          ><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+        </span>
+
+        
+          
+          <div class="flex items-center gap-1 md:gap-2 min-w-0">
+            
+              
+              <a
+                href="https://mydocts.github.io/jiatong.github.io/posts"
+                class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-0.5 md:gap-1 rounded-lg px-1 md:px-3 py-0.5 md:py-1.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] flex-shrink-0">
+                
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+</svg>
+
+                  <span class="max-w-[3rem] md:max-w-none truncate">Posts</span>
+                
+              </a>
+              <span class="text-muted-foreground/50 flex-shrink-0"
+                ><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg></span
+              >
+            
+            
+            <span class="text-foreground flex items-center gap-0.5 md:gap-1 font-medium min-w-0">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+</svg>
+              <span class="max-w-[8rem] md:max-w-[16rem] lg:max-w-none truncate">TIGER &amp; Semantic ID</span>
+            </span>
+          </div>
+        
+      </li>
+    
+
+  </ol>
+</nav>
+
+
+
+  
+
+
+  
+  <header class="mb-8">
+    
+
+
+<div class="post-meta">
+  
+  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+    TIGER &amp; Semantic ID
+  </h1>
+
+  
+  
+
+
+  
+  <div class="bg-card border-border flex flex-col gap-4 rounded-xl border p-6">
+    
+    <div
+      class="text-muted-foreground flex flex-wrap items-center gap-4 text-sm">
+      
+      <div class="flex items-center gap-2">
+        <svg class="h-4 w-4" aria-label="Published on" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+        <time datetime="2025-10-20">
+          October 20, 2025
+        </time>
+      </div>
+
+      
+      
+
+
+      
+      
+        <div class="flex items-center gap-2">
+          <svg class="h-4 w-4" aria-label="Reading time" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+          <span
+            >9 minute</span
+          >
+        </div>
+      
+
+
+      
+      
+        <div class="flex items-center gap-2">
+          <svg class="h-4 w-4" aria-label="Word count" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+</svg>
+
+          <span>4098 words</span>
+        </div>
+      
+
+    </div>
+
+    
+    
+      <div class="flex flex-wrap items-center gap-4">
+        
+        
+          <div class="flex items-center gap-2">
+            <svg class="h-4 w-4" aria-label="Categories" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+</svg>
+            <span class="text-muted-foreground mr-2 text-sm"
+              >Categories:</span
+            >
+            <div class="flex flex-wrap gap-2">
+              
+                <a
+                  href="https://mydocts.github.io/jiatong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"
+                  class="bg-primary/10 text-primary hover:bg-primary/20 focus:ring-primary/20 inline-flex items-center rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:shadow-md focus:ring-2 focus:outline-none">
+                  论文阅读
+                </a>
+              
+            </div>
+          </div>
+        
+
+
+        
+        
+          <div class="flex items-center gap-2">
+            <svg class="h-4 w-4" aria-label="Tags" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		<path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
+		<circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+	</g>
+</svg>
+            <span class="text-muted-foreground mr-2 text-sm"
+              >Tags:</span
+            >
+            <div class="flex flex-wrap gap-2">
+              
+                <a
+                  href="https://mydocts.github.io/jiatong.github.io/tags/%E7%94%9F%E6%88%90%E5%BC%8F%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"
+                  class="bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary focus:ring-primary/20 inline-flex items-center rounded px-2 py-1 text-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
+                  #生成式推荐系统
+                </a>
+              
+            </div>
+          </div>
+        
+
+      </div>
+    
+
+
+    
+    
+
+  </div>
+</div>
+
+  </header>
+
+  
+  <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
+    <h1 id="tiger">TIGER</h1>
+<hr>
+<h2 id="推荐系统深度学习基本流程">推荐系统深度学习基本流程</h2>
+<p>现有深度学习架构：</p>
+<ul>
+<li>输入特征 → 文本嵌入 → 隐藏层（RNN，深度学习网络）<br>
+得到更精准的预测表征 → 预测层（通过查询与物品的相似性度量、点击，对相关物品进行排序，得到预测）</li>
+<li>检索 / 召回一系列可行的候选对象，然后用排序模型对其进行排序。</li>
+</ul>
+<hr>
+<h4 id="检索阶段">检索阶段</h4>
+<p>通过矩阵分解，在同一空间学习查询和候选的嵌入。<br>
+为了更好地捕获数据中的非线性关系，近年来采用 <strong>内积查询和候选嵌入到同一空间的双塔编码架构</strong>（一个塔用于查询(用户)，另一个塔用于候选(物品)）成为主流。</p>
+<p>为了在推理期间使用这些模型，使用候选塔创建一个存储所有物品嵌入的索引。<br>
+对于给定查询，通过在同一个空间内嵌入查询和候选项来执行大规模检索，<br>
+然后使用**近似最邻近搜索（ANN）**来选择给定查询嵌入的最佳候选项。
+然后筛选到的物品进行内积计算排序</p>
+<hr>
+<h2 id="推荐系统存在的局限与挑战">推荐系统存在的局限与挑战</h2>
+<ul>
+<li>召回 → 排序 → 重排，流程复杂，需要分别优化。</li>
+<li>对召回阶段的依赖（庞大候选集快速筛选相关物品）
+<ul>
+<li>如果召回都没召回到用户感兴趣的东西，排序更不可能找到。</li>
+</ul>
+</li>
+<li>对排序阶段的局限（基于学习的排序模型 / 神经网络模型 / 对候选物品排序）。</li>
+<li>对反馈循环的影响：基于用户的历史交互行为进行预测，会产生反馈循环。</li>
+<li>冷启动推荐：新商品被反馈循环影响。</li>
+<li>推荐的“长尾”现象：热门更热，冷门更冷。</li>
+</ul>
+<hr>
+<h2 id="本文工作提出全新的推荐系统框架-tiger">本文工作：提出全新的推荐系统框架 TIGER</h2>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_1.png" width="720">
+</figure>
+
+<p>基于生成式检索范式并应用到序列推荐中：</p>
+<ol>
+<li>创建语义上有意义的 token 元组，作为每个物品的语义 ID。<br>
+通过生成的用户交互序列中物品的语义 ID，训练基于 Transformer 的序列到序列模型来“生成”用户将与之交互的下一个物品的语义 ID。</li>
+<li>提出 TIGER 推荐模型在各种数据集上的性能显著优于当前 SOTA 模型。</li>
+<li>展现两个关键能力：
+<ul>
+<li>冷启动推荐能力：能够推荐此前从未出现过的物品；</li>
+<li>推荐多样性控制能力：可通过调节生成参数实现推荐内容的丰富性。</li>
+</ul>
+</li>
+<li>生成式推荐新范式，为构建更具泛化能力、可解释性和灵活性的推荐系统开辟新方向。</li>
+</ol>
+<hr>
+<h2 id="tiger-的生成式推荐范式">TIGER 的生成式推荐范式</h2>
+<p>提出一种构建序列推荐生成式检索模型的新范式。<br>
+与传统的检索-排序方法不同，<br>
+我们的方法使用 <strong>直接预测候选物品 ID 的端到端生成模型</strong>。</p>
+<p>我们提出利用 Transformer 内存（参数）作为推荐系统中检索的端到端索引引擎。<br>
+我们将提出的方法称为 <strong>Transformer Index for GEnerative Recommenders（TIGER）</strong>。</p>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_2.png"
+    alt="ppo" width="720">
+</figure>
+
+<p>图 2 展示了 TIGER 框架的整体工作流程，说明了如何将序列推荐任务转化为一个生成式检索任务。</p>
+<hr>
+<h2 id="语义-idsemantic-id简介">语义 ID（Semantic ID）简介</h2>
+<p>语义 ID 示例： (2, 3, 55)，每一个数字都代表着一个稠密向量。</p>
+<p>将物品 (item) 表示为语义 ID 序列具有许多优点：</p>
+<ol>
+<li>
+<p><strong>语义共享与泛化</strong><br>
+在具有语义意义的数据上训练 Transformer 允许在相似的物品之间共享知识，<br>
+避免在推荐模型中使用原子、随机的物品 ID 作为特征，<br>
+从而支持知识迁移和泛化。</p>
+</li>
+<li>
+<p><strong>缓解反馈循环</strong><br>
+使用物品的语义 ID 能缓解推荐系统固有的反馈循环，<br>
+减少系统对热门物品的依赖，<br>
+并允许模型泛化到语料库中的新物品，更好地支持新物品推荐。</p>
+</li>
+<li>
+<p><strong>存储与扩展性</strong><br>
+通常物品数量可达数十亿级。<br>
+使用有限数量的代码词组合生成语义 ID 来表示物品，<br>
+可显著降低物品表示的存储成本和参数规模，<br>
+提升系统的可扩展性。</p>
+</li>
+</ol>
+<hr>
+<h4 id="本工作的主要贡献">本工作的主要贡献</h4>
+<ol>
+<li>提出新的基于生成检索的推荐框架 <strong>TIGER</strong>：<br>
+为每个物品分配语义 ID，并训练模型预测生成给定用户可能交互的物品语义 ID。</li>
+<li>通过召回率和 NDCG 指标，证明 TIGER 在多个数据集上优于现有 SOTA 推荐系统。</li>
+<li>发现生成式检索新范式在序列推荐系统中带来了两个额外能力：
+<ul>
+<li>推荐新的和冷门的物品，改进冷启动；</li>
+<li>可用可调参数生成多样的推荐结果。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="语义id详解">语义ID详解</h1>
+<h3 id="定义与构成">定义与构成</h3>
+<ul>
+<li>语义ID是长度为\(m\)的token元组，每个token来自不同的codebook（代码簿），可唯一表示的项数等于每层codebook大小的乘积。</li>
+<li>示例：语义ID\([10,21,35]\)与\([10,21,40]\)的相似度高于\([10,23,32]\)，因前两个token重叠，语义更接近。</li>
+</ul>
+<h3 id="关键属性">关键属性</h3>
+<ul>
+<li>相似性：相似项（内容特征相似或语义嵌入接近）需具有重叠的语义ID。</li>
+<li>离散化语义表示：不依赖具体物品ID，基于内容语义生成，而非物品实体本身。</li>
+<li>可控可复用：组成单位（codewords）来自固定大小的codebook，大小可控且可重复利用。</li>
+<li>组合式表达：如每个ID由3个token组成，每个token选自1000个候选，可表达\(1000^3=10^9\)个组合，能覆盖大规模推荐系统的物品空间。</li>
+</ul>
+<h3 id="与大语言模型tokenizer的区别">与大语言模型Tokenizer的区别</h3>
+<table>
+  <thead>
+      <tr>
+          <th>对比维度</th>
+          <th>语义ID</th>
+          <th>大语言模型Tokenizer</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>依赖对象</td>
+          <td>不依赖具体物品ID，基于内容语义</td>
+          <td>依赖文本序列，与物品语义无直接关联</td>
+      </tr>
+      <tr>
+          <td>组成来源</td>
+          <td>固定大小codebook的codewords</td>
+          <td>文本语料库中的子词（如BPE分词结果）</td>
+      </tr>
+      <tr>
+          <td>表达能力</td>
+          <td>组合式，覆盖物品空间能力强</td>
+          <td>序列式，聚焦文本语义表达</td>
+      </tr>
+  </tbody>
+</table>
+<div
+    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
+              border-left-color: var(--color-tip);
+              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-1-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-1-title"
+          class="m-0 font-semibold text-foreground/90">
+          Tip
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-1-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>通过语义ID的设计，使得推荐系统能够像语言模型那样“输出”目标物品，但又规避了推荐领域中 item ID/token 空间过大、实体变化频繁等根本难题。可以说，语义ID是 TIGER 成功的核心支柱之一。</p>
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<h3 id="语义id生成方法">语义ID生成方法</h3>
+<h4 id="核心方法基于rq-vae残差量化变分自动编码器">核心方法：基于RQ-VAE（残差量化变分自动编码器）</h4>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/semantic_ID_1.png" width="920">
+</figure>
+
+<p>RQ-VAE 首先通过编码器 $\mathcal{E}$ 对输入 $x$ 进行编码，以学习潜在表示：$z := \mathcal{E}(x)$</p>
+<p>在第 0 个残差两化层（$d=0$）时，初始残差被定义为：$r_0 := z$
+在每一层 $d$，都有一个码本（codebook）：$C_d :=$ { $e_k$ } $_{k=1}^K$
+其中 $K$ 是码本的大小。（可以理解为有K个物品）</p>
+<p>接着，$r_0$ 被量化为该层码本中最近的嵌入向量。  距离最近的嵌入为 $e_{c_d}$，其索引为：$c_0 = \arg\min_k \| r_0 - e_k \|$ 这表示第 0 个 codeword。
+在下一层（$d=1$）中，残差定义为：$r_1 := r_0 - e_{c_0}$
+然后与第 0 层类似，第 1 层的 codeword 通过在码本中寻找最接近 $r_1$ 的嵌入得到。
+该过程递归重复 $m$ 次，以获得 $m$ 个 codeword 组成的元组：
+</p>
+$$
+(c_0, c_1, \ldots, c_{m-1})
+$$<p>
+该元组即表示语义 ID（Semantic ID）。</p>
+<hr>
+<h4 id="重构与损失函数">重构与损失函数</h4>
+<p>一旦得到语义 ID $(c_0, \ldots, c_{m-1})$，量化后的潜在表示计算为：
+</p>
+$$
+\hat{z} := \sum_{d=0}^{m-1} e_{c_d}
+$$<p>然后将 $\hat{z}$ 传入解码器，以重建输入 $x$。<br>
+RQ-VAE 的总损失定义为：
+</p>
+$$
+\mathcal{L}(x) := \mathcal{L}\_{recon} + \mathcal{L}_{rqvae}
+$$<p>其中：
+</p>
+$$
+\mathcal{L}\_{recon} := \|| x - \hat{x} \||^2,
+$$<p>
+</p>
+$$
+\mathcal{L}\_{rqvae} := \sum_{d=0}^{m-1} \big( \| sg[r_i] - e_{c_i} \|^2 + \beta \|| r_i - sg[e_{c_i}] \||^2 \big)
+$$<p>这里 $\hat{x}$ 是解码器输出，$sg$ 表示停止梯度（stop-gradient）操作。<br>
+该损失函数联合训练编码器、解码器和码本。</p>
+<hr>
+<h4 id="避免-codebook-collapse">避免 Codebook Collapse</h4>
+<p>为了防止 RQ-VAE 出现 <strong>codebook collapse</strong>（即大部分输入仅映射到极少数码本向量），<br>
+采用基于 <strong>k-means 聚类</strong> 的码本初始化方法。<br>
+具体做法是在首个训练批次上应用 k-means 算法，并使用聚类中心作为初始码本向量。</p>
+<h5 id="生成示例">生成示例</h5>
+<p>若经 3 层量化得到嵌入索引 $e_{c_0}=7$、$e_{c_1}=1$、$e_{c_2}=4$，  则语义 ID 为 $(7, 1, 4)$。</p>
+<h4 id="其他量化方法对比消融实验证实rq-vae最优">其他量化方法对比（消融实验证实RQ-VAE最优）</h4>
+<table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>特点</th>
+          <th>不足</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>LSH（局部敏感哈希）</td>
+          <td>离散化速度快</td>
+          <td>精度低，语义保留差</td>
+      </tr>
+      <tr>
+          <td>VQ-VAE（矢量量化变分自动编码器）</td>
+          <td>基础量化能力</td>
+          <td>无语义层次粒度，无法体现粗/细分类别</td>
+      </tr>
+      <tr>
+          <td>基于k-means层次聚类</td>
+          <td>可实现层次划分</td>
+          <td>丢失ID间的语义关系，相似项可能无重叠ID</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="冲突处理">冲突处理</h4>
+<ul>
+<li>附加标识位：增加1位token表示语义重复，区分相同语义ID的不同物品。</li>
+<li>查找表：维护“语义ID→物品ID”映射表，避免模型误判无对应物品的语义ID；仅需训练后处理1次，不影响训练效率。</li>
+</ul>
+<h1 id="基于语义id的生成式检索tiger框架核心">基于语义ID的生成式检索（TIGER框架核心）</h1>
+<h2 id="核心思路">核心思路</h2>
+<ul>
+<li>将推荐任务转化为“序列生成”任务：通过用户历史交互物品的语义ID序列，预测下一个物品的语义ID，实现生成式检索。</li>
+</ul>
+<h4 id="流程步骤">流程步骤</h4>
+<h4 id="1用户序列构建">（1）用户序列构建</h4>
+<ul>
+<li>按时间顺序排序用户历史交互物品，形成物品序列$(item_1, ..., item_n)$。</li>
+</ul>
+<h4 id="2序列转换">（2）序列转换</h4>
+<ul>
+<li>设$(item_i)$的语义ID为$(c_{i,0}, ..., c_{i,m-1})$，将物品序列转换为语义ID序列：$(c_{1,0}, ..., c_{1,m-1}, c_{2,0}, ..., c_{2,m-1}, ..., c_{n,0}, ..., c_{n,m-1})$。</li>
+</ul>
+<h4 id="3模型训练与预测">（3）模型训练与预测</h4>
+<ul>
+<li>模型结构：
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/Semantic_ID_2.png" width="720">
+</figure>
+</li>
+<li>任务目标：训练序列到序列模型，预测下一个物品的语义ID$(c_{n+1,0}, ..., c_{n+1,m-1})$。</li>
+<li>特殊情况：解码器生成的语义ID可能与推荐语料库物品不匹配，但概率极低。</li>
+<li>通过语义ID的设计，TIGER框架成功地将推荐系统引入了一个生成式检索的新范式，使得系统能够像语言模型那样直接“输出”目标物品。</li>
+</ul>
+<h3 id="实验设计与结果">实验设计与结果</h3>
+<h4 id="1-实验基础设置">1. 实验基础设置</h4>
+<h4 id="基座模型与数据集">基座模型与数据集</h4>
+<p><figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_1.png" width="920">
+</figure>
+
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_2.png" width="920">
+</figure>
+</p>
+<h4 id="2-核心实验结果">2. 核心实验结果</h4>
+<h4 id="1序列推荐性能对比tiger最优">（1）序列推荐性能对比（TIGER最优）</h4>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_3.png" width="920">
+</figure>
+
+<h4 id="2消融实验不同id生成方式rq-vae-sid最优">（2）消融实验：不同ID生成方式（RQ-VAE SID最优）</h4>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_4.png" width="920">
+</figure>
+
+<h4 id="3冷启动推荐性能tiger优于knn">（3）冷启动推荐性能（TIGER优于KNN）</h4>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_5.png" width="920">
+</figure>
+
+<h4 id="4推荐多样性温度系数调控">（4）推荐多样性（温度系数调控）</h4>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_6.png" width="920">
+</figure>
+
+<h4 id="5模型层数与用户信息影响">（5）模型层数与用户信息影响</h4>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_7.png" width="920">
+</figure>
+
+<h4 id="6invalid-semantic-id">（6）Invalid Semantic ID</h4>
+<figure><img src="https://mydocts.github.io/jiatong.github.io/images/tiger/tiger_data_6.png" width="920">
+</figure>
+
+<h3 id="模型成本与优势">模型成本与优势</h3>
+<h4 id="成本分析">成本分析</h4>
+<h4 id="1内存成本">（1）内存成本</h4>
+<ul>
+<li>查找表：维护“物品ID→语义ID”和“语义ID→物品ID”两个哈希表，每个语义ID为4整数元组，大小约64N位（N为物品数）。</li>
+<li>嵌入表：仅存储codebook中每个codeword的嵌入，远小于传统推荐系统的“物品-嵌入”表（传统需为每个物品存储嵌入）。</li>
+</ul>
+<h4 id="2推理成本">（2）推理成本</h4>
+<ul>
+<li>挑战：自回归解码+beam search，推理成本高于基于ANN的模型。</li>
+<li>优化方向：探索更小模型结构或高效推理方法。</li>
+</ul>
+<h4 id="核心优势">核心优势</h4>
+<ul>
+<li>嵌入表规模可控：嵌入表基数不随物品空间线性增长，避免传统模型的大型嵌入表问题。</li>
+<li>泛化能力强：支持冷启动推荐，可泛化到未见过的新物品。</li>
+<li>生成式范式创新：将推荐从“检索匹配”转为“生成预测”，开辟新研究方向。</li>
+</ul>
+<h2 id="总结">总结</h2>
+<h4 id="模型核心思路">模型核心思路</h4>
+<ul>
+<li>本文提出了一种新的推荐范式，称为 <strong>TIGER</strong>，使用生成检索模型在序列推荐中“生成”下一个可能的交互对象。</li>
+<li>支撑该方法的是一种新的 <strong>物品语义 ID 表示</strong>，它在内容嵌入上使用多层量化器（<strong>RQ-VAE</strong>）来生成语义 ID。</li>
+<li>基于 <strong>Transformer 的序列生成模型</strong>：将用户的历史行为表示为语义 ID 序列，使用 <strong>Encoder–Decoder</strong> 结构的 Transformer 模型学习用户偏好，并生成下一个物品的语义 ID。</li>
+<li>嵌入表的基数不会随着物品空间的线性增长而增加，这使得训练过程中无需为每个单独物品建立大型嵌入表或索引系统，效率更高。</li>
+<li>在三个数据集上的实验表明，该模型能达到与 SOTA 检索模型相当的性能，同时具备泛化能力，可生成全新的或未见过的物品。</li>
+</ul>
+<hr>
+<h4 id="不足">不足</h4>
+<ul>
+<li>论文中的语义 ID 建模是静态的，没有与 user–item 交互相关联，也未融合协同信息。</li>
+<li>后续的生成式模型在动态交互建模和个性化生成方面仍有较大改进空间。</li>
+</ul>
+
+  </article>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <div class="post-license bg-muted/30 border-border mb-8 rounded-xl border p-6">
+    <div class="flex items-start gap-4">
+      
+      <div
+        class="bg-primary/10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg">
+        <svg class="h-6 w-6" aria-label="许可证" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+</svg>
+      </div>
+
+      
+      <div class="flex-1 min-w-0">
+        <h3 class="text-foreground mb-2 text-lg font-semibold">
+          Copyright Notice
+        </h3>
+
+        <div class="text-muted-foreground space-y-2 text-sm">
+          
+          
+          <p>
+            <strong>Author:</strong>
+            Hugo Narrow
+          </p>
+          
+
+          
+          <p>
+            <strong>Link:</strong>
+            <a
+              href="https://mydocts.github.io/jiatong.github.io/posts/tiger/"
+              class="text-primary hover:text-primary/80 transition-colors break-all hyphens-auto duration-200">
+              https://mydocts.github.io/jiatong.github.io/posts/tiger/
+            </a>
+          </p>
+
+          
+          <p>
+            <strong>License:</strong>
+            
+              <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:text-primary/80 transition-colors duration-200">
+                CC BY-NC-SA 4.0
+              </a>
+            
+          </p>
+
+          
+          
+          <p class="text-xs">
+            This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+
+
+
+
+
+  <nav
+    class="post-navigation mb-12"
+    aria-label="Post navigation">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      
+      <div class="nav-item">
+        
+          <a
+            href="https://mydocts.github.io/jiatong.github.io/posts/grid/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
+            <div>
+              <div class="mb-3 flex items-center gap-3">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+</svg>
+                <span class="text-muted-foreground text-sm font-medium">
+                  Previous
+                </span>
+              </div>
+
+              <h3
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200">
+                GRID
+              </h3>
+            </div>
+
+            <div
+              class="text-muted-foreground mt-auto flex items-center gap-2 text-xs">
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+              <time datetime="2025-10-01">
+                Oct 01
+              </time>
+            </div>
+          </a>
+        
+      </div>
+
+      
+      <div class="nav-item">
+        
+          <a
+            href="https://mydocts.github.io/jiatong.github.io/posts/hstu/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
+            <div>
+              <div class="mb-3 flex items-center justify-end gap-3">
+                <span class="text-muted-foreground text-sm font-medium">
+                  Next
+                </span>
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+              </div>
+
+              <h3
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200">
+                HSTU
+              </h3>
+            </div>
+
+            <div
+              class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
+              <time datetime="2025-10-24">
+                Oct 24
+              </time>
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  <section class="related-posts mb-12">
+    
+    <div class="mb-6 flex items-center gap-3">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+</svg>
+      <h2 class="text-foreground text-2xl font-bold">
+        Related Posts
+      </h2>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      
+        <article class="group">
+          <a href="https://mydocts.github.io/jiatong.github.io/posts/grid/" class="block">
+            <div class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none min-h-[120px]">
+              <h3 class="text-foreground group-hover:text-primary text-lg font-semibold leading-snug line-clamp-3 w-full">
+                GRID
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+    </div>
+  </section>
+
+
+
+  
+  
+
+
+    </main>
+
+    
+        
+
+
+
+
+
+    <footer class="mx-auto max-w-4xl px-4 py-8">
+  <div class="px-6 py-6">
+    
+    
+      <nav class="mb-6">
+        <div class="flex flex-wrap items-center justify-center gap-1">
+          
+            
+            
+            
+              
+                
+              
+            
+            <a
+              href="https://mydocts.github.io/jiatong.github.io/about/"
+              
+              class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
+              
+                <svg class="h-5 w-5" aria-label="About" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+</svg>
+
+              
+              <span
+                >
+                  About
+                </span
+              >
+            </a>
+          
+            
+            
+            
+            <a
+              href="https://google.com"
+              
+                target="_blank" rel="noopener noreferrer"
+              
+              class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
+              
+                <svg class="h-5 w-5" aria-label="Contact" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+
+              
+              <span
+                >
+                  Contact
+                </span
+              >
+            </a>
+          
+            
+            
+            
+            <a
+              href="https://mydocts.github.io/jiatong.github.io/index.xml"
+              
+              class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
+              
+                <svg class="h-5 w-5" aria-label="RSS Feed" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+
+              
+              <span
+                >
+                  RSS Feed
+                </span
+              >
+            </a>
+          
+        </div>
+      </nav>
+    
+
+
+    
+    
+      <div class="border-border mb-6 border-t"></div>
+    
+
+
+    
+    <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+      
+      <div class="text-muted-foreground text-sm text-center md:text-left">
+        <p class="mb-2">
+          &copy; 2025 Jiatong Blog.
+          All rights reserved.
+        </p>
+        <p class="flex flex-wrap items-center justify-center gap-1 md:justify-start">
+          <span>Powered by</span>
+          <a 
+            href="https://gohugo.io/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-primary hover:text-primary/80 font-medium transition-colors duration-200 hover:underline"
+          >
+            Hugo
+          </a>
+          <span>&</span>
+          <a 
+            href="https://github.com/tom2almighty/hugo-narrow" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-primary hover:text-primary/80 font-medium transition-colors duration-200 hover:underline"
+          >
+            Narrow
+          </a>
+        </p>
+      </div>
+
+      
+      
+        <div class="flex items-center gap-3">
+          
+            <a
+              href="https://github.com/username"
+              
+                target="_blank" rel="noopener noreferrer"
+              
+              class="text-muted-foreground hover:text-primary focus:ring-primary/20 rounded-lg p-1 transition-all duration-300 ease-out hover:scale-110 focus:ring-2 focus:outline-none"
+              title="GitHub"
+              aria-label="GitHub">
+              
+                <svg class="h-6 w-6" aria-label="GitHub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></g></svg>
+              
+            </a>
+          
+            <a
+              href="https://twitter.com/username"
+              
+                target="_blank" rel="noopener noreferrer"
+              
+              class="text-muted-foreground hover:text-primary focus:ring-primary/20 rounded-lg p-1 transition-all duration-300 ease-out hover:scale-110 focus:ring-2 focus:outline-none"
+              title="Twitter"
+              aria-label="Twitter">
+              
+                <svg class="h-6 w-6" aria-label="Twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"/></svg>
+              
+            </a>
+          
+            <a
+              href="https://linkedin.com/in/username"
+              
+                target="_blank" rel="noopener noreferrer"
+              
+              class="text-muted-foreground hover:text-primary focus:ring-primary/20 rounded-lg p-1 transition-all duration-300 ease-out hover:scale-110 focus:ring-2 focus:outline-none"
+              title="LinkedIn"
+              aria-label="LinkedIn">
+              
+                <svg class="h-6 w-6" aria-label="LinkedIn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></g></svg>
+              
+            </a>
+          
+            <a
+              href="mailto:your.email@example.com"
+              
+              class="text-muted-foreground hover:text-primary focus:ring-primary/20 rounded-lg p-1 transition-all duration-300 ease-out hover:scale-110 focus:ring-2 focus:outline-none"
+              title="Email"
+              aria-label="Email">
+              
+                <svg class="h-6 w-6" aria-label="Email" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+
+              
+            </a>
+          
+        </div>
+      
+
+    </div>
+  </div>
+</footer>
+
+    
+    
+
+
+
+
+<div
+  id="dock"
+  class="pointer-events-none fixed bottom-4 left-1/2 z-[9999] w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
+  data-dock-mode="always"
+  role="toolbar"
+  aria-label="Quick action toolbar">
+  <nav
+    class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3">
+    
+    
+      <button
+        id="dock-back"
+        class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex flex-shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
+        title="Back"
+        aria-label="Back">
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m12 19-7-7 7-7"/>
+  <path d="M19 12H5"/>
+</svg>
+
+        <span class="hidden sm:inline"
+          >Back</span
+        >
+      </button>
+
+      
+      <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2"></div>
+    
+
+
+    
+    
+        
+
+        <button
+          id="dock-toc"
+          class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex flex-shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2 "
+          title="Table of Contents"
+          aria-label="Table of Contents">
+          <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="8" x2="21" y1="6" y2="6"/>
+  <line x1="8" x2="21" y1="12" y2="12"/>
+  <line x1="8" x2="21" y1="18" y2="18"/>
+  <line x1="3" x2="3.01" y1="6" y2="6"/>
+  <line x1="3" x2="3.01" y1="12" y2="12"/>
+  <line x1="3" x2="3.01" y1="18" y2="18"/>
+</svg>
+
+          <span class="hidden sm:inline"
+            >Table of Contents</span
+          >
+        </button>
+
+        
+        <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2 "></div>
+    
+
+
+    
+    <button
+      id="dock-search"
+      class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex flex-shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
+      title="Search"
+      aria-label="Search">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+      <span class="hidden md:inline"
+        >Search</span
+      >
+    </button>
+
+    
+    <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2"></div>
+
+    
+    
+    
+
+
+    
+    <button
+      id="dock-top"
+      class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex flex-shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
+      title="Back to Top"
+      aria-label="Back to Top">
+      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m18 15-6-6-6 6"/>
+</svg>
+
+      <span class="hidden sm:inline"
+        >Top</span
+      >
+    </button>
+  </nav>
+</div>
+
+
+
+
+
+    
+        
+
+
+
+
+<div
+  id="toc-overlay"
+  class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 backdrop-blur-sm transition-all duration-300 "
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="toc-title"></div>
+
+
+<div
+  id="toc-card"
+  class="pointer-events-none fixed inset-4 z-50 flex w-auto scale-95 items-center justify-center opacity-0 transition-all duration-300 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:block sm:w-full sm:max-w-md sm:-translate-x-1/2 sm:-translate-y-1/2 "
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="toc-title">
+  <div
+    class="bg-card border-border w-full max-w-sm overflow-hidden rounded-xl border shadow-xl sm:max-w-md">
+    
+    <div
+      class="border-border bg-muted/30 flex items-center justify-between border-b p-4">
+      <div class="flex items-center gap-3">
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="8" x2="21" y1="6" y2="6"/>
+  <line x1="8" x2="21" y1="12" y2="12"/>
+  <line x1="8" x2="21" y1="18" y2="18"/>
+  <line x1="3" x2="3.01" y1="6" y2="6"/>
+  <line x1="3" x2="3.01" y1="12" y2="12"/>
+  <line x1="3" x2="3.01" y1="18" y2="18"/>
+</svg>
+
+        <h2 id="toc-title" class="text-foreground text-lg font-semibold">
+          Table of Contents
+        </h2>
+      </div>
+
+      
+      <button
+        id="toc-close"
+        class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 rounded-lg p-2 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
+        title="Close"
+        aria-label="Close">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+      </button>
+    </div>
+
+    
+    <div class="max-h-96 overflow-y-auto p-4">
+      <nav
+        id="toc-nav"
+        class="toc-scrollbar"
+        aria-label="Table of Contents Navigation">
+          
+          <div id="toc-content">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#推荐系统深度学习基本流程">推荐系统深度学习基本流程</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#检索阶段">检索阶段</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#推荐系统存在的局限与挑战">推荐系统存在的局限与挑战</a></li>
+    <li><a href="#本文工作提出全新的推荐系统框架-tiger">本文工作：提出全新的推荐系统框架 TIGER</a></li>
+    <li><a href="#tiger-的生成式推荐范式">TIGER 的生成式推荐范式</a></li>
+    <li><a href="#语义-idsemantic-id简介">语义 ID（Semantic ID）简介</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#本工作的主要贡献">本工作的主要贡献</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#定义与构成">定义与构成</a></li>
+        <li><a href="#关键属性">关键属性</a></li>
+        <li><a href="#与大语言模型tokenizer的区别">与大语言模型Tokenizer的区别</a></li>
+        <li><a href="#语义id生成方法">语义ID生成方法</a>
+          <ul>
+            <li><a href="#核心方法基于rq-vae残差量化变分自动编码器">核心方法：基于RQ-VAE（残差量化变分自动编码器）</a></li>
+            <li><a href="#重构与损失函数">重构与损失函数</a></li>
+            <li><a href="#避免-codebook-collapse">避免 Codebook Collapse</a></li>
+            <li><a href="#其他量化方法对比消融实验证实rq-vae最优">其他量化方法对比（消融实验证实RQ-VAE最优）</a></li>
+            <li><a href="#冲突处理">冲突处理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#核心思路">核心思路</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#流程步骤">流程步骤</a></li>
+            <li><a href="#1用户序列构建">（1）用户序列构建</a></li>
+            <li><a href="#2序列转换">（2）序列转换</a></li>
+            <li><a href="#3模型训练与预测">（3）模型训练与预测</a></li>
+          </ul>
+        </li>
+        <li><a href="#实验设计与结果">实验设计与结果</a>
+          <ul>
+            <li><a href="#1-实验基础设置">1. 实验基础设置</a></li>
+            <li><a href="#基座模型与数据集">基座模型与数据集</a></li>
+            <li><a href="#2-核心实验结果">2. 核心实验结果</a></li>
+            <li><a href="#1序列推荐性能对比tiger最优">（1）序列推荐性能对比（TIGER最优）</a></li>
+            <li><a href="#2消融实验不同id生成方式rq-vae-sid最优">（2）消融实验：不同ID生成方式（RQ-VAE SID最优）</a></li>
+            <li><a href="#3冷启动推荐性能tiger优于knn">（3）冷启动推荐性能（TIGER优于KNN）</a></li>
+            <li><a href="#4推荐多样性温度系数调控">（4）推荐多样性（温度系数调控）</a></li>
+            <li><a href="#5模型层数与用户信息影响">（5）模型层数与用户信息影响</a></li>
+            <li><a href="#6invalid-semantic-id">（6）Invalid Semantic ID</a></li>
+          </ul>
+        </li>
+        <li><a href="#模型成本与优势">模型成本与优势</a>
+          <ul>
+            <li><a href="#成本分析">成本分析</a></li>
+            <li><a href="#1内存成本">（1）内存成本</a></li>
+            <li><a href="#2推理成本">（2）推理成本</a></li>
+            <li><a href="#核心优势">核心优势</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#模型核心思路">模型核心思路</a></li>
+            <li><a href="#不足">不足</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </div>
+      </nav>
+    </div>
+
+    
+    <div class="border-border bg-muted/20 border-t px-4 py-3">
+      <div class="text-muted-foreground text-center text-xs">
+        <span>Click to jump to the section</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+    integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+    crossorigin="anonymous" />
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+    integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6"
+    crossorigin="anonymous"></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+    integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+    crossorigin="anonymous"></script>
+
+<script>
+    
+    function initKaTeX() {
+        if (typeof renderMathInElement === 'undefined') {
+            setTimeout(initKaTeX, 100);
+            return;
+        }
+
+        var delimiters = [{"display":true,"left":"$$","right":"$$"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"},{"display":true,"left":"\\[","right":"\\]"}];
+
+        renderMathInElement(document.body, {
+            delimiters: delimiters,
+            throwOnError: false,
+            errorColor: '#cc0000',
+            fleqn: false,
+            leqno: false,
+            trust: false
+        });
+    }
+
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initKaTeX);
+    } else {
+        initKaTeX();
+    }
+</script>
+    
+
+
+
+    
+    
+<div
+  id="search-overlay"
+  class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300"></div>
+
+
+<div
+  id="search-modal"
+  class="bg-card border-border pointer-events-none fixed top-1/2 left-1/2 z-50 max-h-[80vh] w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 scale-95 transform overflow-hidden rounded-xl border opacity-0 shadow-xl transition-all duration-300">
+  
+  <div class="border-border flex items-center gap-3 border-b p-4">
+    
+    <div class="text-muted-foreground h-5 w-5 flex-shrink-0">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+    </div>
+
+    
+    <div class="relative flex-1">
+      
+      <button
+        id="search-clear"
+        class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
+        title="Clear"
+        aria-label="Clear">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+      </button>
+
+      
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search posts..."
+        class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
+        autocomplete="off"
+        spellcheck="false" />
+    </div>
+
+    
+    <button
+      id="search-close"
+      class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
+      title="Close"
+      aria-label="Close">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+    </button>
+  </div>
+
+  
+  <div id="search-results" class="max-h-96 overflow-y-auto">
+    
+    <div
+      id="search-empty"
+      class="flex flex-col items-center justify-center py-12 text-center">
+      <div
+        class="bg-muted/50 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+      </div>
+      <h3 class="text-foreground mb-2 text-lg font-semibold">
+        Start searching
+      </h3>
+      <p class="text-muted-foreground text-sm">
+        Enter keywords to search articles
+      </p>
+    </div>
+
+    
+    <div
+      id="search-loading"
+      class="flex hidden items-center justify-center py-8">
+      <div
+        class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"></div>
+      <span class="text-muted-foreground"
+        >Searching...</span
+      >
+    </div>
+
+    
+    <div
+      id="search-no-results"
+      class="flex hidden flex-col items-center justify-center py-12 text-center">
+      <div
+        class="bg-muted/50 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+</svg>
+
+      </div>
+      <h3 class="text-foreground mb-2 text-lg font-semibold">
+        No results found
+      </h3>
+      <p class="text-muted-foreground text-sm">
+        Try using different keywords
+      </p>
+    </div>
+
+    
+    <div id="search-results-list" class="hidden">
+      
+      <div
+        id="search-stats"
+        class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
+        data-template="Found %d results">
+      </div>
+
+      
+      <div id="search-items" class="divide-border divide-y">
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="border-border bg-muted/20 border-t px-4 py-3">
+    <div
+      class="text-muted-foreground flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 md:gap-4">
+        <div class="flex items-center gap-1">
+          <kbd
+            class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+            >↑↓</kbd
+          >
+          <span class="hidden sm:inline"
+            >Navigate</span
+          >
+        </div>
+        <div class="flex items-center gap-1">
+          <kbd
+            class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+            >↵</kbd
+          >
+          <span class="hidden sm:inline"
+            >Select</span
+          >
+        </div>
+        <div class="flex items-center gap-1">
+          <kbd
+            class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+            >ESC</kbd
+          >
+          <span class="hidden sm:inline"
+            >Close</span
+          >
+        </div>
+      </div>
+      <div class="search-hint-desktop flex items-center gap-1">
+        <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+          >⌘K</kbd
+        >
+        <span>Shortcut</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

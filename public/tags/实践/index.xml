@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>实践 on Jiatong Blog</title>
+    <link>https://mydocts.github.io/jiatong.github.io/tags/%E5%AE%9E%E8%B7%B5/</link>
+    <description>Recent content in 实践 on Jiatong Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 02 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mydocts.github.io/jiatong.github.io/tags/%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some Obervations and Experience</title>
+      <link>https://mydocts.github.io/jiatong.github.io/posts/ai-thinking/</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mydocts.github.io/jiatong.github.io/posts/ai-thinking/</guid>
+      <description>&lt;h2 id=&#34;从工程实践看ai的本质&#34;&gt;从工程实践看AI的本质&lt;/h2&gt;&#xA;&lt;p&gt;很多突破性的AI技术，其实都在模仿自然界已经存在了数百万年的机制。&lt;/p&gt;&#xA;&lt;p&gt;比如卷积神经网络的层级结构，本质上是在模拟视觉皮层的工作方式——从简单的边缘检测逐步抽象到复杂的物体识别。Transformer的自注意力机制，某种程度上也像是群体智能的数学建模，每个token都能&amp;quot;看到&amp;quot;全局，但各司其职。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
