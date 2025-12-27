@@ -5,13 +5,15 @@
     <div class="hidden w-full items-center md:flex">
       <!-- 左侧：站点 Logo -->
       <div class="flex items-center">
-        {{ if ne site.Params.header.logo.image "" }}
+        {{- $logoImage := site.Params.header.logo.image | default site.Params.logo.image -}}
+        {{- $logoLink := site.Params.header.logo.link | default site.Params.logo.link -}}
+        {{ if ne $logoImage "" }}
           <a
-            href="{{ if site.Params.header.logo.link }}{{ site.Params.header.logo.link | relLangURL }}{{ else }}{{ site.Home.RelPermalink }}{{ end }}"
+            href="{{ if $logoLink }}{{ $logoLink | relLangURL }}{{ else }}{{ site.Home.RelPermalink }}{{ end }}"
             class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full transition-transform duration-200 hover:scale-105"
             aria-label="{{ site.Title }}">
             <img
-              src="{{ site.Params.header.logo.image }}"
+              src="{{ $logoImage | relURL }}"
               alt="{{ site.Title }}"
               class="h-full w-full object-cover" />
           </a>
