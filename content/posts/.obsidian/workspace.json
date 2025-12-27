@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "bd877ddbc6f85e1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "c9089a9ffd73c3eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7d83fc3b7cb2943",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HSTU.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HSTU"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "21424c6e21037d83",
+    "type": "split",
+    "children": [
+      {
+        "id": "a790986dd2d8b209",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d402d5da3e9f50bd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "6daa37bad2e28835",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#本文工作：提出全新的推荐系统框架〔TIGER〕基于生成式检索范式并应用到序列推荐中：",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "a8b568c71f5a9c7e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "97b1171eaeafd7ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "329a6e8ecbd578a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97e8a2ec91280cf2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HSTU.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "HSTU 的反向链接列表"
+            }
+          },
+          {
+            "id": "405f1abb0e373c8f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HSTU.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "HSTU 的出链列表"
+            }
+          },
+          {
+            "id": "9c9217499dcde67e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "274dc95843269cb1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HSTU.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "HSTU 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "d7d83fc3b7cb2943",
+  "lastOpenFiles": [
+    "GenRecsys 1.md",
+    "HSTU.md",
+    "Tiger.md",
+    "LLM-RL-PPO.md",
+    "LLM-RL-DPO.md",
+    "markdown-test.zh-cn.md",
+    "Pasted image 20251013094854.png",
+    "LLM-RL-GRPO.md",
+    "Pasted image 20251025090221.png",
+    "Pasted image 20251025090159.png",
+    "Pasted image 20251025085748.png",
+    "Pasted image 20251025085446.png",
+    "Pasted image 20251025085128.png",
+    "Pasted image 20251025085046.png",
+    "Pasted image 20251025085013.png",
+    "Pasted image 20251025084914.png",
+    "Pasted image 20251025084704.png",
+    "GRID.md",
+    "markdown-test.md",
+    "render-image/index.md",
+    "alert-test.md",
+    "code-highlighting-test.md",
+    "code-highlighting-test.zh-cn.md",
+    "katex-mermaid-test.zh-cn.md",
+    "katex-mermaid-test.md",
+    "images/GRID.png.md",
+    "alert-test.zh-cn.md",
+    "render-image/index.zh-cn.md",
+    "GRID.zh-cn.md",
+    "images",
+    "GRID(Generative Recommendation with Semantic IDs Framework).md",
+    "GRID(Generative Recommendation with Semantic IDs Framework).md的替身",
+    "katex-mermaid-test.fr.md",
+    "alert-test.fr.md",
+    "render-image/index.ja.md",
+    "render-image/index.fr.md",
+    "markdown-test.fr.md"
+  ]
+}
