@@ -124,7 +124,7 @@ params:
   - "images/og-default.avif"
 
   logo:
-    image: "/images/art_touxiang.jpg"  # Logo path rel to static folder, leave empty use site title and primary color
+    image: "/images/touxiang.jpg"  # Logo path rel to static folder, leave empty use site title and primary color
     link: "/"                  # click to home page
   favicon:
     svg: "favicon.svg"        # SVG format favicon (recommended)
@@ -148,7 +148,7 @@ params:
     name: "Song Jiatong"
     title: "BSc Math, DUT → MSc Data Science, CUHK-SZ"
     description: "	Focused on RecSys & LLM"
-    avatar: "images/art_touxiang.jpg"
+    avatar: "/images/touxiang.jpg"
     social:
       - name: "Wechat"
         url: "images/wechat_qrcode.jpg"
