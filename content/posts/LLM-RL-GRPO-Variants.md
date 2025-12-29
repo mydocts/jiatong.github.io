@@ -278,16 +278,12 @@ $$
 #### 目标函数
 
 $$
-J_{GRPO} = \frac{1}{N} \sum_{n=1}^{N} \frac{1}{T_n}\sum_{t=1}^{T_n}
-\min \Bigg(
-\textcolor{red}{A_{\theta'}^{GRPO}(s_n^t, a_n^t)
-\frac{P_\theta(a_n^t|s_n^t)}{P_{\theta'}(a_n^t|s_n^t)}},
-clip\left(
-\frac{P_\theta(a_n^t|s_n^t)}{P_{\theta'}(a_n^t|s_n^t)},
-1-\varepsilon, 1+\varepsilon
-\right)
-A_{\theta'}^{GRPO}(s_n^t, a_n^t)
-\Bigg) - \beta KL(P_\theta, P_{ref})
+J_{GRPO}(\theta) = \frac{1}{G} \sum_{i=1}^G \frac{1}{T_i} \sum_{t=1}^{T_i} \left[ \min \left( \frac{P_\theta(a_{i,t}|s_{i,t})}{P_{\theta'}(a_{i,t}|s_{i,t})} A_i, \text{clip}\left(\frac{P_\theta(a_{i,t}|s_{i,t})}{P_{\theta'}(a_{i,t}|s_{i,t})}, 1-\varepsilon, 1+\varepsilon\right) A_i \right) - \beta D_{KL}(P_\theta \| P_{ref}) \right]
+$$
+
+其中，$A_i$ 为第 $i$ 个样本的优势值（通常为组内奖励的标准化值），$D_{KL}$ 通常采用无偏估计量：
+$$
+D_{KL}(P_\theta \| P_{ref}) = \frac{P_{ref}(a_t|s_t)}{P_\theta(a_t|s_t)} - \log \frac{P_{ref}(a_t|s_t)}{P_\theta(a_t|s_t)} - 1
 $$
 
 #### 点评
