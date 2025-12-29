@@ -1,7 +1,7 @@
 ---
 title: LLM-RL-GRPO-and its Variants
 date: 2025-12-14
-description: PPO 的改进算法及各类变体 (DAPO, DRPO, GFPO, GSPO)
+description: PPO 的改进算法及各类变体 (DAPO, DRPO, GFPO, GRPO-Training-free)
 draft: false
 categories:
   - 博客
@@ -278,7 +278,7 @@ $$
 #### 目标函数
 
 $$
-J_{GRPO} = \frac{1}{N} \sum_{n=1}^{N} \sum_{t=1}^{T_n}
+J_{GRPO} = \frac{1}{N} \sum_{n=1}^{N} \frac{1}{T_n}\sum_{t=1}^{T_n}
 \min \Bigg(
 \textcolor{red}{A_{\theta'}^{GRPO}(s_n^t, a_n^t)
 \frac{P_\theta(a_n^t|s_n^t)}{P_{\theta'}(a_n^t|s_n^t)}},
@@ -287,7 +287,7 @@ clip\left(
 1-\varepsilon, 1+\varepsilon
 \right)
 A_{\theta'}^{GRPO}(s_n^t, a_n^t)
-\Bigg) - \beta KL(P_\theta, P_{\theta'})
+\Bigg) - \beta KL(P_\theta, P_{ref})
 $$
 
 #### 点评

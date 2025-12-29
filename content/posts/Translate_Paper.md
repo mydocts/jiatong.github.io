@@ -55,10 +55,10 @@ katex: true
 
 ## 评估
 
-1. **BLEU / METEOR / COMET**：基础语义对齐评估。
-2. **GSB (Good/Same/Bad)**：人工或模型对比评估。
-3. **幻觉率评估 (Hallucination Rate Evaluation)**：
-   * **结构硬校验 (Structural Check)**：利用正则统计 `[n]` 引用标签、`Figure/Table` 编号及 LaTeX 公式在翻译前后的数量与结构变化。
+*   **BLEU / METEOR / COMET**：基础语义对齐评估。
+*   **GSB (Good/Same/Bad)**：人工或模型对比评估。
+*   **幻觉率评估 (Hallucination Rate Evaluation)**：
+    *   **结构硬校验 (Structural Check)**：利用正则统计 `[n]` 引用标签、`Figure/Table` 编号及 LaTeX 公式在翻译前后的数量与结构变化。
 
 ## SFT
 
@@ -120,9 +120,9 @@ katex: true
 * **具体问题**：模型将同一术语在上下文中翻译得不一致，或者出现低级错误（如将 "Transformer" 翻译成 "变压器"）。
 * **解决过程**：
   * **问题定位**：发现模型在没有外部约束时，倾向于根据局部语境选择最常见的词汇，而非专业学术词汇。
-  * **解决方案**：
-    1. **Glossary Injection (提示工程)**：在 Prompt 中动态注入领域术语表（如：`{ "Attention Mechanism": "注意力机制" }`），强制约束。
-    2. **SFT 阶段约束**：在训练数据中加入大量带术语保护的样本，让模型学会尊重特定实体。
+    * **解决方案**：
+      * **Glossary Injection (提示工程)**：在 Prompt 中动态注入领域术语表（如：`{ "Attention Mechanism": "注意力机制" }`），强制约束。
+      * **SFT 阶段约束**：在训练数据中加入大量带术语保护的样本，让模型学会尊重特定实体。
 
 #### 案例 2：公式的“降维打击” (Equation/LaTeX Hallucination)
 
@@ -130,8 +130,8 @@ katex: true
 * **解决过程**：
   * **问题定位**：Tokenizer 对 LaTeX 特殊字符（如 `\`、`_`、`^`）的切分导致模型对公式结构的语义理解出现偏差。
   * **解决方案**：
-    1. **正则占位符保护**：翻译前用正则匹配公式并替换为占位符（如 `<MATH_0>`），翻译完成后再进行原位回填。
-    2. **代码感知微调**：在微调数据中刻意保留复杂的 LaTeX 结构，确保模型将其识别为“不可触碰”的特殊 Toekn。
+    * **正则占位符保护**：翻译前用正则匹配公式并替换为占位符（如 `<MATH_0>`），翻译完成后再进行原位回填。
+    * **代码感知微调**：在微调数据中刻意保留复杂的 LaTeX 结构，确保模型将其识别为“不可触碰”的特殊 Toekn。
 
 #### 案例 3：引用标签丢失 (Citation/Link Hallucination)
 
@@ -139,8 +139,8 @@ katex: true
 * **解决过程**：
   * **问题定位**：模型认为引用标签是“噪声”，在生成流畅译文时将其忽略。
   * **解决方案**：
-    1. **Rule-based Reward (RL 阶段)**：在使用 GRPO/PPO 训练时，设计一个“引用一致性奖励函数”。如果译文中的引用标签数量与原文不符，扣除大量 Reward。
-    2. **数据清洗**：剔除 SFT 数据集中任何丢失引用标签的 Bad Case。
+    * **Rule-based Reward (RL 阶段)**：在使用 GRPO/PPO 训练时，设计一个"引用一致性奖励函数"。如果译文中的引用标签数量与原文不符，扣除大量 Reward。
+    * **数据清洗**：剔除 SFT 数据集中任何丢失引用标签的 Bad Case。
 
 ---
 
@@ -197,12 +197,12 @@ katex: true
 
 在翻译或推理任务中，Reward 通常由两部分组成：
 
-1. **Rule-based Reward (硬约束)**：
-   * **格式检查**：是否保留了 Markdown？公式是否损坏？（是=+1, 否=-10）
-   * **长度惩罚**：避免生成过长或过短的无意义内容。
-2. **Model-based Reward (软约束)**：
-   * **语义打分**：使用 Reward Model (如 Starling, Bradley-Terry 模型) 评估流畅度和准确性。
-   * **Golden 对比**：计算生成结果与标准答案的 METEOR/COMET 分数作为奖励值。
+* **Rule-based Reward (硬约束)**：
+  * **格式检查**：是否保留了 Markdown？公式是否损坏？（是=+1, 否=-10）
+  * **长度惩罚**：避免生成过长或过短的无意义内容。
+* **Model-based Reward (软约束)**：
+  * **语义打分**：使用 Reward Model (如 Starling, Bradley-Terry 模型) 评估流畅度和准确性。
+  * **Golden 对比**：计算生成结果与标准答案的 METEOR/COMET 分数作为奖励值。
 
 ## 训练经验
 

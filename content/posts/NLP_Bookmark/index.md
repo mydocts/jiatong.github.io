@@ -19,8 +19,8 @@ katex: true
 
 在测试时扩展（Test-Time Scaling）场景下，大模型需要进行深度、多步骤推理（如数学竞赛题 AIME）。然而，现有方法面临两大挑战：
 
-1. **上下文窗口限制**：长链推理会超出模型的最大上下文长度。
-2. **噪声累积**：历史推理步骤过多时，模型难以聚焦于关键信息（"Lost in the Middle" 现象）。
+* **上下文窗口限制**：长链推理会超出模型的最大上下文长度。
+* **噪声累积**：历史推理步骤过多时，模型难以聚焦于关键信息（"Lost in the Middle" 现象）。
 
 ### 解决方案：Bookmark 框架
 
@@ -41,10 +41,10 @@ Bookmark 框架提出了一种**动态上下文压缩与检索**机制：
 
 ![Bookmark 推理流程](inference.png)
 
-1. **Substep Tagging**：使用 `<substep>...</substep>` 标签将推理过程切分为离散步骤。
-2. **Bookmark Generation**：每个子步骤结束后，模型生成一个简洁的摘要（Bookmark），保存到 Archive。
-3. **Retrieval Trigger**：当模型遇到需要回顾历史的节点时（如 `<reflection>`），触发检索机制从 Archive 中提取相关 Bookmark。
-4. **Context Refresh**：用检索到的 Bookmark 替换原始长上下文，输入模型继续推理。
+* **Substep Tagging**：使用 `<substep>...</substep>` 标签将推理过程切分为离散步骤。
+* **Bookmark Generation**：每个子步骤结束后，模型生成一个简洁的摘要（Bookmark），保存到 Archive。
+* **Retrieval Trigger**：当模型遇到需要回顾历史的节点时（如 `<reflection>`），触发检索机制 from Archive 中提取相关 Bookmark。
+* **Context Refresh**：用检索到的 Bookmark 替换原始长上下文，输入模型继续推理。
 
 ### 训练策略 (Training Pipeline)
 
@@ -112,8 +112,8 @@ Bookmark 框架提出了一种**动态上下文压缩与检索**机制：
 
 ## 5. 未来工作
 
-1. **RL 训练扩展**：在更多数据集上进行大规模 GRPO 训练，观察是否能涌现更高级的策略行为。
-2. **算法优化**：探索 **DAPO** 等更稳定的对齐算法，优化准确性与格式奖励的权衡。
-3. **跨模型验证**：在 Llama-3、32B 等更大模型上验证框架的通用性。
+* **RL 训练扩展**：在更多数据集上进行大规模 GRPO 训练，观察是否能涌现更高级的策略行为。
+* **算法优化**：探索 **DAPO** 等更稳定的对齐算法，优化准确性与格式奖励的权衡。
+* **跨模型验证**：在 Llama-3、32B 等更大模型上验证框架的通用性。
 
 ---
