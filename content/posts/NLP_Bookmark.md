@@ -7,8 +7,7 @@ categories:
   - 博客
 tags:
   - 大模型
-  - 强化学习
-  - NLP
+  - Reasoning RL
 slug: bookmark-framework
 math: true
 katex: true
