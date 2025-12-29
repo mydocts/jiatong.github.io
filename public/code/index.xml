@@ -1,25 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Codes on Jiatong Blog</title>
-    <link>https://mydocts.github.io/jiatong.github.io/code/</link>
-    <description>Recent content in Codes on Jiatong Blog</description>
-    <generator>Hugo</generator>
-    <language>en-US</language>
-    <atom:link href="https://mydocts.github.io/jiatong.github.io/code/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://mydocts.github.io/jiatong.github.io/code/core_algos_summary_zh/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/code/core_algos_summary_zh/</guid>
-      <description>&lt;h1 id=&#34;核心强化学习算法代码总结-core_algospy&#34;&gt;核心强化学习算法代码总结 (&lt;code&gt;core_algos.py&lt;/code&gt;)&lt;/h1&gt;&#xA;&lt;p&gt;该文件是 &lt;strong&gt;verl&lt;/strong&gt; 框架中强化学习 (RL) 核心算法和工具函数的集合，主要针对大语言模型 (LLM) 对齐任务中的&lt;strong&gt;策略梯度 (Policy Gradient)&lt;/strong&gt; 方法（如 PPO, GRPO, RLOO 等）。&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-概览&#34;&gt;1. 概览&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;core_algos.py&lt;/code&gt; 提供了以下功能的实现：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://mydocts.github.io/jiatong.github.io/code/ppo_vs_grpo_example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/code/ppo_vs_grpo_example/</guid>
-      <description>&lt;h1 id=&#34;ppo-vs-grpo-优势值计算对比实例&#34;&gt;PPO vs GRPO 优势值计算对比实例&lt;/h1&gt;&#xA;&lt;p&gt;为了清晰理解代码背后的数学逻辑，我们假设一个简单的场景：&#xA;&lt;strong&gt;Prompt:&lt;/strong&gt; &lt;code&gt;1 + 1 = ?&lt;/code&gt;&#xA;&lt;strong&gt;模型生成回答:&lt;/strong&gt; &lt;code&gt;The answer is 2.&lt;/code&gt; (假设为 5 个 Token)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-ppo-基于-gae-实例&#34;&gt;1. PPO (基于 GAE) 实例&lt;/h2&gt;&#xA;&lt;p&gt;PPO 需要一个 &lt;strong&gt;Critic 网络&lt;/strong&gt; 来预测每一个状态的价值 ($V$)。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codes on Jiatong Blog</title><link>https://mydocts.github.io/jiatong.github.io/code/</link><description>Recent content in Codes on Jiatong Blog</description><generator>Hugo</generator><language>en-US</language><atom:link href="https://mydocts.github.io/jiatong.github.io/code/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://mydocts.github.io/jiatong.github.io/code/core_algos_summary_zh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/code/core_algos_summary_zh/</guid><description>&lt;h1 id="核心强化学习算法代码总结-core_algospy"&gt;核心强化学习算法代码总结 (&lt;code&gt;core_algos.py&lt;/code&gt;)&lt;/h1&gt;
+&lt;p&gt;该文件是 &lt;strong&gt;verl&lt;/strong&gt; 框架中强化学习 (RL) 核心算法和工具函数的集合，主要针对大语言模型 (LLM) 对齐任务中的&lt;strong&gt;策略梯度 (Policy Gradient)&lt;/strong&gt; 方法（如 PPO, GRPO, RLOO 等）。&lt;/p&gt;
+&lt;h2 id="1-概览"&gt;1. 概览&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;core_algos.py&lt;/code&gt; 提供了以下功能的实现：&lt;/p&gt;</description></item><item><title/><link>https://mydocts.github.io/jiatong.github.io/code/ppo_vs_grpo_example/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/code/ppo_vs_grpo_example/</guid><description>&lt;h1 id="ppo-vs-grpo-优势值计算对比实例"&gt;PPO vs GRPO 优势值计算对比实例&lt;/h1&gt;
+&lt;p&gt;为了清晰理解代码背后的数学逻辑，我们假设一个简单的场景：
+&lt;strong&gt;Prompt:&lt;/strong&gt; &lt;code&gt;1 + 1 = ?&lt;/code&gt;
+&lt;strong&gt;模型生成回答:&lt;/strong&gt; &lt;code&gt;The answer is 2.&lt;/code&gt; (假设为 5 个 Token)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-ppo-基于-gae-实例"&gt;1. PPO (基于 GAE) 实例&lt;/h2&gt;
+&lt;p&gt;PPO 需要一个 &lt;strong&gt;Critic 网络&lt;/strong&gt; 来预测每一个状态的价值 ($V$)。&lt;/p&gt;</description></item></channel></rss>

@@ -1,47 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>论文阅读 on Jiatong Blog</title>
-    <link>https://mydocts.github.io/jiatong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
-    <description>Recent content in 论文阅读 on Jiatong Blog</description>
-    <generator>Hugo</generator>
-    <language>en-US</language>
-    <lastBuildDate>Sat, 15 Nov 2025 10:00:00 +0800</lastBuildDate>
-    <atom:link href="https://mydocts.github.io/jiatong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Paper Reading 2</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/paper2/</link>
-      <pubDate>Sat, 15 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/paper2/</guid>
-      <description>&lt;h2 id=&#34;lost-in-the-middle&#34;&gt;Lost In the Middle&lt;/h2&gt;&#xA;&lt;p&gt;我们在这项工作中观察到的 U 形曲线，与心理学中的一个现象有关——&lt;strong&gt;系列位置效应（serial-position effect）&lt;/strong&gt;（Ebbinghaus，1913；Murdock Jr，1962）。这一效应指出：在让人们自由回忆一串列表元素的实验中，人类往往&lt;strong&gt;最容易记住列表中的第一个和最后一个元素&lt;/strong&gt;。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Paper Reading</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/paper/</link>
-      <pubDate>Tue, 11 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/paper/</guid>
-      <description>&lt;h4 id=&#34;基于历史信息生成时对不同位置信息的关注不同&#34;&gt;基于历史信息生成时，对不同位置信息的关注不同&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lost In the Middle&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;注意力层面校准差分选择性注意削弱首尾优势&#34;&gt;注意力层面：校准/差分/选择性注意，削弱“首尾优势”；&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Found In the Middle&lt;/li&gt;&#xA;&lt;li&gt;DIFF&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;训练数据位置无关信息密集型合成任务让模型学会任何位置都可能关键&#34;&gt;&lt;strong&gt;训练数据&lt;/strong&gt;：位置无关/信息密集型合成任务，让模型学会“任何位置都可能关键”；&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Never Lost in the Model&lt;/li&gt;&#xA;&lt;li&gt;Fill in the Model&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;提示工程预处理压缩与重排把关键信息放到模型更易注意的位置或在对话中状态化总结与提醒&#34;&gt;&lt;strong&gt;提示工程/预处理&lt;/strong&gt;：压缩与&lt;strong&gt;重排&lt;/strong&gt;把关键信息放到模型更易注意的位置，或在对话中&lt;strong&gt;状态化总结与提醒&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LongLLMLingua&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;lost-in-the-middle&#34;&gt;Lost In the Middle&lt;/h2&gt;&#xA;&lt;p&gt;目标信息的位置会显著影响模型推理的表现，当目标信息在上下文的开头和结尾时，模型表现好；在中间位置时，模型表现较差。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>HSTU</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/hstu/</link>
-      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/hstu/</guid>
-      <description>&lt;h2 id=&#34;dlrm深度学习推荐系统&#34;&gt;DLRM（深度学习推荐系统）：&lt;/h2&gt;&#xA;&lt;p&gt;一个经典的，标准的，符合工业界趋势的深度学习推荐系统模型应该如何构建？&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bottom MLP：处理连续数值特征。&lt;/li&gt;&#xA;&lt;li&gt;EmbeddingLookup：将离散类别特征映射到向量空间。&lt;/li&gt;&#xA;&lt;li&gt;Feature Interaction Layer: 融合 dense 与 sparse 特征。&lt;/li&gt;&#xA;&lt;li&gt;Top MLP：进行最终预测（如点击率）。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;DLRM 成为推荐系统工业界（如 Meta、Tencent、ByteDance）广泛采用的标准架构之一，因为它兼顾：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>TIGER &amp; Semantic ID</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/tiger/</link>
-      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/tiger/</guid>
-      <description>&lt;h1 id=&#34;tiger&#34;&gt;TIGER&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;推荐系统深度学习基本流程&#34;&gt;推荐系统深度学习基本流程&lt;/h2&gt;&#xA;&lt;p&gt;现有深度学习架构：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;输入特征 → 文本嵌入 → 隐藏层（RNN，深度学习网络）&lt;br&gt;&#xA;得到更精准的预测表征 → 预测层（通过查询与物品的相似性度量、点击，对相关物品进行排序，得到预测）&lt;/li&gt;&#xA;&lt;li&gt;检索 / 召回一系列可行的候选对象，然后用排序模型对其进行排序。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;检索阶段&#34;&gt;检索阶段&lt;/h4&gt;&#xA;&lt;p&gt;通过矩阵分解，在同一空间学习查询和候选的嵌入。&lt;br&gt;&#xA;为了更好地捕获数据中的非线性关系，近年来采用 &lt;strong&gt;内积查询和候选嵌入到同一空间的双塔编码架构&lt;/strong&gt;（一个塔用于查询(用户)，另一个塔用于候选(物品)）成为主流。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GRID</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/grid/</link>
-      <pubDate>Wed, 01 Oct 2025 10:00:00 +0800</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/grid/</guid>
-      <description>&lt;h2 id=&#34;1前言&#34;&gt;1.前言&lt;/h2&gt;&#xA;&lt;p&gt;GR 利用生成模型的进步，实现两种主要方式：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;直接生成用户感兴趣物品的文本内容&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识&lt;/strong&gt;，本文中的模型是后者。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2语义idsemantic-ids&#34;&gt;2.语义ID（Semantic IDs）&lt;/h2&gt;&#xA;&lt;h4 id=&#34;21语义id是什么&#34;&gt;2.1语义ID是什么&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;促成 &lt;strong&gt;GR（Generative Recommender）&lt;/strong&gt; 成功的关键因素之一是 &lt;strong&gt;语义 ID（SID, Semantic ID）&lt;/strong&gt;。它将连续的语义表示（例如来自大型语言模型的向量表示）&lt;strong&gt;转换为离散的 ID 序列&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;22传统id与语义id对比&#34;&gt;2.2传统ID与语义ID对比&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号&lt;/li&gt;&#xA;&lt;li&gt;语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。&lt;/li&gt;&#xA;&lt;li&gt;当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的&lt;strong&gt;语义相似性&lt;/strong&gt;；同时，下一步的监督学习（next-item supervision）使模型能够学习&lt;strong&gt;跨 SID 的协同过滤信号&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;23怎么得到语义id&#34;&gt;2.3怎么得到语义ID&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示；&lt;/li&gt;&#xA;&lt;li&gt;然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。&lt;/li&gt;&#xA;&lt;li&gt;常见的基于量化的标记器包括：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;RQ-VAE&lt;/strong&gt; ，&lt;strong&gt;RVQ&lt;/strong&gt; ，&lt;strong&gt;Residual K-Means&lt;/strong&gt; 。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;24如何将语义id用于生成式推荐&#34;&gt;2.4如何将语义ID用于生成式推荐&lt;/h4&gt;&#xA;&lt;p&gt;TIGER 首次将 Transformer 应用于推荐任务，&#xA;用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>论文阅读 on Jiatong Blog</title><link>https://mydocts.github.io/jiatong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link><description>Recent content in 论文阅读 on Jiatong Blog</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sat, 15 Nov 2025 10:00:00 +0800</lastBuildDate><atom:link href="https://mydocts.github.io/jiatong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>Paper Reading 2</title><link>https://mydocts.github.io/jiatong.github.io/posts/paper2/</link><pubDate>Sat, 15 Nov 2025 10:00:00 +0800</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/paper2/</guid><description>&lt;h2 id="lost-in-the-middle"&gt;Lost In the Middle&lt;/h2&gt;
+&lt;p&gt;我们在这项工作中观察到的 U 形曲线，与心理学中的一个现象有关——&lt;strong&gt;系列位置效应（serial-position effect）&lt;/strong&gt;（Ebbinghaus，1913；Murdock Jr，1962）。这一效应指出：在让人们自由回忆一串列表元素的实验中，人类往往&lt;strong&gt;最容易记住列表中的第一个和最后一个元素&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>Paper Reading</title><link>https://mydocts.github.io/jiatong.github.io/posts/paper/</link><pubDate>Tue, 11 Nov 2025 10:00:00 +0800</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/paper/</guid><description>&lt;h4 id="基于历史信息生成时对不同位置信息的关注不同"&gt;基于历史信息生成时，对不同位置信息的关注不同&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Lost In the Middle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="注意力层面校准差分选择性注意削弱首尾优势"&gt;注意力层面：校准/差分/选择性注意，削弱“首尾优势”；&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Found In the Middle&lt;/li&gt;
+&lt;li&gt;DIFF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="训练数据位置无关信息密集型合成任务让模型学会任何位置都可能关键"&gt;&lt;strong&gt;训练数据&lt;/strong&gt;：位置无关/信息密集型合成任务，让模型学会“任何位置都可能关键”；&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Never Lost in the Model&lt;/li&gt;
+&lt;li&gt;Fill in the Model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="提示工程预处理压缩与重排把关键信息放到模型更易注意的位置或在对话中状态化总结与提醒"&gt;&lt;strong&gt;提示工程/预处理&lt;/strong&gt;：压缩与&lt;strong&gt;重排&lt;/strong&gt;把关键信息放到模型更易注意的位置，或在对话中&lt;strong&gt;状态化总结与提醒&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;LongLLMLingua&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="lost-in-the-middle"&gt;Lost In the Middle&lt;/h2&gt;
+&lt;p&gt;目标信息的位置会显著影响模型推理的表现，当目标信息在上下文的开头和结尾时，模型表现好；在中间位置时，模型表现较差。&lt;/p&gt;</description></item><item><title>HSTU</title><link>https://mydocts.github.io/jiatong.github.io/posts/hstu/</link><pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/hstu/</guid><description>&lt;h2 id="dlrm深度学习推荐系统"&gt;DLRM（深度学习推荐系统）：&lt;/h2&gt;
+&lt;p&gt;一个经典的，标准的，符合工业界趋势的深度学习推荐系统模型应该如何构建？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bottom MLP：处理连续数值特征。&lt;/li&gt;
+&lt;li&gt;EmbeddingLookup：将离散类别特征映射到向量空间。&lt;/li&gt;
+&lt;li&gt;Feature Interaction Layer: 融合 dense 与 sparse 特征。&lt;/li&gt;
+&lt;li&gt;Top MLP：进行最终预测（如点击率）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DLRM 成为推荐系统工业界（如 Meta、Tencent、ByteDance）广泛采用的标准架构之一，因为它兼顾：&lt;/p&gt;</description></item><item><title>TIGER &amp; Semantic ID</title><link>https://mydocts.github.io/jiatong.github.io/posts/tiger/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/tiger/</guid><description>&lt;h1 id="tiger"&gt;TIGER&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="推荐系统深度学习基本流程"&gt;推荐系统深度学习基本流程&lt;/h2&gt;
+&lt;p&gt;现有深度学习架构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入特征 → 文本嵌入 → 隐藏层（RNN，深度学习网络）&lt;br&gt;
+得到更精准的预测表征 → 预测层（通过查询与物品的相似性度量、点击，对相关物品进行排序，得到预测）&lt;/li&gt;
+&lt;li&gt;检索 / 召回一系列可行的候选对象，然后用排序模型对其进行排序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="检索阶段"&gt;检索阶段&lt;/h4&gt;
+&lt;p&gt;通过矩阵分解，在同一空间学习查询和候选的嵌入。&lt;br&gt;
+为了更好地捕获数据中的非线性关系，近年来采用 &lt;strong&gt;内积查询和候选嵌入到同一空间的双塔编码架构&lt;/strong&gt;（一个塔用于查询(用户)，另一个塔用于候选(物品)）成为主流。&lt;/p&gt;</description></item><item><title>GRID</title><link>https://mydocts.github.io/jiatong.github.io/posts/grid/</link><pubDate>Wed, 01 Oct 2025 10:00:00 +0800</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/grid/</guid><description>&lt;h2 id="1前言"&gt;1.前言&lt;/h2&gt;
+&lt;p&gt;GR 利用生成模型的进步，实现两种主要方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接生成用户感兴趣物品的文本内容&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;或者从预训练模型中提取语义表示（semantic representations），以编码开放世界的知识&lt;/strong&gt;，本文中的模型是后者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2语义idsemantic-ids"&gt;2.语义ID（Semantic IDs）&lt;/h2&gt;
+&lt;h4 id="21语义id是什么"&gt;2.1语义ID是什么&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;促成 &lt;strong&gt;GR（Generative Recommender）&lt;/strong&gt; 成功的关键因素之一是 &lt;strong&gt;语义 ID（SID, Semantic ID）&lt;/strong&gt;。它将连续的语义表示（例如来自大型语言模型的向量表示）&lt;strong&gt;转换为离散的 ID 序列&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="22传统id与语义id对比"&gt;2.2传统ID与语义ID对比&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;传统的ID特征是为用户/物品分配独一无二，但不提供信息的ID，这些ID被映射到嵌入向量中，主要用于捕获协同过滤信号&lt;/li&gt;
+&lt;li&gt;语义ID将连续的语义表示(例如，来自大模型语言)转换为离散的ID序列；这样能够同时利用预训练基础模型中编码的语义知识以及用户-物品交互历史中的编码的协同信号。&lt;/li&gt;
+&lt;li&gt;当两个物品的 SID 有重叠时，这种重叠在原理上反映了它们的&lt;strong&gt;语义相似性&lt;/strong&gt;；同时，下一步的监督学习（next-item supervision）使模型能够学习&lt;strong&gt;跨 SID 的协同过滤信号&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="23怎么得到语义id"&gt;2.3怎么得到语义ID&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;首先通过模态编码器（modality encoder，例如大型语言模型 LLMs）提取语义表示；&lt;/li&gt;
+&lt;li&gt;然后使用量化器（quantizer）将连续嵌入压缩为离散稀疏 ID。&lt;/li&gt;
+&lt;li&gt;常见的基于量化的标记器包括：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RQ-VAE&lt;/strong&gt; ，&lt;strong&gt;RVQ&lt;/strong&gt; ，&lt;strong&gt;Residual K-Means&lt;/strong&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="24如何将语义id用于生成式推荐"&gt;2.4如何将语义ID用于生成式推荐&lt;/h4&gt;
+&lt;p&gt;TIGER 首次将 Transformer 应用于推荐任务，
+用于预测物品的语义 ID（SID），并借鉴了文档检索（document retrieval）中生成式推荐的思想 。后续研究在多个方向上改进了 SID 的训练：&lt;/p&gt;</description></item></channel></rss>

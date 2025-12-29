@@ -1,47 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>强化学习 on Jiatong Blog</title>
-    <link>https://mydocts.github.io/jiatong.github.io/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</link>
-    <description>Recent content in 强化学习 on Jiatong Blog</description>
-    <generator>Hugo</generator>
-    <language>en-US</language>
-    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mydocts.github.io/jiatong.github.io/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>NLP-Bookmark-Framework</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/bookmark-framework/</link>
-      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/bookmark-framework/</guid>
-      <description>&lt;h2 id=&#34;1-项目背景与动机&#34;&gt;1. 项目背景与动机&lt;/h2&gt;&#xA;&lt;h3 id=&#34;核心问题&#34;&gt;核心问题&lt;/h3&gt;&#xA;&lt;p&gt;在测试时扩展（Test-Time Scaling）场景下，大模型需要进行深度、多步骤推理（如数学竞赛题 AIME）。然而，现有方法面临两大挑战：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Translate-Paper</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/translate/</link>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/translate/</guid>
-      <description>&lt;h3 id=&#34;项目背景&#34;&gt;项目背景&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;目标&lt;/strong&gt;：构建一个专注于将英文论文翻译为流畅中文的垂直领域小模型。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;痛点分析&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;现有工具问题&lt;/strong&gt;：传统的翻译工具（如 Google Translate）往往过于直译，缺乏学术语境的润色，读起来拗口。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;大模型限制&lt;/strong&gt;：SOTA 大模型（如 GPT-4）效果好但 API 成本高，且并发受限，不适合大规模文档处理。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;项目方案&lt;/strong&gt;：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LLM-RL-GRPO-and its Variants</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/grpo-variants/</link>
-      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/grpo-variants/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;GRPO是针对LLM的一种改进PPO算法&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;回顾前置知识&#34;&gt;回顾前置知识：&lt;/h1&gt;&#xA;&lt;h2 id=&#34;policy-gradient&#34;&gt;Policy Gradient&lt;/h2&gt;&#xA;$$&#xA;\nabla_\theta J(\theta)&#xA;\approx &#xA;\frac{1}{N} &#xA;\sum_{n=1}^{N} &#xA;\sum_{t=1}^{T_n} &#xA;R(\tau^{(n)}) &#xA;\nabla_\theta &#xA;\log P_\theta(a_t^{(n)} \mid s_t^{(n)})&#xA;$$&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;符号解释&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;符号&lt;/th&gt;&#xA;          &lt;th&gt;含义&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$\nabla_\theta J(\theta)$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;目标函数（期望回报）关于参数$\theta$的梯度&lt;/strong&gt;，即策略更新的方向。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$N$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;采样的轨迹数量（episodes）&lt;/strong&gt;，即从环境中采样的完整回合数。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$T_n$&lt;/td&gt;&#xA;          &lt;td&gt;第$n$条轨迹的时间步数（episode的长度）。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$\tau^{(n)}$&lt;/td&gt;&#xA;          &lt;td&gt;第$n$条&lt;strong&gt;轨迹（trajectory）&lt;/strong&gt;：&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; $\tau^{(n)} = (s_1^{(n)}, a_1^{(n)}, r_1^{(n)}, \dots, s_{T_n}^{(n)}, a_{T_n}^{(n)}, r_{T_n}^{(n)})$。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$R(\tau^{(n)})$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;整条轨迹的总回报（return）&lt;/strong&gt;，通常为折扣累计奖励：&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; $R(\tau^{(n)}) = \sum_{t=1}^{T_n}\gamma^{t-1}r_t^{(n)}$。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$\nabla_\theta \log P_\theta(a_t^{(n)}\mid s_t^{(n)})$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;策略梯度项&lt;/strong&gt;，表示策略在状态$s_t^{(n)}$下选择动作$a_t^{(n)}$的对数概率的梯度，用于指导参数更新。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;$P_\theta(a_t^{(n)}\mid s_t^{(n)})$&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;参数化策略（policy）&lt;/strong&gt;，给定状态$s_t^{(n)}$时采取动作$a_t^{(n)}$的概率，由参数$\theta$控制。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;直观理解&lt;/strong&gt;&#xA;这个公式的含义是：如果一条轨迹带来的总奖励$R(\tau)$很高，那么模型应该调整参数$\theta$，让在这条轨迹中采取的动作$a_t$的概率更高；反之则降低这些动作的概率。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LLM-RL-DPO</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/dpo/</link>
-      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/dpo/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;https://mydocts.github.io/jiatong.github.io/images/ppo_full.png&#34;&#xA;    alt=&#34;ppo&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;https://mydocts.github.io/jiatong.github.io/images/dpo_full.png&#34;&#xA;    alt=&#34;dpo_full&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;kl-散度kullbackleibler-divergence&#34;&gt;KL 散度（Kullback–Leibler Divergence）&lt;/h3&gt;&#xA;$$&#xA;KL(P \parallel Q) = \sum_{x \in X} P(x) \log \frac{P(x)}{Q(x)}&#xA;$$&lt;p&gt;&lt;strong&gt;含义&lt;/strong&gt;&#xA;P 分布相对于 Q 分布的相似程度。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;性质&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;KL 散度的值 &lt;strong&gt;大于等于 0&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;P 和 Q 越相似，KL 散度越接近 0。&lt;/li&gt;&#xA;&lt;li&gt;如果 P 和 Q 分布完全一致，则 &lt;strong&gt;KL 散度 = 0&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;注意：&#xA;$$&#xA;  KL(P \parallel Q) \neq KL(Q \parallel P)&#xA;  $$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;KL 散度大于等于 0 的直观理解&lt;/strong&gt;&#xA;&lt;strong&gt;直观理解&lt;/strong&gt;：KL 散度是一个非负数，因为我们在比较两个分布时，&#xA;只有在完全一致时，它们之间的“差异”才为 0。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LLM-RL-PPO</title>
-      <link>https://mydocts.github.io/jiatong.github.io/posts/ppo/</link>
-      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mydocts.github.io/jiatong.github.io/posts/ppo/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;https://mydocts.github.io/jiatong.github.io/images/ppo_1.png&#34;&#xA;    alt=&#34;前置基础&#34; width=&#34;720&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;基础概念i&#34;&gt;基础概念I&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果你不熟悉强化学习，学习ppo了解这些基础知识就足够了&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Action Space&lt;/strong&gt;: 可选择的动作，比如 {left, up, right}&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Policy&lt;/strong&gt;: 策略函数，输入 State，输出 Action 的概率分布。一般用 π 表示。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>强化学习 on Jiatong Blog</title><link>https://mydocts.github.io/jiatong.github.io/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</link><description>Recent content in 强化学习 on Jiatong Blog</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mydocts.github.io/jiatong.github.io/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml"/><item><title>NLP-Bookmark-Framework</title><link>https://mydocts.github.io/jiatong.github.io/posts/bookmark-framework/</link><pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/bookmark-framework/</guid><description>&lt;h2 id="1-项目背景与动机"&gt;1. 项目背景与动机&lt;/h2&gt;
+&lt;h3 id="核心问题"&gt;核心问题&lt;/h3&gt;
+&lt;p&gt;在测试时扩展（Test-Time Scaling）场景下，大模型需要进行深度、多步骤推理（如数学竞赛题 AIME）。然而，现有方法面临两大挑战：&lt;/p&gt;</description></item><item><title>Translate-Paper</title><link>https://mydocts.github.io/jiatong.github.io/posts/translate/</link><pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/translate/</guid><description>&lt;h3 id="项目背景"&gt;项目背景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;目标&lt;/strong&gt;：构建一个专注于将英文论文翻译为流畅中文的垂直领域小模型。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;痛点分析&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;现有工具问题&lt;/strong&gt;：传统的翻译工具（如 Google Translate）往往过于直译，缺乏学术语境的润色，读起来拗口。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大模型限制&lt;/strong&gt;：SOTA 大模型（如 GPT-4）效果好但 API 成本高，且并发受限，不适合大规模文档处理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;项目方案&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>LLM-RL-GRPO-and its Variants</title><link>https://mydocts.github.io/jiatong.github.io/posts/grpo-variants/</link><pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/grpo-variants/</guid><description>&lt;p&gt;&lt;strong&gt;GRPO是针对LLM的一种改进PPO算法&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id="回顾前置知识"&gt;回顾前置知识：&lt;/h1&gt;
+&lt;h2 id="policy-gradient"&gt;Policy Gradient&lt;/h2&gt;
+$$
+\nabla_\theta J(\theta)
+\approx 
+\frac{1}{N} 
+\sum_{n=1}^{N} 
+\sum_{t=1}^{T_n} 
+R(\tau^{(n)}) 
+\nabla_\theta 
+\log P_\theta(a_t^{(n)} \mid s_t^{(n)})
+$$&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;符号解释&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;符号&lt;/th&gt;
+ &lt;th&gt;含义&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;$\nabla_\theta J(\theta)$&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;目标函数（期望回报）关于参数$\theta$的梯度&lt;/strong&gt;，即策略更新的方向。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;$N$&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;采样的轨迹数量（episodes）&lt;/strong&gt;，即从环境中采样的完整回合数。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;$T_n$&lt;/td&gt;
+ &lt;td&gt;第$n$条轨迹的时间步数（episode的长度）。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;$\tau^{(n)}$&lt;/td&gt;
+ &lt;td&gt;第$n$条&lt;strong&gt;轨迹（trajectory）&lt;/strong&gt;：&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; $\tau^{(n)} = (s_1^{(n)}, a_1^{(n)}, r_1^{(n)}, \dots, s_{T_n}^{(n)}, a_{T_n}^{(n)}, r_{T_n}^{(n)})$。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;$R(\tau^{(n)})$&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;整条轨迹的总回报（return）&lt;/strong&gt;，通常为折扣累计奖励：&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; $R(\tau^{(n)}) = \sum_{t=1}^{T_n}\gamma^{t-1}r_t^{(n)}$。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;$\nabla_\theta \log P_\theta(a_t^{(n)}\mid s_t^{(n)})$&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;策略梯度项&lt;/strong&gt;，表示策略在状态$s_t^{(n)}$下选择动作$a_t^{(n)}$的对数概率的梯度，用于指导参数更新。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;$P_\theta(a_t^{(n)}\mid s_t^{(n)})$&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;参数化策略（policy）&lt;/strong&gt;，给定状态$s_t^{(n)}$时采取动作$a_t^{(n)}$的概率，由参数$\theta$控制。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;直观理解&lt;/strong&gt;
+这个公式的含义是：如果一条轨迹带来的总奖励$R(\tau)$很高，那么模型应该调整参数$\theta$，让在这条轨迹中采取的动作$a_t$的概率更高；反之则降低这些动作的概率。&lt;/p&gt;</description></item><item><title>LLM-RL-DPO</title><link>https://mydocts.github.io/jiatong.github.io/posts/dpo/</link><pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/dpo/</guid><description>&lt;figure&gt;&lt;img src="https://mydocts.github.io/jiatong.github.io/images/ppo_full.png"
+ alt="ppo" width="720"&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src="https://mydocts.github.io/jiatong.github.io/images/dpo_full.png"
+ alt="dpo_full" width="720"&gt;
+&lt;/figure&gt;
+
+&lt;h3 id="kl-散度kullbackleibler-divergence"&gt;KL 散度（Kullback–Leibler Divergence）&lt;/h3&gt;
+$$
+KL(P \parallel Q) = \sum_{x \in X} P(x) \log \frac{P(x)}{Q(x)}
+$$&lt;p&gt;&lt;strong&gt;含义&lt;/strong&gt;
+P 分布相对于 Q 分布的相似程度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;性质&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KL 散度的值 &lt;strong&gt;大于等于 0&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;P 和 Q 越相似，KL 散度越接近 0。&lt;/li&gt;
+&lt;li&gt;如果 P 和 Q 分布完全一致，则 &lt;strong&gt;KL 散度 = 0&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;注意：
+$$
+ KL(P \parallel Q) \neq KL(Q \parallel P)
+ $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;KL 散度大于等于 0 的直观理解&lt;/strong&gt;
+&lt;strong&gt;直观理解&lt;/strong&gt;：KL 散度是一个非负数，因为我们在比较两个分布时，
+只有在完全一致时，它们之间的“差异”才为 0。&lt;/p&gt;</description></item><item><title>LLM-RL-PPO</title><link>https://mydocts.github.io/jiatong.github.io/posts/ppo/</link><pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate><guid>https://mydocts.github.io/jiatong.github.io/posts/ppo/</guid><description>&lt;figure&gt;&lt;img src="https://mydocts.github.io/jiatong.github.io/images/ppo_1.png"
+ alt="前置基础" width="720"&gt;
+&lt;/figure&gt;
+
+&lt;h2 id="基础概念i"&gt;基础概念I&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你不熟悉强化学习，学习ppo了解这些基础知识就足够了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Action Space&lt;/strong&gt;: 可选择的动作，比如 {left, up, right}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Policy&lt;/strong&gt;: 策略函数，输入 State，输出 Action 的概率分布。一般用 π 表示。&lt;/p&gt;</description></item></channel></rss>
