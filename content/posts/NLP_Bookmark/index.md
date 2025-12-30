@@ -60,7 +60,7 @@ Bookmark 框架提出了一种**动态上下文压缩与检索**机制：
   * 利用子节点信息和正则化匹配的方法 将原始推理过程 用 `<substep>...</substep>和<reflection>...</reflection>`分割
   * 有了标识符之后再利用大模型对每一对标识符进行总结，供后续RL动态推理使用。
 * **模型**：Qwen3-8B Backbone。
-* **损失函数**：标准自回归损失 $\mathcal{L}_{SFT} = -\sum_{t} \log P(x_t | x_{<t})$。
+* **损失函数**：标准自回归损失 $\mathcal{L}\_{SFT} = -\sum\_{t} \log P(x\_t | x\_{\lt t})$。
 
 #### Stage 2: 强化学习 (GRPO)
 
