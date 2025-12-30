@@ -306,7 +306,6 @@ GRPO提供了一种不需要训练状态价值网络，就可以估算每个toke
 - [GSPO](https://arxiv.org/abs/2507.18071) - Group Sequence Policy Optimization (July 2025)
 - [GFPO](https://arxiv.org/abs/2508.09726) - Group Filtered Policy Optimization (August 2025)
 - [DRPO](https://arxiv.org/abs/2510.04474) - Decoupled Reward Policy Optimization (October 2025)
-- [DeepSeek-V3.2](https://arxiv.org/abs/2512.02556) - DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models (December 2025)
 - [Training-Free GRPO](https://arxiv.org/abs/2510.08191) - Tencent: Training-Free Group Relative Policy Optimization (October 2025)
 
 ---
