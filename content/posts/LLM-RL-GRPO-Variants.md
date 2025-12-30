@@ -282,6 +282,7 @@ J_{GRPO}(\theta) = \frac{1}{G} \sum_{i=1}^G \frac{1}{T_i} \sum_{t=1}^{T_i} \left
 $$
 
 其中，$A_i$ 为第 $i$ 个样本的优势值（通常为组内奖励的标准化值），$D_{KL}$ 通常采用无偏估计量：
+
 $$
 D_{KL}(P_\theta \| P_{ref}) = \frac{P_{ref}(a_t|s_t)}{P_\theta(a_t|s_t)} - \log \frac{P_{ref}(a_t|s_t)}{P_\theta(a_t|s_t)} - 1
 $$
@@ -302,8 +303,9 @@ GRPO提供了一种不需要训练状态价值网络，就可以估算每个toke
 
 - [GRPO](https://arxiv.org/abs/2402.03300) - DeepSeekMath (February 2024)
 - [DAPO](https://arxiv.org/abs/2503.14476) - Decoupled Clip and Dynamic Sampling Policy Optimization (March 2025)
-- [Dr.DRPO](https://arxiv.org/abs/2510.04474) - Decoupled Reward Policy Optimization (October 2025)
+- [GSPO](https://arxiv.org/abs/2507.18071) - Group Sequence Policy Optimization (July 2025)
 - [GFPO](https://arxiv.org/abs/2508.09726) - Group Filtered Policy Optimization (August 2025)
+- [DRPO](https://arxiv.org/abs/2510.04474) - Decoupled Reward Policy Optimization (October 2025)
 - [DeepSeek-V3.2](https://arxiv.org/abs/2512.02556) - DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models (December 2025)
 - [Training-Free GRPO](https://arxiv.org/abs/2510.08191) - Tencent: Training-Free Group Relative Policy Optimization (October 2025)
 
