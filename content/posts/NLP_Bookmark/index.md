@@ -81,7 +81,7 @@ Bookmark 框架提出了一种**动态上下文压缩与检索**机制：
 
 ### 最终效果
 
-![Bookmark 训练流程](explanation.png)
+![Bookmark 最终效果](explanation.png)
 
 ## 3. 实验设置
 
