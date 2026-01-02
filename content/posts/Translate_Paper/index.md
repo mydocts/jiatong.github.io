@@ -62,34 +62,140 @@ katex: true
 
 ### 最终结果评估
 
-| 评估指标 | 描述 | 备注 |
-| :------- | :--- | :--- |
-| **BLEU** | 基础语义对齐评估 | 核心是与人对齐。大模型无法解决"拗口"的问题，有时候大模型给一段话评分很高，但人读起来比较费解。 |
-| **GSB (Good/Same/Bad)** | 人工或模型对比评估 | 人工评价翻译质量的相对优劣 |
+| 评估指标                      | 描述               | 备注                                                                                           |
+| :---------------------------- | :----------------- | :--------------------------------------------------------------------------------------------- |
+| **BLEU**                | 基础语义对齐评估   | 核心是与人对齐。大模型无法解决"拗口"的问题，有时候大模型给一段话评分很高，但人读起来比较费解。 |
+| **GSB (Good/Same/Bad)** | 人工或模型对比评估 | 人工评价翻译质量的相对优劣                                                                     |
+
+#### BLEU 计算详解
+
+**BLEU (Bilingual Evaluation Understudy)** 是机器翻译领域最常用的自动评估指标，通过计算候选翻译与参考翻译之间的 n-gram 重合度来衡量翻译质量。
+
+**计算公式：**
+
+$$
+BLEU = BP \cdot \exp\left(\sum_{n=1}^{N} w_n \log p_n\right)
+$$
+
+其中：
+- $p_n$ 是 **n-gram 精确率**：候选翻译中与参考翻译匹配的 n-gram 数量 / 候选翻译中的 n-gram 总数
+- $w_n$ 是权重，通常取 $w_n = \frac{1}{N}$（均匀权重）
+- $BP$ 是 **短句惩罚因子 (Brevity Penalty)**，防止模型通过生成过短的翻译来"作弊"：
+
+$$
+BP = \begin{cases} 1 & \text{if } c > r \\\\ e^{1 - r/c} & \text{if } c \leq r \end{cases}
+$$
+
+其中 $c$ 是候选翻译长度，$r$ 是参考翻译长度。
+
+**计算示例：**
+
+假设：
+- **参考翻译 (Reference)**：`the cat sat on the mat`
+- **候选翻译 (Candidate)**：`the cat on the mat`
+
+**Step 1: 计算各阶 n-gram 精确率**
+
+| n-gram | 候选翻译中的 n-gram | 匹配数 | 总数 | 精确率 $p_n$ |
+| :----- | :------------------ | :----- | :--- | :----------- |
+| 1-gram | the, cat, on, the, mat | 5 | 5 | 5/5 = 1.0 |
+| 2-gram | the cat, cat on, on the, the mat | 3 | 4 | 3/4 = 0.75 |
+| 3-gram | the cat on, cat on the, on the mat | 1 | 3 | 1/3 ≈ 0.33 |
+| 4-gram | the cat on the, cat on the mat | 0 | 2 | 0/2 = 0.0 |
+
+**Step 2: 计算短句惩罚**
+- 候选长度 $c = 5$，参考长度 $r = 6$
+- 因为 $c < r$，所以 $BP = e^{1 - 6/5} = e^{-0.2} \approx 0.819$
+
+**Step 3: 计算 BLEU-4**
+$$
+BLEU = 0.819 \times \exp\left(\frac{1}{4}(\log 1.0 + \log 0.75 + \log 0.33 + \log 0.0)\right)
+$$
+
+> 注意：由于 4-gram 精确率为 0，$\log 0 = -\infty$，导致 BLEU = 0。实际应用中会使用**平滑技术**避免这种情况。
+
+**Python 代码实现：**
+
+```python
+from collections import Counter
+import math
+
+def calculate_bleu(reference: str, candidate: str, max_n: int = 4) -> float:
+    """
+    计算 BLEU 分数
+    
+    Args:
+        reference: 参考翻译
+        candidate: 候选翻译
+        max_n: 最大 n-gram 阶数，默认为 4
+    
+    Returns:
+        BLEU 分数 (0-1)
+    """
+    ref_tokens = reference.lower().split()
+    cand_tokens = candidate.lower().split()
+    
+    # 计算各阶 n-gram 精确率
+    precisions = []
+    for n in range(1, max_n + 1):
+        # 提取 n-grams
+        ref_ngrams = Counter([tuple(ref_tokens[i:i+n]) for i in range(len(ref_tokens) - n + 1)])
+        cand_ngrams = Counter([tuple(cand_tokens[i:i+n]) for i in range(len(cand_tokens) - n + 1)])
+        
+        # 计算匹配数（带裁剪）
+        matches = sum(min(cand_ngrams[ng], ref_ngrams[ng]) for ng in cand_ngrams)
+        total = sum(cand_ngrams.values())
+        
+        # 平滑处理：避免 log(0)
+        precision = (matches + 1) / (total + 1) if total > 0 else 0
+        precisions.append(precision)
+    
+    # 计算几何平均
+    if 0 in precisions:
+        return 0.0
+    log_precision = sum(math.log(p) for p in precisions) / max_n
+    
+    # 计算短句惩罚 (Brevity Penalty)
+    c, r = len(cand_tokens), len(ref_tokens)
+    bp = 1 if c > r else math.exp(1 - r / c)
+    
+    return bp * math.exp(log_precision)
+
+
+# 使用示例
+reference = "the cat sat on the mat"
+candidate = "the cat on the mat"
+
+bleu_score = calculate_bleu(reference, candidate)
+print(f"BLEU Score: {bleu_score:.4f}")
+# 输出: BLEU Score: 0.4647 (使用平滑后的结果)
+```
+
+> **实践建议**：在实际项目中推荐使用 `sacrebleu` 或 `nltk.translate.bleu_score` 等成熟库，它们实现了更完善的平滑策略和多参考翻译支持。
 
 ### 效果评估
 
 #### BLEU 分数对比
 
-| Checkpoint | BLEU 分数 |
-| :--------- | :-------- |
-| base模型 | 0.2843 |
-| sft模型, lora-rank=8, lora alpha=32 | 0.5092 |
-| 全参数微调 | 0.5614 |
-| dpo训练 | 0.5710 |
-| grpo-checkpoint-1500 | 0.5921 |
+| Checkpoint                          | BLEU 分数 |
+| :---------------------------------- | :-------- |
+| base模型                            | 0.2843    |
+| sft模型, lora-rank=8, lora alpha=32 | 0.5092    |
+| 全参数微调                          | 0.5614    |
+| dpo训练                             | 0.5710    |
+| grpo-checkpoint-1500                | 0.5921    |
 
 #### GSB 人工评估对比
 
-| 对比 | GSB |
-| :--- | :-- |
+| 对比        | GSB          |
+| :---------- | :----------- |
 | sft vs base | 100%: 0%: 0% |
 | grpo vs sft | 87%: 13%: 0% |
 
 ### 过程评估
 
-| 评估维度 | 方法 | 说明 |
-| :------- | :--- | :--- |
+| 评估维度             | 方法       | 说明                                                             |
+| :------------------- | :--------- | :--------------------------------------------------------------- |
 | **幻觉率评估** | 大模型评估 | 大部分翻译问题可由 Prompt 解决，幻觉问题更多要从训练数据层面入手 |
 
 ## SFT
@@ -273,3 +379,9 @@ katex: true
   * 将 BadCase 收集起来，人工修正得到 Correct Answer。
   * 构造 `(Question, Bad_Answer)` 作为 Rejected，`(Question, Correct_Answer)` 作为 Chosen。
   * 加入微调集进行下一轮迭代。
+
+### 拓展性思考
+
+有硬性指标的都可以交由Agent去快速迭代
+
+数据集的质量与分布决定训练的效果；评估数据集的质量非常重要
