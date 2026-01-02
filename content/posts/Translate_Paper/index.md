@@ -145,11 +145,11 @@ def calculate_bleu(reference: str, candidate: str, max_n: int = 4) -> float:
         # 提取 n-grams
         ref_ngrams = Counter([tuple(ref_tokens[i:i+n]) for i in range(len(ref_tokens) - n + 1)])
         cand_ngrams = Counter([tuple(cand_tokens[i:i+n]) for i in range(len(cand_tokens) - n + 1)])
-      
+    
         # 计算匹配数（带裁剪）
         matches = sum(min(cand_ngrams[ng], ref_ngrams[ng]) for ng in cand_ngrams)
         total = sum(cand_ngrams.values())
-      
+    
         # 平滑处理：避免 log(0)
         precision = (matches + 1) / (total + 1) if total > 0 else 0
         precisions.append(precision)
@@ -219,7 +219,7 @@ print(f"BLEU Score: {bleu_score:.4f}")
 
 ---
 
-**Base 模型翻译结果** ❌
+**Base 模型翻译结果** 
 
 > Fig. 5: Stiffness modulation controls collision forces. The plot shows the contact force over time as the robot's hand collides with a tower of blocks. By commanding different stiffness levels, our policy can produce low, controlled forces (blue) or high, potentially destructive forces (red), showcasing a direct trade-off between safety and posture tracking accuracy.
 >
@@ -229,7 +229,7 @@ print(f"BLEU Score: {bleu_score:.4f}")
 
 ---
 
-**SFT 模型翻译结果** ✅
+**SFT 模型翻译结果** 
 
 > 图5：刚度调节控制碰撞力。该图展示了机器人手部与一排积木碰撞时的接触力随时间的变化。通过调节不同的刚度水平，我们的策略可以产生低、可控的力（蓝色）或高、可能造成破坏的力（红色），体现了安全性和姿态跟踪精度之间的直接权衡。
 >
@@ -241,7 +241,7 @@ print(f"BLEU Score: {bleu_score:.4f}")
 
 ---
 
-**DPO 模型翻译结果** ✅✅
+**DPO 模型翻译结果** 
 
 > 图5：刚度调节控制碰撞力。图中展示了机器人手部与积木塔碰撞时接触力随时间的变化。通过设定不同的刚度水平，我们的策略可以产生较低且可控的力（蓝色），或较高且可能具有破坏性的力（红色），体现了安全性与姿态跟踪精度之间的直接权衡。
 >
@@ -253,7 +253,7 @@ print(f"BLEU Score: {bleu_score:.4f}")
 
 ---
 
-**GRPO 模型翻译结果** ✅✅✅
+**GRPO 模型翻译结果** 
 
 > 图5：刚度调节控制碰撞力。图中展示了机器人手部撞击积木塔时接触力随时间的变化。通过设定不同的刚度水平，我们的策略可产生较低且可控的力（蓝色），或较高且可能造成破坏的力（红色），体现出安全性与姿态跟踪精度之间的直接权衡。
 >
