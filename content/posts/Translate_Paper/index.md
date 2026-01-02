@@ -394,7 +394,7 @@ print(f"BLEU Score: {bleu_score:.4f}")
   * **计算效率**：GRPO 省去了 Critic 模型的显存占用 and 计算量，更适合大模型训练。
 * **为什么 GRPO 更高效**：
   * **Group Baseline**：对于推理/数学问题，答案通常只有一个对错。GRPO 通过从群体中对比，能更直接地利用“相对优劣”作为信号，减少方差。
-  * 适合 **Training-free** 场景的进一步优化（如 DeepSeek-R1 的思路）。
+  * 适合 **Training-free** 场景的进一步优化。
 
 ### GRPO奖励函数 (Reward Function) 设计
 
