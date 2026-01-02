@@ -78,6 +78,7 @@ BLEU = BP \cdot \exp\left(\sum_{n=1}^{N} w_n \log p_n\right)
 $$
 
 其中：
+
 - $p_n$ 是 **n-gram 精确率**：候选翻译中与参考翻译匹配的 n-gram 数量 / 候选翻译中的 n-gram 总数
 - $w_n$ 是权重，通常取 $w_n = \frac{1}{N}$（均匀权重）
 - $BP$ 是 **短句惩罚因子 (Brevity Penalty)**，防止模型通过生成过短的翻译来"作弊"：
@@ -91,23 +92,26 @@ $$
 **计算示例：**
 
 假设：
+
 - **参考翻译 (Reference)**：`the cat sat on the mat`
 - **候选翻译 (Candidate)**：`the cat on the mat`
 
 **Step 1: 计算各阶 n-gram 精确率**
 
-| n-gram | 候选翻译中的 n-gram | 匹配数 | 总数 | 精确率 $p_n$ |
-| :----- | :------------------ | :----- | :--- | :----------- |
-| 1-gram | the, cat, on, the, mat | 5 | 5 | 5/5 = 1.0 |
-| 2-gram | the cat, cat on, on the, the mat | 3 | 4 | 3/4 = 0.75 |
-| 3-gram | the cat on, cat on the, on the mat | 1 | 3 | 1/3 ≈ 0.33 |
-| 4-gram | the cat on the, cat on the mat | 0 | 2 | 0/2 = 0.0 |
+| n-gram | 候选翻译中的 n-gram                | 匹配数 | 总数 | 精确率$p_n$ |
+| :----- | :--------------------------------- | :----- | :--- | :------------ |
+| 1-gram | the, cat, on, the, mat             | 5      | 5    | 5/5 = 1.0     |
+| 2-gram | the cat, cat on, on the, the mat   | 3      | 4    | 3/4 = 0.75    |
+| 3-gram | the cat on, cat on the, on the mat | 1      | 3    | 1/3 ≈ 0.33   |
+| 4-gram | the cat on the, cat on the mat     | 0      | 2    | 0/2 = 0.0     |
 
 **Step 2: 计算短句惩罚**
+
 - 候选长度 $c = 5$，参考长度 $r = 6$
 - 因为 $c < r$，所以 $BP = e^{1 - 6/5} = e^{-0.2} \approx 0.819$
 
 **Step 3: 计算 BLEU-4**
+
 $$
 BLEU = 0.819 \times \exp\left(\frac{1}{4}(\log 1.0 + \log 0.75 + \log 0.33 + \log 0.0)\right)
 $$
@@ -123,42 +127,42 @@ import math
 def calculate_bleu(reference: str, candidate: str, max_n: int = 4) -> float:
     """
     计算 BLEU 分数
-    
+  
     Args:
         reference: 参考翻译
         candidate: 候选翻译
         max_n: 最大 n-gram 阶数，默认为 4
-    
+  
     Returns:
         BLEU 分数 (0-1)
     """
     ref_tokens = reference.lower().split()
     cand_tokens = candidate.lower().split()
-    
+  
     # 计算各阶 n-gram 精确率
     precisions = []
     for n in range(1, max_n + 1):
         # 提取 n-grams
         ref_ngrams = Counter([tuple(ref_tokens[i:i+n]) for i in range(len(ref_tokens) - n + 1)])
         cand_ngrams = Counter([tuple(cand_tokens[i:i+n]) for i in range(len(cand_tokens) - n + 1)])
-        
+      
         # 计算匹配数（带裁剪）
         matches = sum(min(cand_ngrams[ng], ref_ngrams[ng]) for ng in cand_ngrams)
         total = sum(cand_ngrams.values())
-        
+      
         # 平滑处理：避免 log(0)
         precision = (matches + 1) / (total + 1) if total > 0 else 0
         precisions.append(precision)
-    
+  
     # 计算几何平均
     if 0 in precisions:
         return 0.0
     log_precision = sum(math.log(p) for p in precisions) / max_n
-    
+  
     # 计算短句惩罚 (Brevity Penalty)
     c, r = len(cand_tokens), len(ref_tokens)
     bp = 1 if c > r else math.exp(1 - r / c)
-    
+  
     return bp * math.exp(log_precision)
 
 
@@ -197,6 +201,57 @@ print(f"BLEU Score: {bleu_score:.4f}")
 | 评估维度             | 方法       | 说明                                                             |
 | :------------------- | :--------- | :--------------------------------------------------------------- |
 | **幻觉率评估** | 大模型评估 | 大部分翻译问题可由 Prompt 解决，幻觉问题更多要从训练数据层面入手 |
+
+#### 效果展示
+
+<details>
+<summary><strong>📄 点击展开：翻译效果对比示例</strong></summary>
+
+**原文 (English)**
+
+> Fig. 5: Stiffness modulation controls collision forces. The plot shows the contact force over time as the robot's hand collides with a tower of blocks. By commanding different stiffness levels, our policy can produce low, controlled forces (blue) or high, potentially destructive forces (red), showcasing a direct trade-off between safety and posture tracking accuracy.
+>
+> External force profile. Note that the policy directly observes neither the wrench nor displacement information, but can make inferences about them based on proprioceptive sensing. For an impedance strategy, the end-effector pose can be inferred from the joint positions $q_{t}$ and root orientation $g_{t}^{b}$ via forward kinematics. For an admittance strategy, the external wrench can be inferred from the robot's dynamics, using observations of previous joint position $q_{t-1}$, joint position target $a_{t-1}$, joint velocity $\dot{q}_{t-1}$, and joint accelerations.
+>
+> Command Sampling and Force Field Dynamics. Training episodes consist of sampling a motion clip, a desired robot stiffness, and an external force profile. The external force is implemented as a 'force field' which pulls a selected link of the robot towards a moving setpoint with a distance-proportional force according to a randomized environment stiffness $K_{\mathrm{env}}$.
+>
+> Stiffness Bounds: When sensing and dynamics are noisy and the robot's state is only partially observable, inferences about pose and wrench also become noisy. This noise makes realizing highly sensitive responses, including extremely low or high stiffnesses, infeasible.
+
+---
+
+**Base 模型翻译结果** ❌
+
+> Fig. 5: Stiffness modulation controls collision forces. The plot shows the contact force over time as the robot's hand collides with a tower of blocks. By commanding different stiffness levels, our policy can produce low, controlled forces (blue) or high, potentially destructive forces (red), showcasing a direct trade-off between safety and posture tracking accuracy.
+>
+> external force profile. Note that the policy directly observes neither the wrench nor displacement information, but can make inferences about them based on proprioceptive sensing...
+>
+> *(Base模型基本保持原文，未进行有效翻译)*
+
+---
+
+**SFT 模型翻译结果** ✅
+
+> 图5：刚度调节控制碰撞力。该图展示了机器人手部与一排积木碰撞时的接触力随时间的变化。通过调节不同的刚度水平，我们的策略可以产生低、可控的力（蓝色）或高、可能造成破坏的力（红色），体现了安全性和姿态跟踪精度之间的直接权衡。
+>
+> 外部力场的设定。注意，该策略并不直接观测力环（wrench）或位移信息，而是利用本体感觉（proprioceptive sensing）对它们进行推断。对于阻抗策略（impedance strategy），末端执行器的姿态可通过关节位置 $q_{t}$ 和根部姿态 $g_{t}^{b}$ 通过前向运动学（forward kinematics）推断得到。对于通量（admittance）策略，外部力环可通过机器人动力学推断。
+>
+> **运动控制采样与力场动力学**。训练数据集包含一个运动片段、一个期望的刚度值和一个外部力场轮廓。外部力场被实现为一种"力场"（force field），根据随机环境的刚度 $K_{\mathrm{env}}$，以距离成正比的方式施加一个拉力。
+>
+> **刚度范围**：当感知和动力学信息存在噪声，且机器人状态仅部分可观测时，关于位姿和力环的推断也会产生噪声。这种噪声使得实现高度敏感的响应——包括极低或极高刚度——变得不可行。
+
+---
+
+**GRPO 模型翻译结果** ✅✅
+
+> 图5：刚度调节控制碰撞力。图中展示了机器人手部撞击积木塔时接触力随时间的变化。通过设定不同的刚度水平，我们的策略可产生较低且可控的力（蓝色），或较高且可能造成破坏的力（红色），体现出安全性与姿态跟踪精度之间的直接权衡。
+>
+> 外部力的分布情况。需要注意的是，策略并未直接观测到广义力（wrench）或位移信息，而是基于本体感知（proprioceptive sensing）进行推断。对于阻抗控制策略（impedance strategy），末端执行器的位姿可通过前向运动学，由关节位置 $q_{t}$ 和根节点方向 $g_{t}^{b}$ 推算得出。而对于导纳控制策略（admittance strategy），外部广义力（external wrench）则可通过机器人动力学模型推断。
+>
+> **指令采样与力场动态**。训练阶段的每个episode包含采样一个运动片段、期望的机器人刚度，以及一个外部力分布。外部力通过"力场"（force field）实现，即对机器人某一指定连杆施加一个与距离成正比的拉力，使其趋向于一个移动的目标点。
+>
+> **刚度边界**（Stiffness Bounds）：当传感和动力学存在噪声，且机器人状态仅为部分可观测时，对位姿和广义力的推断也会带有噪声。这种噪声使得实现极高灵敏度的响应——例如极低或极高的刚度——变得不可行。
+
+</details>
 
 ## SFT
 

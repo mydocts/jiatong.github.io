@@ -26,6 +26,8 @@
 \usepackage{amssymb}
 \usepackage{fontawesome5}
 \usepackage{zh_CN-Adobefonts_external}
+\usepackage{tikz}
+\usepackage{graphicx}
 
 \newcommand*{\customcventry}[7][0em]{
 \begin{tabular}{@{}l}
@@ -52,6 +54,13 @@
 \name{宋佳桐}{}
 
 \begin{document}
+
+% 在右上角添加照片
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north east, inner sep=0pt] at ([xshift=-1.2cm, yshift=-0.8cm]current page.north east)
+    {\includegraphics[width=2.2cm]{1cun-1.jpg}};
+\end{tikzpicture}
+
 \makecvtitle
 \vspace*{-10mm}
 
@@ -126,11 +135,11 @@
 {\setstretch{1.0}
 \customcventry{10/2025 ‐ 12/2025}{}{学术论文翻译垂直领域大模型微调}{}{}{}{
   \begin{itemize}[leftmargin=0.61cm, label={\textbullet}]
-    \item \textbf{项目背景：} 针对物理/AI学术论文翻译中专有名词不准、公式排版易碎以及 SOTA 模型 API 成本过高的痛点，构建一款低成本、高并发且支持本地化部署的垂直领域翻译模型。
+    \item \textbf{项目背景：} 针对学术论文翻译中专有名词不准、公式排版易碎以及 SOTA 模型 API 成本过高的痛点，构建一款低成本、高并发且支持本地化部署的垂直领域翻译模型。
     \item \textbf{数据构造：} 分为\textbf{SFT数据}和\textbf{DPO数据}构造。通过Teacher-Student蒸馏利用GPT-4o生成高质量翻译对，项目难点在于针对学术垂直领域特定的表达规范（如公式保护、术语一致性）设计最有效的 Prompt 模板。
     \item \textbf{项目难点：} 解决小参数量模型（0.6B级）在偏好对齐过程中容易出现的“幻觉增强”与“灾难性遗忘”问题，通过精细调节 Beta 系数与混合数据回填策略，实现精度从 0.28 提升至 0.57 的显著跨越。
     \item \textbf{偏好对齐：} 选用\textbf{Qwen3-0.6B}为目标模型，深入实践\textbf{DPO}与\textbf{GRPO}算法进行偏好对齐，针对训练中的不稳定性、灾难性遗忘等问题进行了针对性调优。
-    \item \textbf{实验结果：} Base模型(BLEU 0.2843) $\rightarrow$ SFT LoRA(Rank 8, Alpha 32, \textbf{BLEU 0.5092}) $\rightarrow$ 全参数微调(\textbf{BLEU 0.5614}) $\rightarrow$ DPO训练(\textbf{BLEU 0.5710})；GRPO训练表现稳定，在Step 100/200分别达到\textbf{BLEU 0.5636/0.5670}。
+    \item \textbf{实验结果：} BLEU:Base模型(0.2843) $\rightarrow$ SFT LoRA(Rank 8, Alpha 32, \textbf{0.5092}) $\rightarrow$ 全参数微调(\textbf{0.5614}) $\rightarrow$ DPO训练(\textbf{0.5710})；GRPO训练表现稳定，在Step 100/200分别达到\textbf{0.5636/0.5670}。
   \end{itemize}
 }}
 
