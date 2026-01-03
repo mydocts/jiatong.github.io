@@ -1,0 +1,15 @@
+# 简历文件夹 - 不推送到 GitHub
+简历/
+
+# Hugo 生成的文件
+resources/_gen/
+
+# OS 文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
