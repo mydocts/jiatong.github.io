@@ -30,7 +30,7 @@ katex: true
 
 ![数据过滤流程](data_filter.png)
 
-![整体流程](process_new.png)
+![整体流程](process.png)
 
 ### 数据工程
 
