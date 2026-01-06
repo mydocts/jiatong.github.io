@@ -194,6 +194,7 @@ print(f"BLEU Score: {bleu_score:.4f}")
 | 对比        | GSB          |
 | :---------- | :----------- |
 | sft vs base | 100%: 0%: 0% |
+| dpo vs sft  | 100%: 0%: 0% |
 | grpo vs sft | 87%: 13%: 0% |
 
 ### 过程评估
@@ -267,14 +268,20 @@ print(f"BLEU Score: {bleu_score:.4f}")
 
 ### 灾难性遗忘:数据量较小或偏离原模型分布，模型可能会强行拟合新任务，从而覆盖掉原来的语言能力或推理能力
 
-* 混合数据训练:	DPO混合部分SFT原始数据，保证不要遗忘原始的记忆能力
-* 降低学习率，采取Warmup等操作
-* Lora微调
-* 损失函数，KL散度
+在这里体现的是模型会故意偏好生成强模型的风格，迎合其风格获得奖励；
 
-本质上就是减少参数更新幅度，减少更新范围，减少分布偏移。
+测试：
 
-**参数选择：**
+1. 同一段英文，用不同 prompt 翻译 → 输出是否几乎一样？
+2. BLEU 很高，但人工读感“机械”
+
+解决办法：
+
+增大KL
+
+采取多个强模型，让正确答案不再为一种风格
+
+### **参数选择：**
 
 **不同规模模型的推荐学习率参考 (LoRA/QLoRA)**
 
@@ -394,11 +401,76 @@ print(f"BLEU Score: {bleu_score:.4f}")
 
 ### GRPO奖励函数 (Reward Function) 设计
 
-#### BLEU：得分越高奖励越大
+<details>
+<summary><strong>📝 点击展开：奖励函数代码实现</strong></summary>
 
-后续可以考虑加入幻觉惩罚，用大模型评估
+```python
+class PaperBleuReward(ORM):
+
+    def __call__(self, completions, response, **kwargs) -> List[float]:
+        """
+        Evaluates completions based on Mathematical correctness of the answer
+
+        Args:
+            completions (list[str]): Generated outputs
+            response (list[str]): Expected answers
+
+        Returns:
+            list[float]: Reward scores
+        """
+        rewards = []
+        for completion, res in zip(completions, response):
+            try:
+                rewards.append(self.chinese_bleu_score(res, completion))
+            except Exception:
+                # If evaluation fails, reward is 0
+                rewards.append(0.0)
+        return rewards
+
+    def chinese_bleu_score(self, reference: str, hypothesis: str, weights=(0.25, 0.25, 0.25, 0.25)):
+        """
+        计算中文翻译的 BLEU 分数（基于 n-gram）
+
+        Args:
+            reference (str): 参考译文（标准中文）
+            hypothesis (str): 系统译文（你的中文翻译）
+            weights (tuple): n-gram 权重，默认为 BLEU-4 (1~4 gram 平均)
+                             - BLEU-1: (1.0,)
+                             - BLEU-2: (0.5, 0.5)
+                             - BLEU-4: (0.25, 0.25, 0.25, 0.25)
+
+        Returns:
+            float: BLEU 分数 (0.0 ~ 1.0)
+        """
+        # 中文分词
+        #print(hypothesis)
+        hypothesis = re.sub(r'`<think>`.*?`</think>`', '', hypothesis, flags=re.DOTALL)
+        ref_tokens = list(jieba.cut(reference))
+        hyp_tokens = list(jieba.cut(hypothesis))
+
+        # 打印分词结果（调试用，可注释）
+        #print(f"参考分词: {ref_tokens}")
+        #print(f"译文分词: {hyp_tokens}")
+
+        # 使用平滑函数避免零分
+        smooth = SmoothingFunction().method4
+
+        # 计算 BLEU
+        bleu = sentence_bleu(
+            [ref_tokens],          # 注意：sentence_bleu 要求是 list of references
+            hyp_tokens,
+            weights=weights,
+            smoothing_function=smooth
+        )
+        return bleu
+
+orms['external_paper'] = PaperBleuReward
+```
+
+</details>
 
 ## 训练经验
+
 
 ### 核心参数与模型规模对照表
 
