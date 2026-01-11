@@ -52,6 +52,8 @@ Bookmark 框架提出了一种**动态上下文压缩与检索**机制：
 
 ![Bookmark 训练流程](training.png)
 
+![训练细节](details.png)
+
 #### Stage 1: 监督微调 (SFT)
 
 * **目标**：让模型学会生成结构化标签（`<substep>`, `<reflection>`）和 Bookmark 摘要。
