@@ -36,6 +36,93 @@ katex: true
 
 **以下是一篇英文论文的一个片段，请帮我以该论文作者的语气用中文翻译该片段的内容，记住一定要保持英文表达的含义，但是表述的方式要符合中文的表达习惯，不用直接翻译英文的表达形式，记住一定以改论文作者的语气来表述。\n#任务要求\n1、重新表述****一定不要遗漏，一定不能遗漏**，否则会收到投诉。\n1、对于专有的缩写名词，请直接保留该缩写。\n2、对于该领域专有的一些名词，请在中文后面用括弧进行英文专有名词注释。\n3、一定要以该论文作者的语气进行表述。\n4、论文中如果有论文引用，一定要保留下来。\n5、**一定要用中文阅读习惯的表达方式来表述，不要直接翻译，很多英文直接翻译后，中文会非常的别扭，导致阅读体验差。但是一定要忠实原文**\n6、保留文本中的markdown格式，保持与英文的文本格式一致，特别是注重一级标题的保留，让阅读有层次感，但是一定不能擅自添加标题，一定要忠实原文，否则你会受到惩罚。\n7、文本中公式为latex格式，遇到公式如果公式有错误，请修正后输出，如果没有错误则原样输出即可，不需要任何翻译，输出要保证正确性，公式格式为latex。如果没有公式则不用输出任何公式。\n8、不要杜撰任何原文没有的内容，比如公示、没说完的话等，否则你会收到投诉！\n#输出要求\n请直接开始输出翻译后的内容。禁止在你的回答中包含任何额外的说明、前言或总结性文字（例如“这是翻译好的内容：”、“翻译如下：”等）。你的输出必须且只能是翻译后的正文。\n#英文论文如下
 
+### 翻译领域前沿方法
+
+<details>
+<summary><strong>📖 DeepTrans：基于深度推理的翻译强化学习</strong></summary>
+
+**方法概述**：DeepTrans 是一种基于深度推理的翻译强化学习训练框架。该方法利用 DeepTrans Model 生成翻译，并通过多维度 Reward Signals（格式奖励、思维奖励、翻译质量奖励）进行优化。
+
+**流程图**：
+
+![DeepTrans RL Training Overview](DRT.png)
+
+**Reward 函数**：
+
+$$
+r_{\text{all}} = \begin{cases} 0 & \text{if } r_{\text{format}} = 0 \\ r_{\text{trans}} + \alpha \times r_{\text{thought}} & \text{if } r_{\text{format}} \neq 0 \end{cases}
+$$
+
+其中 $r_{\text{format}}$ 为格式奖励，$r_{\text{trans}}$ 为翻译质量奖励，$r_{\text{thought}}$ 为思维推理奖励，$\alpha$ 为权衡系数。
+
+</details>
+
+<details>
+<summary><strong>📖 ExTrans：基于示例增强的翻译奖励方法</strong></summary>
+
+**方法概述**：ExTrans（Exemplar-enhanced Translation）利用强模型（如 DeepSeek-R1）作为示例模型生成高质量翻译，然后与策略模型的翻译进行对比，通过 DeepSeek-v3 判断优劣来生成奖励信号。
+
+**流程图**：
+
+![ExTrans Exemplar-enhanced Translation Reward](Extrans.png)
+
+**Reward 函数**：
+
+$$
+r_{\text{all}} = \begin{cases} 0 & \text{if } r_{\text{format}} = 0 \\ r_{\text{trans}} + \alpha \times r_{\text{thought}} + \beta \times r_{\text{comet}} & \text{if } r_{\text{format}} \neq 0 \end{cases}
+$$
+
+$$
+r_{\text{generalize}} = \begin{cases} 0 & \text{if } r_{\text{format}} = 0 \\ 0 & \text{elif } \text{Lang}(t_r) \neq \text{target language} \\ 1 & \text{else} \end{cases}
+$$
+
+其中 $\alpha$ 和 $\beta$ 为权衡系数，$\text{Lang}(\cdot)$ 表示语言检测函数。
+
+</details>
+
+<details>
+<summary><strong>📖 SSR：基于自评估的零样本强化学习翻译</strong></summary>
+
+**方法概述**：SSR（Self-evaluation based RL）是一种类 R1-Zero 的机器翻译强化学习训练方法。该方法使用同一个模型同时作为 Actor 和 Judge，不需要外部奖励模型或人工标注的参考数据，通过 GRPO 进行迭代训练优化。
+
+**流程图**：
+
+![SSR Framework Overview](SSR_zero.png)
+
+**Reward 函数**：
+
+$$
+r_{\text{all}} = \begin{cases} 1 + r_{\text{self}}, & \text{if } r_{\text{format}} \neq 0 \\ 0, & \text{if } r_{\text{format}} = 0 \end{cases}
+$$
+
+其中 $r_{\text{self}}$ 为模型自评估奖励，$r_{\text{format}}$ 为格式正确性奖励。
+
+</details>
+
+<details>
+<summary><strong>📖 TAT-R1：基于词对齐的翻译强化学习</strong></summary>
+
+**方法概述**：TAT-R1 是一种结合 RL 和词对齐（Word Alignment）的翻译训练方法。该方法从源文本和参考翻译中提取关键词对齐信息，并设计多维度奖励函数（Answer-align-word reward、Answer-align-order reward、Think-align-word reward、Format reward、COMET reward）进行 GRPO 训练。
+
+**流程图**：
+
+![TAT-R1 Training with RL and Word Alignment](TRT.png)
+
+**Reward 函数**：
+
+$$
+R_{\text{all}} = \begin{cases} 0, & \text{if } R_{\text{format}} = 0 \\ R_{\text{comet}} + \alpha * R_{\text{aaw}} + \beta * R_{\text{aao}} + \gamma * R_{\text{taw}}, & \text{if } R_{\text{format}} = 1 \end{cases}
+$$
+
+其中：
+- $R_{\text{comet}}$：COMET 评估奖励
+- $R_{\text{aaw}}$：Answer-align-word 奖励（答案-词对齐）
+- $R_{\text{aao}}$：Answer-align-order 奖励（答案-顺序对齐）
+- $R_{\text{taw}}$：Think-align-word 奖励（思维-词对齐）
+- $\alpha, \beta, \gamma$：权衡系数
+
+</details>
+
 ### 数据工程
 
 #### 数据集构建策略
